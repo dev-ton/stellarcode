@@ -32,7 +32,8 @@ const Header = () => {
         <path id="Star3" d="M29.4325 28.875L26.6288 30.1963L25.3075 33L23.9862 30.1963L21.1825 28.875L23.9862 27.5537L25.3075 24.75L26.6288 27.5537L29.4325 28.875Z" fill="#FFC857"/>
         </g>
         </svg></div> 
-          <div className="font-extrabold leading-relaxed tracking-normal text-4xl"><span className="text-stellar">Stellar</span><span className="text-whitey">Code</span></div>
+          <div className="font-extrabold leading-relaxed tracking-normal text-4xl"><span className="text-stellar">Stellar</span><span className="text-whitey">Code</span>
+          </div>
         </div>  
         </Link>
 

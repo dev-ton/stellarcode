@@ -64,7 +64,7 @@ const AboutMe = () => (
 
       <div className="w-1/3"></div>
       <div className="w-2/3 pl-24">
-        <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-whitey pt-3 pb-8">{data.aboutme.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar pt-3 pb-8">{data.aboutme.title}</h2>
       </div>
 
 
@@ -84,7 +84,7 @@ const AboutMe = () => (
 
 
       <div className="w-2/3 pl-24 pr-20">
-        <span className="text-space-lighter pt-3 text-xl"
+        <span className=" text-gray-400 pt-3 text-xl"
         dangerouslySetInnerHTML={{
           __html: data.aboutme.textContent.childMarkdownRemark.html,
           }}>

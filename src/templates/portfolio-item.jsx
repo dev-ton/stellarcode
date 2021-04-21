@@ -63,7 +63,7 @@ export default props => {
         <div className="bg-transparent py-12 lg:py-16">
           <div className="container">
             <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-whitey mb-8">
-              You may also like
+              Similar projects:
             </h2>
           </div>
           <Cards items={related} hideLastItemOnMobile={true} />

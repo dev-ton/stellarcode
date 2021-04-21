@@ -40,7 +40,7 @@ return (
   </div>
   <div>
     <div className="md:w-full">
-      <button className="shadow bg-stellar-dark w-full hover:bg-stellar-light hover:text-space-dark transition ease-in-out duration-75 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
+      <button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-75 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
         Send
       </button>
     </div>

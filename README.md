@@ -2,8 +2,7 @@
 
 ## Demo
 
-Live demo is available at:
-https://gatsby-contentful-portfolio.netlify.com/
+Live demo is available at: to be published
 
 ## Features
 

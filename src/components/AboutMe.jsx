@@ -77,7 +77,7 @@ const AboutMe = () => (
                 <a href={data.aboutme.resume.file.url}>
                 <div className="bg-stellar-dark stellarButton p-3 my-6 text-xs text-whitey uppercase hover:shadow-xl h transition ease-in-out duration-75">Download my resume</div>
                 </a>
-                <Socials />
+                <Socials/>
               </div>
             </div>
       </div>

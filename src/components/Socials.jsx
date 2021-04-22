@@ -12,10 +12,10 @@ const Socials = () => {
         site {
           meta: siteMetadata {
             links {
-              facebook
-              instagram
-              pinterest
-              twitter
+              dribbble
+              behance
+              linkedin
+              github
             }
           }
         }
@@ -28,11 +28,13 @@ const Socials = () => {
             <FooterLink 
                 href={links.twitter} 
                 icon={FaDribbble} 
-                label="Dribbble" />
+                label="Dribbble"
+                 />
             <FooterLink 
                 href={links.facebook} 
                 icon={FaBehance} 
-                label="Behance" />
+                label="Behance"
+                />
             <FooterLink
                 href={links.instagram}
                 icon={FaLinkedinIn}
@@ -51,12 +53,12 @@ const Socials = () => {
 
 const FooterLink = ({ href, label, icon: Icon }) => {
     return (
-      <li className="inline-block p-3">
+      <li className="inline-block cursor-pointer p-3 bg-stellar-dark bg-opacity-0 rounded-full hover:bg-opacity-100 transition-opacity ease-in-out duration-100">
         <a
           href={href}
           target="_blank"
           rel="noreferrer noopener"
-          className="text-whitey hover:text-blue-600 transition duration-150 ease-in-out"
+          className="text-whitey"
         >
           <span className="sr-only">{label}</span>
           <Icon className="w-5 h-5 fill-current" />

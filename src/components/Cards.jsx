@@ -5,7 +5,7 @@ import Card from "./Card"
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
   return (
-    <div className="container">
+    <div className="">
       <div className="flex flex-wrap -mx-3 lg:-mx-6">
         {items.map(item => (
           <div

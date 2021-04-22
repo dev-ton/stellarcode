@@ -11,10 +11,10 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
-      { name: "Home", to: "/" },
-      { name: "About me", to: "#aboutMe" },
-      { name: "My work", to: "#myWork" },
-      { name: "Contact me", to: "#contactMe" },
+      { name: "Home", to: "#home", spy: "home" },
+      { name: "About me", to: "#aboutme", spy: "aboutme" },
+      { name: "My work", to: "#mywork", spy: "mywork" },
+      { name: "Contact me", to: "#contactme", spy: "contactme" },
     ],
     links: {
       facebook: "https://www.facebook.com/",

@@ -28,6 +28,11 @@ p {
   padding-top: 15rem;
 }
 
+nav > div.hidden.sm\:block > ul > a.active {
+  @apply border-blue-600 text-stellar;
+}
+
+
 /* animation of the stars in the logo */
 #logo {
   transform: translate(10%, 10%);

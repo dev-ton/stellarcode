@@ -7,31 +7,12 @@ const Footer = () => {
 
   return (
 
-    <div className="footer w-full flex flex-col-reverse justify-between pt-64">
+    <div className="footer w-full flex flex-col justify-between pt-64">
 
       
       
-
-
-
-
-
-
-
-
-    <div className="container py-12 md:flex md:items-center md:justify-between">
-      <Socials/>
-      <div className="mt-8 md:mt-0 md:order-1">
-        <p className="text-center text-sm md:text-base text-gray-700">
-          &copy; 2020 John Doe. All rights reserved.
-        </p>
-      </div>
-    </div>
-
-
-    <div className="container flex flex-col">
-   
-    <h2 className=" pb-12 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-whitey">
+    <section id="contactme" className="container flex flex-col">
+    <h2 className=" pb-8 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar">
                 Contact Me
     </h2>
 
@@ -43,8 +24,25 @@ const Footer = () => {
 
      <Contact className="w-full md:w-1/2"/>
     </div>
+    </section>
 
-    </div>
+
+
+
+
+
+
+    <footer className="container py-12 md:flex md:items-center md:justify-between">
+      <Socials/>
+      <div className="mt-8 md:mt-0 md:order-1">
+        <p className="text-center text-sm md:text-base text-gray-700">
+          &copy; 2020 John Doe. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+
+
              
 
     </div>

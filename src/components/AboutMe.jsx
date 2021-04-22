@@ -44,7 +44,7 @@ const AboutMe = () => (
     render={data => (
     
     
-  <div id="aboutME" className="container mt-20">
+  <section id="aboutme" className="container mt-20">
 
 
    <div style={{overflow:'hidden',
@@ -94,7 +94,7 @@ const AboutMe = () => (
     </div>
     
 
-  </div>
+  </section>
     
     
     )}

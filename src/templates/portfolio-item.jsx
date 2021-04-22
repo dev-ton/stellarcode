@@ -5,7 +5,6 @@ import SiteMetadata from "../components/SiteMetadata"
 import Button from "../components/Button"
 import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
-import Newsletter from "../components/Newsletter"
 import Layout from "../layouts/Layout"
 
 export default props => {
@@ -60,16 +59,16 @@ export default props => {
         </div>
       </div>
       {related && (
-        <div className="bg-transparent py-12 lg:py-16">
-          <div className="container">
-            <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-whitey mb-8">
+        <div className="bg-transparent py-12 lg:py-16 container">
+          <div>
+            <h2 className="text-3xl sm:text-4xl leading-tight font-extrabold tracking-tight text-stellar mb-8">
               Similar projects:
             </h2>
           </div>
           <Cards items={related} hideLastItemOnMobile={true} />
         </div>
       )}
-      <Newsletter />
+      
     </Layout>
   )
 }

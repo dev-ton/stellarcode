@@ -15,14 +15,14 @@ return (
       <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-name">
         Name
       </label>
-      <input className="appearance-none opacity-75 block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane" />
+      <input className="appearance-none opacity-75 block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-name" type="text" placeholder="Jane" />
       <p className="text-red-500 text-xs italic">Please fill out this field.</p>
     </div>
     
   </div>
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-password">
+      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-email">
         E-mail
       </label>
       <input className="appearance-none opacity-75 block w-full bg-gray-200 text-whitey border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" />
@@ -31,7 +31,7 @@ return (
   </div>
   <div className="flex flex-wrap -mx-3 mb-6">
     <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-password">
+      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="message">
         Message
       </label>
       <textarea className="no-resize opacity-75 appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" defaultValue={""} />

@@ -32,6 +32,10 @@ nav > div.hidden.sm\:block > ul > a.active {
   @apply border-blue-600 text-stellar;
 }
 
+.bgBlur {
+  backdrop-filter: blur(20px);
+}
+
 
 /* animation of the stars in the logo */
 #logo {

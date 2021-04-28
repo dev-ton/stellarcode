@@ -1,4 +1,5 @@
 import React from "react"
+import {FaUserAlt, FaPenNib, FaEnvelope, FaPaperPlane} from "react-icons/fa"
 
 
 
@@ -6,47 +7,64 @@ import React from "react"
 
 const Contact = () => {
 
+
+
+
 return (
 
+<div className="w-full md:w-2/3 flex justify-center border-gray-700 border-solid border-l-2">
 
-<form className="w-full max-w-lg pl-20 border-gray-700 border-solid border-l-2">
-  <div className="flex flex-wrap -mx-3 mb-6">
-    <div className="w-full px-3 mb-6 md:mb-0">
-      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-name">
-        Name
-      </label>
-      <input className="appearance-none opacity-75 block w-full bg-gray-200 text-gray-500 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-name" type="text" placeholder="Jane" />
-      <p className="text-red-500 text-xs italic">Please fill out this field.</p>
-    </div>
-    
-  </div>
-  <div className="flex flex-wrap -mx-3 mb-6">
-    <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="grid-email">
-        E-mail
-      </label>
-      <input className="appearance-none opacity-75 block w-full bg-gray-200 text-whitey border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email" />
-      <p className="text-gray-600 text-xs italic">Fill in your email address.</p>
-    </div>
-  </div>
-  <div className="flex flex-wrap -mx-3 mb-6">
-    <div className="w-full px-3">
-      <label className="block uppercase tracking-wide text-whitey text-xs font-bold mb-2" htmlFor="message">
-        Message
-      </label>
-      <textarea className="no-resize opacity-75 appearance-none block w-full bg-gray-200 text-gray-500 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message" defaultValue={""} />
-      <p className="text-gray-600 text-xs italic">Describe your project</p>
-    </div>
-  </div>
-  <div>
-    <div className="md:w-full">
-      <button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-75 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
-        Send
-      </button>
-    </div>
-    <div className="md:w-2/3" />
-  </div>
+<form className="w-full max-w-lg" autoComplete="off">
+<div className="pb-8">
+<div className=" w-full relative input-effect">
+  <input className="effect-16 appearance-none" type="text" name="name" placeholder=" " />
+  <label htmlFor="name"><FaUserAlt className="float-left mr-3"/><span className="relative form-label-align">Name<sup>*</sup>:</span> </label>
+  <span className="default-border" />
+  <span className="focus-border" />
+</div></div>
+
+<div className="pb-8">
+<div className=" w-full relative input-effect">
+  <input className="effect-16 appearance-none" type="email" name="email" placeholder=" " required/>
+  <label htmlFor="email"><FaEnvelope className="float-left mr-3"/><span className="relative form-label-align">Email<sup>*</sup>:</span></label>
+  <span className="default-border" />
+  <span className="focus-border" />
+</div></div>
+
+<div className="pb-8">
+<div className=" w-full relative input-effect">
+  <textarea className="effect-16 relative textarea-align appearance-none" name="message" rows="7" placeholder=" "></textarea>
+  <label htmlFor="message"><FaPenNib className="float-left mr-3"/><span className="relative form-label-align">Message:</span></label>
+  <span className="default-border" />
+  <span className="focus-border" />
+  
+</div></div>
+
+<div className="w-full pb-8">
+<button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-75 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
+        <FaPaperPlane className="float-left mr-3"/>Send
+</button></div>
 </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

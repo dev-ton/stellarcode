@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 import AboutMe from "../components/AboutMe"
 import MyWork from "../components/MyWork"
+import ContactMe from "../components/ContactMe"
 
 
 
@@ -18,6 +19,7 @@ const IndexPage = () => {
       
       <MyWork/>
       
+      <ContactMe/>
      
     </Layout>
   )

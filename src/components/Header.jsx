@@ -10,7 +10,7 @@ const Header = () => {
 
 
   return (
-    <div className=" bg-space-dark pt-6 pb-6 fixed z-50 w-full shadow-xl bg-opacity-50 bgBlur">
+    <div className=" bg-space-dark pt-6 pb-6 fixed z-50 w-full shadow-xl bg-opacity-75 bgBlur">
       <div className="flex justify-between items-center container">
         <Link to="/">
         <div className="flex justify-items-start items-center">

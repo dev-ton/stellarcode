@@ -1,4 +1,7 @@
 module.exports = {
+  future: {
+    purgeLayersByDefault: true,
+  },
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
   theme: {
     container: {
@@ -19,6 +22,7 @@ module.exports = {
         dark: '#1F2041',
         darkest: '#131313',
       },
+      white: '#fff',
       stellar: {
         light: '#ffc857',
         dark: '#B27800',

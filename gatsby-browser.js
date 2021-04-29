@@ -1,5 +1,6 @@
 import React from 'react';
 import {AnimatePresence} from 'framer-motion';
+import './src/styles/style.css';
 
 
 export const wrapPageElement = ({element}) => (

@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-contentful-portfolio",
-  "description": "Portfolio theme for GatsbyJS",
+  "name": "gatsby-stellarcode-portfolio",
+  "description": "Stellarcode Portfolio GatsbyJS",
   "version": "1.0.0",
-  "author": "Wojciech Kocjan <wojciech@kocjan.net>",
+  "author": "Antonin Jech <tony@stellarcode.io>",
   "dependencies": {
     "@georgedoescode/spline": "^1.0.1",
     "autoprefixer": "^9.7.6",
@@ -21,7 +21,6 @@
     "gatsby-source-filesystem": "^2.3.0",
     "gatsby-transformer-remark": "^4.0.0",
     "gatsby-transformer-sharp": "^2.5.0",
-    "js-spline": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",
@@ -31,7 +30,7 @@
     "react-icons": "^3.10.0",
     "react-id-swiper": "^3.0.0",
     "react-scrollspy": "^3.4.3",
-    "simplex-noise": "^2.4.0",
+    "styled-components": "^5.2.3",
     "swiper": "^5.3.8",
     "tailwindcss": "^1.4.4",
     "typeface-inter": "^3.12.0"

@@ -12,7 +12,7 @@ const Contact = () => {
 
 return (
 
-<div className="w-full md:w-2/3 flex justify-center border-gray-700 border-solid border-l-2">
+<div className="w-full md:w-2/3 flex justify-center md:border-gray-700 md:border-solid md:border-r-2">
 
 <form className="w-full max-w-lg" autoComplete="off">
 <div className="pb-8">

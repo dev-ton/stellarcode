@@ -4,17 +4,31 @@
 
 
 :root {
-  --startColor: hsl(0, 100%, 75%);
-  --stopColor: hsl(0, 100%, 75%);
+  --trackColor:#131313;
+  --thumbColor:#4B3F72;
+}
+
+body, html {
+  scrollbar-track-color: var(--trackColor) !important;
 }
 
 body {
   background: url("../images/landscape.svg") no-repeat bottom center, linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
   background-size: contain;
-  
+  scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  scrollbar-width: auto;
   @apply font-sans antialiased;
 }
 
+body::-webkit-scrollbar-track {
+  background: var(--trackColor);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbColor) ;
+  border-radius: 6px;
+  border: 3px solid var(--trackColor);
+}
 
 p { 
   @apply py-2;
@@ -22,12 +36,6 @@ p {
 
 .container {
   @apply max-w-screen-xl mx-auto px-4;
-}
-
-/* pt-72 did not work for some reason, so I made this. Its making offset on the Hero component,
- so its not covered by the header*/
-.pt15rem {
-  padding-top: 15rem;
 }
 
 nav > div.hidden.sm\:block > ul > a.active {

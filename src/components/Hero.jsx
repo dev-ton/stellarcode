@@ -3,10 +3,10 @@ import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Hero = () => (
-  <section id="home" className="container pt15rem py-12 lg:pb-16">
+  <section id="home" className="container pt-40 md:pt-64 lg:pb-16">
 
 <div className="flex">
-      <div className="md:w-1/2">
+      <div className="w-full md:w-1/2">
     <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
       <span className="text-whitey">
       Welcome{" "}
@@ -25,13 +25,13 @@ const Hero = () => (
         </h3>
       </div>
 
-      <div className="pl-56 w-1/2">
+      <div className="pl-56 w-1/2 hidden md:block">
       <Illustration/>
       </div>  
 
     </div>
 
-    <div className="mx-auto square50">
+    <div className="mx-auto square50 hidden md:block">
     <AnchorLink offset="150" href="#aboutme">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="bouncyBounce">
       <path d="M14.5833 27.0833L25 37.5L35.4167 27.0833" stroke="#FFC857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

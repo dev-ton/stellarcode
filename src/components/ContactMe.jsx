@@ -10,12 +10,14 @@ const ContactMe = () => {
     return (
 
 
-  <section id="contactme" className="container flex flex-col">
+  <section id="contactme" className="container">
   <h2 className=" pb-8 text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar">
               Contact Me
   </h2>
 
-  <div className=" bg-space-light bg-opacity-50 rounded-lg px-10 flex py-20 bgBlur">
+  <div className=" bg-space-light bg-opacity-50 rounded-lg md:px-10 flex md:py-20 py-10 px-4 bgBlur flex-wrap">
+
+  <Contact/>
 
     <div className="w-full md:w-1/3 md:h-full text-whitey">
     
@@ -27,7 +29,7 @@ const ContactMe = () => {
     <Socials/>
     </div>
 
-   <Contact/>
+   
 
 
   </div>

@@ -62,13 +62,13 @@ const AboutMe = () => (
    
     <div className="flex flex-wrap">
 
-      <div className="w-1/3"></div>
-      <div className="w-2/3 pl-24">
+      <div className="hidden md:block md:w-1/3"></div>
+      <div className="w-full md:w-2/3 pl-24">
         <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar pt-3 pb-8">{data.aboutme.title}</h2>
       </div>
 
 
-      <div className=" bg-space-light h-full w-1/3 shadow-lg rounded-md overflow-hidden group">
+      <div className=" bg-space-light h-full w-full md:w-1/3 shadow-lg rounded-md overflow-hidden group">
           <div className="pt-4">
               <Img fluid={data.aboutme.portraitImage.localFile.childImageSharp.fluid} alt={data.aboutme.portraitImage.title} />
             </div>
@@ -85,7 +85,7 @@ const AboutMe = () => (
       </div>
 
 
-      <div className="w-2/3 pl-24 pr-20">
+      <div className="w-full md:w-2/3 md:pl-24 md:pr-20 pt-10 sm:pt-0">
         <span className=" text-gray-400 pt-3 text-xl"
         dangerouslySetInnerHTML={{
           __html: data.aboutme.textContent.childMarkdownRemark.html,

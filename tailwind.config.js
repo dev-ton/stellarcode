@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "1.25rem",
+      padding: "2rem",
     },
     fontFamily: {
       sans: ["Futura", "Inter var", "system-ui", "sans-serif"],

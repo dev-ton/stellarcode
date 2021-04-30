@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-contentful-portfolio",
-  "description": "Portfolio theme for GatsbyJS",
+  "name": "gatsby-contentful-website",
+  "description": "Portfolio of Antonin Jech",
   "version": "1.0.0",
-  "author": "Wojciech Kocjan <wojciech@kocjan.net>",
+  "author": "Antonin Jech <tony@stellarcode.io>",
   "dependencies": {
     "autoprefixer": "^9.7.6",
     "classnames": "^2.2.6",
@@ -57,9 +57,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wkocjan/gatsby-contentful-portfolio"
+    "url": "https://github.com/dev-ton/stellarcode"
   },
   "bugs": {
-    "url": "https://github.com/wkocjan/gatsby-contentful-portfolio/issues"
+    "url": "https://github.com/dev-ton/stellarcode/issues"
   }
 }

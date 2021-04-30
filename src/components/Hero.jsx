@@ -34,8 +34,8 @@ const Hero = () => (
     <div className="mx-auto square50 hidden md:block">
     <AnchorLink offset="150" href="#aboutme">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="bouncyBounce">
-      <path d="M14.5833 27.0833L25 37.5L35.4167 27.0833" stroke="#FFC857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M14.5833 12.5L25 22.9167L35.4167 12.5" stroke="#FFC857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14.5833 27.0833L25 37.5L35.4167 27.0833" stroke="#FFC857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M14.5833 12.5L25 22.9167L35.4167 12.5" stroke="#FFC857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
       </AnchorLink>
     </div>

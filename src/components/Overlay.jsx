@@ -83,7 +83,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
           </motion.button>
         </div>
         <motion.div
-          className="flex flex-grow overflow-hidden"
+          className="flex flex-grow bg-space-dark py-20"
           animate={isOpen ? "open" : "closed"}
           variants={childrenVariants}
         >

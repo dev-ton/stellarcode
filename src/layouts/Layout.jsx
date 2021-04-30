@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
           transition={{
             type: "spring",
             mass: 0.35,
-            stiffness: 75,
+            stiffness: 70,
             duration: 0.3
           }}
         >

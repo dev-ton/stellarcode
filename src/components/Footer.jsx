@@ -7,7 +7,7 @@ const Footer = () => {
 
   return (
 
-    <div className="footer w-full flex flex-col justify-between pt-64">
+    <div className="footer w-full flex flex-col justify-between md:pt-64">
 
       
       

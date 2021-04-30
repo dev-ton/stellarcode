@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className=" bg-space-dark pt-6 pb-6 fixed z-50 w-full shadow-xl bg-opacity-75 bgBlur">
       <div className="flex justify-between items-center container">
-        <Link to="/">
+        <Link to="/" className="outline-none">
         <div className="flex justify-items-start items-center">
         <div className="pr-5"> 
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +22,7 @@ const Header = () => {
         <path id="Star3" d="M29.4325 28.875L26.6288 30.1963L25.3075 33L23.9862 30.1963L21.1825 28.875L23.9862 27.5537L25.3075 24.75L26.6288 27.5537L29.4325 28.875Z" fill="#FFC857"/>
         </g>
         </svg></div> 
-          <div className="font-extrabold leading-relaxed tracking-normal text-4xl"><span className="text-stellar">Stellar</span><span className="text-whitey">Code</span>
+          <div className="font-extrabold leading-relaxed tracking-normal text-3xl md:text-4xl"><span className="text-stellar">Stellar</span><span className="text-whitey">Code</span>
           </div>
         </div>  
         </Link>

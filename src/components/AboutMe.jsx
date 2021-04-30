@@ -1,7 +1,6 @@
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Socials from "../components/Socials"
-import BackgroundBlob from "./BackgroundBlob"
 import React from "react"
 
 
@@ -47,17 +46,7 @@ const AboutMe = () => (
   <section id="aboutme" className="container mt-20">
 
 
-   <div style={{overflow:'hidden',
-                position:'absolute',
-                top: '100%',
-                right: '0',
-                zIndex: -1,
-                width: '100%',
-                height: '150%',
-                padding: '2rem',
-                }}>
-      <BackgroundBlob/>
-   </div>
+  
 
    
     <div className="flex flex-wrap">

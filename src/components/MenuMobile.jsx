@@ -1,8 +1,9 @@
-import { Link } from "gatsby"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 import React from "react"
 import Overlay from "./Overlay"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
+import Scrollspy from 'react-scrollspy'
 
 const menuItem = {
   closed: {
@@ -28,6 +29,13 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
     <Overlay isOpen={isOpen} setIsOpen={setIsOpen}>
       <div className="container flex flex-col justify-center">
         <ul className="text-center">
+
+        <Scrollspy
+            items={links.map(item => item.spy.toLowerCase())}
+            currentClassName="active"
+            offset={-150}
+        >
+
           {links.map((link, key) => (
             <motion.li
               className="my-3"
@@ -36,16 +44,19 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               key={`menu_mobile_link${key}`}
               variants={menuItem}
             >
-              <Link
+              <AnchorLink
                 className="font-semibold text-4xl text-white"
-                activeClassName="text-blue-500"
-                to={link.to}
+                href={link.to}
+                offset='150'
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </Link>
+              </AnchorLink>
             </motion.li>
           ))}
+
+</Scrollspy>
+
         </ul>
       </div>
     </Overlay>

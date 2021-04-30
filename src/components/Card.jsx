@@ -8,7 +8,7 @@ const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
   return (
-    <motion.div className=" bg-space-light h-full shadow-lg rounded-md overflow-hidden group card" whileHover={{ scale: 1.05,}} whileTap={{ scale: 0.9 }} >
+    <motion.div className=" bg-space-light h-full shadow-lg rounded-md overflow-hidden group card" whileHover={{ scale: 1.05,}} >
       
       
       <Link to={`/${slug}`}>

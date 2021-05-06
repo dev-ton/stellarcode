@@ -7,6 +7,11 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Header2 from "../components/Header2"
 
+const headerDynamic = () => (
+  typeof window !== `undefined` ?
+  window.location.pathname === '/' ? <Header/> : <Header2/> : null
+)
+
 const Layout = ({ children, location}) => {
 
   return (
@@ -14,12 +19,11 @@ const Layout = ({ children, location}) => {
     
       <>
     { 
-    typeof window !== `undefined` ?
-    window.location.pathname === '/' ? <Header/> : <Header2/> : null
+   headerDynamic()
     }
       </>
 
-      
+
       <motion.main
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}

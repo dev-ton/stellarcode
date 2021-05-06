@@ -8,7 +8,12 @@ const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
   return (
-    <motion.div className=" bg-space-light h-full shadow-lg rounded-md overflow-hidden group card" whileHover={{ scale: 1.05,}} >
+    <motion.div className=" bg-space-light h-full shadow-lg rounded-md overflow-hidden group card" 
+    whileHover={{ scale: 1.05 }}
+    transition={{
+      x: { type: "spring", stiffness: 100 },
+      default: { duration: 0.15 },
+    }} >
       
       
       <Link to={`/${slug}`}>
@@ -17,8 +22,8 @@ const Card = props => {
         </div>
         <div className="p-4 sm:p-5">
           <div className="flex">
-            <div className="bg-stellar-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
-            <div className="bg-stellar-dark rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
+            <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
+            <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
           </div>
           <h1 className="sm:text-lg text-2xl text-whitey font-bold">{name}</h1>
           <p className="text-sm sm:text-base text-stellar">{summary}</p>

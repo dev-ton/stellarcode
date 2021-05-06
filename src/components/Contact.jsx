@@ -41,7 +41,7 @@ return (
 </div></div>
 
 <div className="w-full pb-8">
-<button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-75 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
+<button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-150 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
         <FaPaperPlane className="float-left mr-3"/>Send
 </button></div>
 </form>

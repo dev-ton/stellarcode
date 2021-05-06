@@ -32,7 +32,8 @@ module.exports = {
       whitey: '#eee',
       white: '#fff',
       stellar: '#ffc857',
-      spaceLight: '#119da4',
+      stellarDark: 'B27800',
+      spaceLight: '#119da4'
     },
     backgroundImage: {
       main: 'background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);',

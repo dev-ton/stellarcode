@@ -5,11 +5,19 @@ import { motion } from "framer-motion"
 import "../styles/style.css"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
+import Header2 from "../components/Header2"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location}) => {
   return (
     <>
-      <Header />
+      <>
+    {window.location.pathname === '/' &&
+      <Header/>
+    }
+    {window.location.pathname !== '/' &&
+      <Header2/>
+    }
+      </>
       <motion.main
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}

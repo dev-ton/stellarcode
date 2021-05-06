@@ -11,7 +11,7 @@ const Layout = ({ children, location}) => {
   return (
     <>
       <>
-    {typeof window !== `undefined` ? window.location.pathname === '/' &&
+    {typeof window !== `undefined` ? window.location.pathname === '/' || window.location.hostname &&
       <Header/> : null
     }
     {typeof window !== `undefined` ? window.location.pathname !== '/' &&

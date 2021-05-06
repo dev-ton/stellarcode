@@ -107,7 +107,7 @@ const AboutMe = () => (
                 <div className="bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 my-6 mr-6 text-xs text-whitey uppercase hover:shadow-xl h transition ease-in-out duration-150"><FaDownload className="float-left mr-2"/>Download my resume</div>
                 </a>
                 <Link to="/about">
-                <div className=" text-yellow-700 bg-transparent border-2 border-stellar-dark stellarButton p-3 my-6 text-xs uppercase hover:shadow-xl hover:text-whitey hover:bg-stellar-dark h transition ease-in-out duration-150"><FaUserAlt className="float-left mr-3"/>My biography</div>
+                <div className=" text-whitey bg-transparent border-2 border-stellar-dark stellarButton p-3 my-6 text-xs uppercase hover:shadow-xl hover:text-whitey hover:bg-stellar-dark h transition ease-in-out duration-150"><FaUserAlt className="float-left mr-3"/>My biography</div>
                 </Link>
               </div>
             </div>

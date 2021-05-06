@@ -11,11 +11,11 @@ const Layout = ({ children, location}) => {
   return (
     <>
       <>
-    {window.location.pathname === '/' &&
-      <Header/>
+    {typeof window !== `undefined` ? window.location.pathname === '/' &&
+      <Header/> : null
     }
-    {window.location.pathname !== '/' &&
-      <Header2/>
+    {typeof window !== `undefined` ? window.location.pathname !== '/' &&
+      <Header2/> : null
     }
       </>
       <motion.main

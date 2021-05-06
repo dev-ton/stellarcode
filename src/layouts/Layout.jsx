@@ -8,16 +8,18 @@ import Header from "../components/Header"
 import Header2 from "../components/Header2"
 
 const Layout = ({ children, location}) => {
+
   return (
     <>
+    
       <>
-    {typeof window !== `undefined` ? window.location.pathname === '/' || window.location.hostname &&
-      <Header/> : null
-    }
-    {typeof window !== `undefined` ? window.location.pathname !== '/' &&
-      <Header2/> : null
+    { 
+    typeof window !== `undefined` ?
+    window.location.pathname === '/' ? <Header/> : <Header2/> : null
     }
       </>
+
+      
       <motion.main
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}

@@ -23,9 +23,10 @@ module.exports = {
       github: "https://twitter.com/",
     },
     locale: "en",
-    title: `John Doe`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    title: `Antonin Jech`,
+    description: `UX Designer & Front-end Developer`,
+    author: `@antoninjech`,
+    siteUrl: `https://stellarcodemaster.gtsb.io`,
   },
   plugins: [
     `gatsby-plugin-postcss`,

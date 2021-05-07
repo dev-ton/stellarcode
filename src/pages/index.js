@@ -9,8 +9,13 @@ import ContactMe from "../components/ContactMe"
 
 
 const IndexPage = () => {
+
+  
+  
+
   return (
-    <Layout className="bg-main">
+    <Layout menuToggle="true" className="bg-main">
+
       <SiteMetadata title="Home" description="Portfolio of Antonin Jech" />
 
       <Hero />

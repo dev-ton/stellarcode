@@ -7,22 +7,15 @@ import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Header2 from "../components/Header2"
 
-const headerDynamic = () => (
-  typeof window !== `undefined` ?
-  window.location.pathname === '/' ? <Header/> : <Header2/> : null
-)
 
-const Layout = ({ children, location}) => {
+
+const Layout = ({ children, menuToggle }) => {
 
   return (
     <>
-    
-      <>
-    { 
-   headerDynamic()
-    }
-      </>
-
+        <>
+      {menuToggle ? <Header/> : <Header2/> }
+        </>
 
       <motion.main
           initial={{ opacity: 0, x: -200 }}

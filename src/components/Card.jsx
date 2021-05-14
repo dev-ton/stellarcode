@@ -5,16 +5,48 @@ import React from "react"
 import { motion } from "framer-motion"
 import { FaAngleRight } from "react-icons/fa"
 
+
+const cardMotion = {
+  rest: {
+    scale: 1.00,
+    transition: {
+      duration: 0.15,
+      type: "spring",
+      stiffness: 100
+    }
+  },
+  hover: {
+    scale: 1.05,
+    transition: {
+      duration: 0.15,
+      type: "spring",
+      stiffness: 100
+    }
+  }
+};
+
+const arrowMotion = {
+  rest: { opacity: 0, x: -30, ease: "easeOut", duration: 0.15, type: "tween" },
+  hover: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.4,
+      type: "tween",
+      ease: "easeIn"
+    }
+  }
+};
+
 const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
   return (
-    <motion.div className=" bg-space-light h-full shadow-lg rounded-md overflow-hidden group card" 
-    whileHover={{ scale: 1.05 }}
-    transition={{
-      x: { type: "spring", stiffness: 100 },
-      default: { duration: 0.15 },
-    }} >
+    <motion.div className="bg-space-light h-full shadow-lg rounded-md overflow-hidden group card"
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+      variants={cardMotion}>
       
       
       <Link to={`/${slug}`}>
@@ -30,9 +62,9 @@ const Card = props => {
           <h1 className="sm:text-lg text-2xl text-whitey font-bold">{name}</h1>
           <p className="text-sm sm:text-base text-stellar">{summary}</p>
           </div>
-          <div className="w-4/12 inline-block">
+          <motion.div className="w-4/12 inline-block" variants={arrowMotion}>
             <FaAngleRight className="cardArrow mx-auto opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out"/>
-          </div>
+          </motion.div>
         </div>
       </Link>
     </motion.div>

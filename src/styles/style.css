@@ -42,9 +42,6 @@ nav > div.hidden.sm\:block > ul > a.active {
   @apply border-blue-600 text-stellar;
 }
 
-.bgBluro {
-  backdrop-filter: blur(20px);
-}
 
 /* if backdrop support: very transparent and blurred */
 @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {

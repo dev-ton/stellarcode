@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { motion } from "framer-motion"
+import { FaAngleRight } from "react-icons/fa"
 
 const Card = props => {
   const { name, slug, summary, thumbnail } = props
@@ -20,13 +21,18 @@ const Card = props => {
         <div className="pt-3 group-hover:opacity-75 transition duration-150 ease-in-out">
           <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
         </div>
-        <div className="p-4 sm:p-5">
+        <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
             <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
             <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
           </div>
+          <div className="w-8/12 float-left inline-block">
           <h1 className="sm:text-lg text-2xl text-whitey font-bold">{name}</h1>
           <p className="text-sm sm:text-base text-stellar">{summary}</p>
+          </div>
+          <div className="w-4/12 inline-block">
+            <FaAngleRight className="cardArrow mx-auto opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out"/>
+          </div>
         </div>
       </Link>
     </motion.div>

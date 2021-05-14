@@ -135,6 +135,12 @@ nav > div.hidden.sm\:block > ul > a.active {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.cardArrow {
+  width: 64px;
+  height: 64px;
+  fill: #1F2041;
+}
+
 /*  stellar button */
 .stellarButton {
 display: flex;
@@ -149,17 +155,6 @@ border-radius: 4px;
   transition: all ease-in-out .75;
   }
 
-
-/* SVG background */
-.svgBlob {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 1072 941' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1064 423C1122.93 692.5 832.083 941 546 941C176.5 941 0.5 667.583 0.5 381.5C0.5 95.4165 217.5 -115 663 70.5C1007.5 213.945 1030 267.5 1064 423Z' fill='%231F2041'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-}
-
-.svgAnimBlob {
-  width: 90vmin;
-  height: 90vmin;
-}
 
 /* footer */
 

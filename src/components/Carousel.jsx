@@ -13,6 +13,14 @@ export const Carousel = ({ images }) => {
       type: "bullets",
       clickable: true,
     },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    a11y: {
+      prevSlideMessage: 'Previous slide',
+      nextSlideMessage: 'Next slide',
+    },
   }
   return (
     <Swiper {...swiperParams}>

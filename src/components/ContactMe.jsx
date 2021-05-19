@@ -1,7 +1,8 @@
 import React from "react"
 import Socials from "../components/Socials"
 import Contact from "./Contact"
-import { FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
+import { FaMapMarkerAlt } from "react-icons/fa"
+import Email from "../components/Email"
 
 
 const ContactMe = () => {
@@ -24,7 +25,7 @@ const ContactMe = () => {
 
     <ul className="flex flex-col items-center">
       <li className="hidden p-6"><FaMapMarkerAlt className="float-left mr-2"/><span className="relative form-label-align">Regensburg, Germany</span></li>
-      <li className=" p-6"><FaEnvelope className="float-left mr-2"/><span className="relative form-label-align">tony@stellarcode.io</span></li>
+      <li className=" p-6"><Email/></li>
     </ul>
     
     <Socials/>
@@ -39,6 +40,7 @@ const ContactMe = () => {
 
 )
 }
+
 
 
 

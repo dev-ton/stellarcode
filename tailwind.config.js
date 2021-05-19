@@ -32,7 +32,7 @@ module.exports = {
       whitey: '#eee',
       white: '#fff',
       stellar: '#ffc857',
-      stellarDark: 'B27800',
+      stellarDark: '#B27800',
       spaceLight: '#119da4'
     },
     backgroundImage: {

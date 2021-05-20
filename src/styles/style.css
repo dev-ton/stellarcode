@@ -237,6 +237,41 @@ textarea:not(:placeholder-shown) ~ label {
   top: -3px;
 }
 
+/* Scroll Up */
+.scrollTop {
+  position: fixed; 
+  width: 5%;
+  bottom: 100px;
+  height: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+  right: 10px;
+}
+
+.scrollTop:hover{
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.copyIcon {
+  fill: #aaa;
+  outline: none;
+}
+
+.copyIcon:hover {
+  fill: #4caf50 ;
+}
 
 /* responsive */
 

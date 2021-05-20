@@ -1,5 +1,6 @@
 import React from "react"
 import Socials from "../components/Socials"
+import ScrollUp from "../components/ScrollUp"
 
 
 const Footer = () => {
@@ -17,7 +18,7 @@ const Footer = () => {
 
 
     <footer>
-    <div className="container py-12 md:flex md:items-center md:justify-between">
+    <div className="container py-12 hidden">
     <Socials/>
     </div>
 
@@ -34,6 +35,8 @@ const Footer = () => {
       </div>
 
     </div>
+
+    <ScrollUp/>
     </footer>
 
 

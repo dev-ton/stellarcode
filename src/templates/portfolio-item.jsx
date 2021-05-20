@@ -65,7 +65,7 @@ export default props => {
               Similar projects:
             </h2>
           </div>
-          <Cards items={related} hideLastItemOnMobile={true} />
+          <Cards items={related} hideLastItemOnMobile={false} />
         </div>
       )}
       

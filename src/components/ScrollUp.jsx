@@ -26,7 +26,7 @@ return (
     <FaArrowCircleUp 
    className="scrollTop invisible md:visible" 
    onClick={scrollTop} 
-   style={{height: 40, display: showScroll ? 'block' : 'none'}}
+   style={{height: 40, fill: '#131313', display: showScroll ? 'block' : 'none'}}
     />
 )
 

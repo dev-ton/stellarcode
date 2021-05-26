@@ -10,11 +10,13 @@
 
 body, html {
   scrollbar-track-color: var(--trackColor) !important;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: url("../images/landscape.svg") no-repeat bottom center, linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
-  background-size: contain;
+  /*url("../images/landscape.svg") no-repeat bottom center,*/
+  background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
+  background-size: contain; 
   scrollbar-color: var(--thumbColor) var(--trackColor) !important;
   scrollbar-width: auto;
   @apply font-sans antialiased;
@@ -29,6 +31,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid var(--trackColor);
 }
+
+.bodyBackground
+.bodyBackground::before,
+.bodyBackground::after {
+  background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
 
 p { 
   @apply py-2;
@@ -241,7 +253,7 @@ textarea:not(:placeholder-shown) ~ label {
 .scrollTop {
   position: fixed; 
   width: 5%;
-  bottom: 100px;
+  bottom: 20px;
   height: 20px;
   z-index: 1000;
   cursor: pointer;
@@ -258,9 +270,11 @@ textarea:not(:placeholder-shown) ~ label {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    bottom: -20px;
   }
   100% {
     opacity: 0.5;
+    bottom: 20px;
   }
 }
 

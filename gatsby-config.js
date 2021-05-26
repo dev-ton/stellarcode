@@ -46,16 +46,23 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `John Doe`,
-        short_name: `johndoe`,
+        name: `Antonin Jech`,
+        short_name: `antoninjech`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#3182ce`,
+        theme_color: `#4B3F72`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
       },

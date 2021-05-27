@@ -1,6 +1,9 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import { FaBehance, FaLinkedinIn, FaDribbble, FaGitAlt } from "react-icons/fa"
+import { FaBehance } from "@react-icons/all-files/fa/FaBehance"
+import { FaLinkedinIn } from "@react-icons/all-files/fa/FaLinkedinIn"
+import { FaDribbble } from "@react-icons/all-files/fa/FaDribbble"
+import { FaGitAlt } from "@react-icons/all-files/fa/FaGitAlt"
 
 const Socials = () => {
     const {

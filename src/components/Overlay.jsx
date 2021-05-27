@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
 import React, { useEffect } from "react"
-import { FaTimes } from "react-icons/fa"
+import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
 
 const backgroundVariants = {
   closed: {

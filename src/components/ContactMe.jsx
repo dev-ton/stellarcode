@@ -1,7 +1,7 @@
 import React from "react"
 import Socials from "../components/Socials"
 import Contact from "./Contact"
-import { FaMapMarkerAlt } from "react-icons/fa"
+import { FaMapMarkerAlt } from "@react-icons/all-files/fa/FaMapMarkerAlt"
 import Email from "../components/Email"
 
 

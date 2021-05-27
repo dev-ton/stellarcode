@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import Scrollspy from 'react-scrollspy'
 import { graphql, useStaticQuery } from "gatsby"
-import { FaBars } from "react-icons/fa"
+import { FaBars } from "@react-icons/all-files/fa/FaBars"
 import MenuMobile from "./MenuMobile"
 
 

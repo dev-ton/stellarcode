@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import {FaArrowCircleUp} from 'react-icons/fa'
+import {FaArrowCircleUp} from '@react-icons/all-files/fa/FaArrowCircleUp'
 
 const ScrollUp = () => {
 

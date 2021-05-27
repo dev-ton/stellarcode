@@ -15,7 +15,7 @@ body, html {
 
 body {
   /*url("../images/landscape.svg") no-repeat bottom center,*/
-  background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
+  background: url("../images/landscape.svg") no-repeat bottom center, linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
   background-size: contain; 
   scrollbar-color: var(--thumbColor) var(--trackColor) !important;
   scrollbar-width: auto;
@@ -32,14 +32,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--trackColor);
 }
 
-.bodyBackground
-.bodyBackground::before,
-.bodyBackground::after {
-  background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-}
 
 
 p { 

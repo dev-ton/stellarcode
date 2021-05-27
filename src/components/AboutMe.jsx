@@ -1,7 +1,11 @@
+import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
-import { FaBezierCurve, FaCode, FaDownload, FaUserAlt } from "react-icons/fa"
-import React from "react"
+import { FaBezierCurve } from "@react-icons/all-files/fa/FaBezierCurve"
+import { FaCode } from "@react-icons/all-files/fa/FaCode"
+import { FaDownload } from "@react-icons/all-files/fa/FaDownload"
+import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt"
+
 
 
 

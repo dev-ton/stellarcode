@@ -1,5 +1,8 @@
 import React from "react"
-import {FaUserAlt, FaPenNib, FaEnvelope, FaPaperPlane} from "react-icons/fa"
+import {FaUserAlt} from "@react-icons/all-files/fa/FaUserAlt"
+import {FaPenNib} from "@react-icons/all-files/fa/FaPenNib"
+import {FaEnvelope} from "@react-icons/all-files/fa/FaEnvelope"
+import {FaPaperPlane} from "@react-icons/all-files/fa/FaPaperPlane"
 
 
 

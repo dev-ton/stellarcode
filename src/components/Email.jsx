@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect }  from "react"
-import { FaEnvelope, FaCopy } from "react-icons/fa"
+import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope"
+import { FaCopy } from "@react-icons/all-files/fa/FaCopy"
 import toast, { Toaster } from 'react-hot-toast';
 
 
@@ -33,7 +34,7 @@ const Email = () => {
       {data.map((text, index) => (
           <div className="flex space-between" key={index}>
      <FaEnvelope className="float-left mr-2 relative top-3" style={{fill:'#ffc857'}}/><a href={`mailto:${text}?subject=Quote&body=I%20would%20like%20to%20accept%20this%20quote`} className="relative form-label-align text-stellar underline hover:no-underline">
-         {text}</a> <a onClick={notify} title="Copy to clipboard"><FaCopy className="mx-4 relative top-3 copyIcon" onClick={() => setCopyText(text)} onKeyDown={() => setCopyText(text)} role="button" tabIndex={0}/></a>
+         {text}</a> <a onClick={notify} onKeyPress={notify} role="button" tabIndex={0} title="Copy to clipboard"><FaCopy className="mx-4 relative top-3 copyIcon" onClick={() => setCopyText(text)} onKeyDown={() => setCopyText(text)} role="button" tabIndex={0}/></a>
          </div>
       ))}
       <CopyToClipElement text={copyText} />

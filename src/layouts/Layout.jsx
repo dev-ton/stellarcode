@@ -1,6 +1,5 @@
 import PropTypes from "prop-types"
 import React from "react"
-import "typeface-inter"
 import { motion } from "framer-motion"
 import "../styles/style.css"
 import Footer from "../components/Footer"
@@ -33,7 +32,7 @@ const Layout = ({ children, menuToggle }) => {
       {children}
       </motion.main>
       <Footer />
-      </>
+    </>
   )
 }
 

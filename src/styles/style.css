@@ -10,7 +10,6 @@
 
 body, html {
   scrollbar-track-color: var(--trackColor) !important;
-  scroll-behavior: smooth;
 }
 
 body {

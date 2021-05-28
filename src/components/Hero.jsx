@@ -17,12 +17,12 @@ const Hero = () => (
       your way to the stellar website starts here.
       </span>
     </h1>
-        <h3 className="text-2xl font-bold text-spaceLight pt-10">
+        <h2 className="text-2xl font-bold text-spaceLight pt-10">
         I’m Antonin, freelance Front-end developer and UI/UX designer. You can read more <AnchorLink href="#aboutme" offset="150">
           <span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="150"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">
             my work</span></AnchorLink> and if you have a project for me then <AnchorLink href="#contactme" offset="150"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
         <br/>I’m looking forward to hear from you!
-        </h3>
+        </h2>
       </div>
 
       <div className="pl-56 w-1/2 hidden md:block">

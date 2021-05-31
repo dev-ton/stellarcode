@@ -5,7 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 const Hero = () => (
   <section id="home" className="container pt-40 md:pt-64 lg:pb-16">
 
-<div className="flex">
+<div className="flex justify-between">
       <div className="w-full md:w-1/2">
     <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
       <span className="text-whitey">
@@ -25,7 +25,7 @@ const Hero = () => (
         </h2>
       </div>
 
-      <div className="pl-56 w-1/2 hidden md:block">
+      <div className=" max-w-sm w-1/2 hidden md:block">
       <Illustration/>
       </div>  
 

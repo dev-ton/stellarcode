@@ -2,7 +2,7 @@
 
 ## Demo
 
-Live demo is available at: to be published
+Live demo is available at: [stellarcodemaster.gtsb.io] (https://stellarcodemaster.gtsb.io)
 
 ## Features
 

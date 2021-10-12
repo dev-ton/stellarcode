@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 
-const skillsDesign = ["Figma", "Adobe XD", "Sketch", "Zeplin", "Adobe Illustrator", "Adobe Animate", "Adobe Photoshop"];
+const skillsDesign = ["Figma", "Adobe XD", "Sketch", "Zeplin", "Adobe Illustrator", "Adobe Animate", "Adobe Photoshop", "Test"];
 
 
 const tabContentVariant = {
@@ -62,11 +62,11 @@ const TabContent = ({ id, active }) => (
                <div className="flex flex-wrap justify-center py-4 px-12 pb-12">
 
 
-               {skillsDesign.map((skill, index) => (
-                <motion.div variants={contVariant} className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
-                </motion.div>
-                
-               ))}
+                  {skillsDesign.map((skill, index) => (
+                    <motion.div variants={contVariant} className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
+                    </motion.div>
+                    
+                  ))}
 
                </div>
             </div>

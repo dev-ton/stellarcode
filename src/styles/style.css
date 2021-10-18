@@ -9,6 +9,8 @@
   --white: #fff;
   --black: #333;
   --tab-active-color: #ffc857;
+  --stellar-dark: #B27800;
+  --stellar-light: #ffc857;
   --border-radius: 40px;
 }
 
@@ -138,6 +140,40 @@ nav > div.hidden.sm\:block > ul > a.active {
 }
 
 /* tab component */
+.arrow {
+  padding-top: 1.0em;
+  position: relative;
+  left: 46.5%;
+}
+
+.triangle {
+	position: relative;
+	text-align: left;
+  top: 0.5em;
+}
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  1.6em;
+	height: 1.6em;
+	border-top-right-radius: 25%;
+}
+
+.triangle {
+	transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
 
 
 
@@ -155,8 +191,11 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .tab a {
   text-decoration: none;
-  color:#ffc857;
+  color: var(--stellar-dark);
 }
+
+
+/* background of the tab-links
 
 .tab::before {
   content: "";
@@ -167,13 +206,13 @@ nav > div.hidden.sm\:block > ul > a.active {
   border-radius: var(--border-radius);
   background: none;
   transition: background 0.5s ease;
-}
+} */
 
 .tab svg {
   height: 36px;
   width: 36px;
   min-width: 36px;
-  fill: var(--white);
+  fill: var(--stellar-dark);
   transition: fill 0.5s ease;
 }
 

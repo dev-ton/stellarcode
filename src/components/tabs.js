@@ -9,14 +9,14 @@ const tabs = [
       title: "Design",
       id: "design",
       icon: <FaBezierCurve />,
-      color: "#5d5dff",
+      color: "#ffc857",
       content: TabContent1
     },
     {
       title: "Front-end",
       id: "code",
       icon: <FaCode />,
-      color: "#67bb67",
+      color: "#ffc857",
       content: TabContent2
     }
   ];

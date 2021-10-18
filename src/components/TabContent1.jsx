@@ -36,6 +36,8 @@ const contVariant = {
     }
   };
 
+
+
 const TabContent = ({ id, active }) => (
   
   <motion.div

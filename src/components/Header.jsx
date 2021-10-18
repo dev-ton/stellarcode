@@ -1,7 +1,7 @@
 import {Link} from "gatsby"
 import React from "react"
-
 import Menu from "./Menu"
+
 
 
 const Header = () => {
@@ -10,6 +10,7 @@ const Header = () => {
 
 
   return (
+    
     <div className=" bg-space-dark pt-6 pb-6 fixed z-50 w-full shadow-xl">
       <div className="flex justify-between items-center container">
         <Link to="/" className="outline-none">
@@ -34,6 +35,7 @@ const Header = () => {
       </div>
  
     </div>
+    
   )
 }
 

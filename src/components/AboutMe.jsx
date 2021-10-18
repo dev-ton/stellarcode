@@ -48,6 +48,7 @@ const AboutMe = () => (
     <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar pt-3 pb-8">{data.aboutme.title}</h2>
 
     <TabComponent tabs={tabs} />
+   
 
 
   </section>

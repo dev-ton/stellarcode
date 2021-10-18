@@ -1,6 +1,7 @@
 import {Link} from "gatsby"
 import React from "react"
 import MenuBack from "../components/MenuBack"
+import Headroom from 'react-headroom'
 
 
 
@@ -10,7 +11,8 @@ const Header2 = () => {
 
 
   return (
-    <div className=" bg-space-dark pt-6 pb-6 fixed z-50 w-full shadow-xl">
+    <Headroom>
+    <div className=" bg-space-dark w-full shadow-xl h-16">
       <div className="flex justify-between items-center container">
         <Link to="/" className="outline-none">
         <div className="flex justify-items-start items-center">
@@ -34,6 +36,7 @@ const Header2 = () => {
       </div>
  
     </div>
+    </Headroom>
   )
 }
 

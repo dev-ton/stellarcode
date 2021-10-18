@@ -5,7 +5,7 @@ import "../styles/style.css"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Header2 from "../components/Header2"
-import Headroom from 'react-headroom'
+
 
 
 
@@ -15,9 +15,9 @@ const Layout = ({ children, menuToggle }) => {
 
   return (
     <>
-        <Headroom>
+        <>
       {menuToggle ? <Header/> : <Header2/> }
-        </Headroom>
+        </>
 
       <motion.main
           initial={{ opacity: 0, x: -200 }}

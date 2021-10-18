@@ -3,7 +3,7 @@ import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Hero = () => (
-  <section id="home" className="container pt-40 md:pt-64 lg:pb-16">
+  <section id="home" className="container pt-32 lg:pb-16">
 
 <div className="flex justify-between">
       <div className="w-full md:w-1/2">

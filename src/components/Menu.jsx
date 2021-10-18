@@ -52,7 +52,7 @@ const Menu = () => {
                     key={`menu_desktop_link${key}`}
                     className="ml-6 sm:ml-8 text-2xl sm:text-base font-bold px-px border-b-2 pb-2 border-transparent text-whitey hover:text-stellar transition duration-150 ease-in-out"
                     href={link.to}
-                    offset='150'
+                    offset='50'
                     >
                     {link.name}
                     </AnchorLink>

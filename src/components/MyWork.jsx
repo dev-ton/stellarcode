@@ -24,7 +24,7 @@ const MyWork = () => {
 
 <section id="mywork" className="container mt-20">
 
-      <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar pb-8">
+      <h2 className="text-2xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">
       My Work
       </h2>
 

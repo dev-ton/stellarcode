@@ -44,8 +44,8 @@ const AboutMe = () => (
     render={data => (
     
     
-  <section id="aboutme" className="container mt-20">
-    <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-stellar pt-3 pb-8">{data.aboutme.title}</h2>
+  <section id="aboutme" className="container">
+    <h2 className="text-2xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">{data.aboutme.title}</h2>
 
     <TabComponent tabs={tabs} />
    

@@ -61,7 +61,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
         initial={false}
         animate={activeTabIndex === index ? "active" : "inactive"}
       >
-        <a href={`#about${tab.id}`} onClick={() => onTabClick(index)}>
+        <a href={`#about${tab.id}`} className="text-base sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
           {tab.icon}
           <span className="inline-block whitespace-nowrap">{tab.title}</span>
         </a>
@@ -85,7 +85,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
 
 
 
-	<div className="p-1 bg-space-light w-full shadow-lg rounded-md ">
+	<div className="p-1 bg-space-light w-full shadow-lg rounded-md pt-12">
     {tabs.map((tab, index) => (
       
 		  <tab.content

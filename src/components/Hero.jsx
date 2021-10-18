@@ -3,7 +3,7 @@ import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Hero = () => (
-  <section id="home" className="container pt-32 lg:pb-16">
+  <section id="home" className="container pt-12 sm:pt-24 lg:pb-16">
 
 <div className="flex justify-between">
       <div className="w-full md:w-1/2">
@@ -32,7 +32,7 @@ const Hero = () => (
     </div>
 
     <div className="mx-auto square50 hidden md:block">
-    <AnchorLink offset="150" href="#aboutme">
+    <AnchorLink offset="50" href="#aboutme">
       <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" className="bouncyBounce">
       <path d="M14.5833 27.0833L25 37.5L35.4167 27.0833" stroke="#FFC857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M14.5833 12.5L25 22.9167L35.4167 12.5" stroke="#FFC857" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

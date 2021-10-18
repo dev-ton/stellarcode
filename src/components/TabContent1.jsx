@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 
-const skillsDesign = ["Figma", "Adobe XD", "Sketch", "Zeplin", "Adobe Illustrator", "Adobe Animate", "Adobe Photoshop", "Test"];
+const skillsDesign = ["Figma", "Adobe XD", "Sketch", "Zeplin", "Adobe Illustrator", "Adobe Animate", "Adobe Photoshop"];
 
 
 const tabContentVariant = {
@@ -52,25 +52,29 @@ const TabContent = ({ id, active }) => (
   
   
                
-            <div className="mx-auto text-center pt-2">
+          <div className="mx-auto text-left flex pb-10 px-12">
             <motion.div variants={contVariant}>
-               <p className="text-whitey py-8 px-12 text-xl">I value simple content structure, clean design patterns, and thoughtful interactions.</p>
-               <h4 className="text-xl leading-relaxed text-stellar font-normal text-center py-4">Focus: </h4>
-               <p className="text-whitey py-4 px-12">Always doing my best to see things
-               from the user perspective. I enjoy designing web & mobile apps.</p>
-               <h4 className="text-xl leading-relaxed text-stellar font-normal text-center py-4">Tools: </h4>
+            <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">My Approach </h4>
+               <p className="text-whitey py-2">
+                 More and more businesses are finding out how dramatically can good UX design affect their productivity, sales & revenues, reduce development time & costs, reduce maintenance cost and increase customer satisfaction. </p>
+                 <p className="text-whitey py-2">
+                 As a UX designer I can adapt to the client needs, whether you’re used to work based on Design Thinking, Lean UX or any other framework. Are you looking for someone to work exclusively on the visuals, are you in need of rapidly made prototypes or you want someone to overlook the whole project from start to finish, then you don’t have to search anymore.</p>
+                 <p className="text-whitey py-2">
+                 And finally, having a knowledge of frontend development allows me to create developer-friendly designs, which speed up the hand-off process by reducing the back-and-forths between designer and development team.</p>
+                 <p className="text-whitey py-2">
+                 Regarding the tools, I’m used to work with Figma, Adobe XD, Sketch, Adobe Creative Suite and Pen & Paper. If your company uses different tools I will be able to grasp it quite quickly.</p>
             </motion.div>
 
-               <div className="flex flex-wrap justify-center py-4 px-12 pb-12">
-
-
+            <motion.div variants={contVariant} className="pl-12">
+            <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">Tools </h4>
+               <div className="flex flex-wrap py-2">
                   {skillsDesign.map((skill, index) => (
-                    <motion.div variants={contVariant} className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
-                    </motion.div>
+                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
+                    </div>
                     
                   ))}
-
                </div>
+            </motion.div>
             </div>
 
     

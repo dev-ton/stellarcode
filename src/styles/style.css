@@ -192,6 +192,11 @@ nav > div.hidden.sm\:block > ul > a.active {
 .tab a {
   text-decoration: none;
   color: var(--stellar-dark);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  overflow:visible;
+  position: relative;
 }
 
 
@@ -234,15 +239,6 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .tab.active svg {
   fill: var(--tab-active-color);
-}
-
-.tab a {
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  font-size: 20px;
-  overflow:visible;
-  position: relative;
 }
 
 .tab-content {

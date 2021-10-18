@@ -3,6 +3,7 @@ import { FaBezierCurve } from "@react-icons/all-files/fa/FaBezierCurve"
 import { FaCode } from "@react-icons/all-files/fa/FaCode"
 import TabContent1 from "./TabContent1";
 import TabContent2 from "./TabContent2";
+import TabContent3 from "./TabContent3";
 
 const tabs = [
     {
@@ -18,6 +19,13 @@ const tabs = [
       icon: <FaCode />,
       color: "#ffc857",
       content: TabContent2
+    },
+    {
+      title: "CV & Bio",
+      id: "bio",
+      icon: <FaCode />,
+      color: "#ffc857",
+      content: TabContent3
     }
   ];
   

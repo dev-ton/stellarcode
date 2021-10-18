@@ -11,8 +11,9 @@ const ContactMe = () => {
     return (
 
 
-  <section id="contactme" className="container">
-  <h2 className="text-2xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">
+  <section id="contactme" className="container pb-20 sm:pb-40">
+
+  <h2 className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pb-10 text-center">
               Contact Me
   </h2>
 

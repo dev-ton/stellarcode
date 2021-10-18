@@ -63,7 +63,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
       >
         <a href={`#about${tab.id}`} className="text-base sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
           {tab.icon}
-          <span className="inline-block whitespace-nowrap">{tab.title}</span>
+          <span className="whitespace-nowrap hidden sm:inline-block">{tab.title}</span>
         </a>
         
         {activeTabIndex === index && (     

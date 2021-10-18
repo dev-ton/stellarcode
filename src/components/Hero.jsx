@@ -3,11 +3,14 @@ import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Hero = () => (
-  <section id="home" className="container pt-12 sm:pt-24 lg:pb-16">
+  <section id="home" className="container pb-20 sm:pb-40">
 
-<div className="flex justify-between">
+
+  <div className="topSpace h-8 sm:h-24"></div>
+
+  <div className="flex justify-between">
       <div className="w-full md:w-1/2">
-    <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
+    <h1 className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight text-gray-900">
       <span className="text-whitey">
       Welcome{" "}
       <span role="img" aria-label="waving hand">
@@ -17,7 +20,7 @@ const Hero = () => (
       your way to the stellar website starts here.
       </span>
     </h1>
-        <h2 className="text-2xl font-bold text-spaceLight pt-10">
+        <h2 className="text-xl sm:text-2xl font-bold text-spaceLight pt-10">
         I’m Antonin, freelance Front-end developer and UI/UX designer. You can read more <AnchorLink href="#aboutme" offset="150">
           <span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="150"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">
             my work</span></AnchorLink> and if you have a project for me then <AnchorLink href="#contactme" offset="150"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">send me a message!</span></AnchorLink>

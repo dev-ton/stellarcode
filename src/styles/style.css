@@ -66,6 +66,8 @@ nav > div.hidden.sm\:block > ul > a.active {
 }
 
 /* animation of the stars in the logo */
+
+
 #logo {
   transform: translate(10%, 10%);
 }

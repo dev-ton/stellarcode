@@ -25,8 +25,9 @@ export default props => {
         description={summary}
         image={thumbnail.localFile.publicURL}
       />
-      <div className="bg-gray-0 py-12 lg:py-16">
-        <div className="container pt-24">
+      
+        <div className="container pb-20 sm:pb-40">
+        <div className="topSpace h-8 sm:h-24"></div>
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
@@ -57,7 +58,7 @@ export default props => {
             </div>
           </div>
         </div>
-      </div>
+      
       {related && (
         <div className="bg-transparent py-12 lg:py-16 container">
           <div>

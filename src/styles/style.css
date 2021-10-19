@@ -143,15 +143,21 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 /* tab component */
 .arrow {
+  /*
   padding-top: 1.0em;
   position: relative;
-  left: 46.5%;
+  left: 46.5%; */
+}
+.arrowSize {
+transform: translateY(15px);
 }
 
 .triangle {
+  /*
 	position: relative;
 	text-align: left;
-  top: 0.5em;
+  top: 0.5em;*/
+  margin: auto;
 }
 .triangle:before,
 .triangle:after {
@@ -187,18 +193,19 @@ nav > div.hidden.sm\:block > ul > a.active {
   justify-content: space-evenly;
 }
 
+/*
 .tab {
   position: relative;
-}
+} */
 
 .tab a {
   text-decoration: none;
   color: var(--stellar-dark);
-  padding: 16px;
+  /*padding: 16px;
   display: flex;
   align-items: center;
   overflow:visible;
-  position: relative;
+  position: relative;*/
 }
 
 
@@ -216,11 +223,12 @@ nav > div.hidden.sm\:block > ul > a.active {
 } */
 
 .tab svg {
-  height: 36px;
+  /*height: 36px;*/
   width: 36px;
   min-width: 36px;
   fill: var(--stellar-dark);
   transition: fill 0.5s ease;
+  margin: 0.1rem auto;
 }
 
 .tab.active::before {
@@ -229,7 +237,7 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .tab span {
   font-weight: 700;
-  margin-left: 15px;
+ /* margin-left: 15px; */
   white-space: nowrap;
   overflow: hidden;
   transition: color 0.5s ease;

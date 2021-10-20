@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import { motion, AnimateSharedLayout } from "framer-motion";
+import useIsSmall from "../hooks/utils/usemediaquery"
 
 const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
@@ -9,9 +10,16 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     setActiveTabIndex(index);
   };
 
-
+  const isSmall = useIsSmall;
 
   const tabVariant = {
+    activeSmall: {
+      scale: 1.2,
+      transition: {
+        type: "tween",
+        duration: 0.2
+      }
+    },
     active: {
       scale: 1,
       transition: {
@@ -54,10 +62,11 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
 
   return (
 
+ 
   <div>
     
   <AnimateSharedLayout>
-  <ul className="tab-links sticky z-10 top-0 pt-5 bg-space-dark rounded-t-md m-0 border-stellar-dark border-b-8 border-solid" role="tablist">
+  <ul className="tab-links flex justify-evenly sticky top-0 z-10 pt-5 bg-space-DEFAULT rounded-t-md m-0" role="tablist">
     {tabs.map((tab, index) => (
       <motion.li
         key={tab.id}
@@ -65,11 +74,11 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
         role="presentation"
         variants={tabVariant}
         initial={false}
-        animate={activeTabIndex === index ? "active" : "inactive"}
+        animate={isSmall ? (activeTabIndex === index ? "activeSmall" : "inactive") : (activeTabIndex === index ? "active" : "inactive")}
       >
         <a href={`#about${tab.id}`} className="text-base sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
-          {tab.icon}
-          <span className="whitespace-nowrap hidden sm:inline-block">{tab.title}</span>
+          <div className="hidden sm:block">{tab.icon}</div>
+          <span className="whitespace-nowrap inline-block">{tab.title}</span>
         </a>
         
         {activeTabIndex === index && (     
@@ -80,7 +89,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
    transition={spring}
    > 
    <div className="arrowMobile block sm:hidden pt-5 relative">
-   <div className="h-2 w-12 rounded-full bg-stellar-light"></div>
+   <div className="h-2 bg-stellar-light"></div>
    </div>
 
    <div className="arrowSize hidden sm:block">
@@ -97,7 +106,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
 
 
 
-	<div className="p-1 bg-space-light w-full shadow-lg rounded-md pt-12 overflow-hidden">
+	<div className="tabBoard p-1 bg-space-light w-full shadow-lg rounded-md pt-12 overflow-hidden">
     {tabs.map((tab, index) => (
       <motion.div
       initial="false"
@@ -127,7 +136,6 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     ))}
   </div>
   </div>
-  
 );
 }
 

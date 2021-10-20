@@ -184,15 +184,17 @@ transform: translateY(15px);
 }
 
 .arrowMobile {
-  top: 8px;
+  top: 0;
 }
 
-
+@media (min-width: 640px) { 
 .tab-links {
- /* margin: 30px 0px 20px; */
+  margin: 30px 0px 20px;
   list-style: none; 
-  display: flex;
-  justify-content: space-evenly;
+  position: static;
+  border-bottom: none;
+  background-color: transparent;
+}
 }
 
 /*
@@ -260,6 +262,12 @@ transform: translateY(15px);
 .tab-content.active {
   display: block;
 }
+
+
+.tabBoard {
+  position: relative;
+  top: -8px;
+} 
 
 /* card */
 

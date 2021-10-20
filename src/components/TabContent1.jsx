@@ -52,7 +52,7 @@ const TabContent = ({ id, active }) => (
   
   
                
-          <div className="mx-auto text-left flex pb-10 px-12">
+          <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant}>
             <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">My Approach </h4>
                <p className="text-whitey py-2">
@@ -65,7 +65,7 @@ const TabContent = ({ id, active }) => (
                  Regarding the tools, I’m used to work with Figma, Adobe XD, Sketch, Adobe Creative Suite and Pen & Paper. If your company uses different tools I will be able to grasp it quite quickly.</p>
             </motion.div>
 
-            <motion.div variants={contVariant} className="pl-12">
+            <motion.div variants={contVariant} className="sm:pl-12">
             <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">Tools </h4>
                <div className="flex flex-wrap py-2">
                   {skillsDesign.map((skill, index) => (

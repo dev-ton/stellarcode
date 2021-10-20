@@ -13,7 +13,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
 
   const tabVariant = {
     active: {
-      scale: 1.2,
+      scale: 1,
       transition: {
         type: "tween",
         duration: 0.2
@@ -57,7 +57,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   <div>
     
   <AnimateSharedLayout>
-  <ul className="tab-links" role="tablist">
+  <ul className="tab-links sticky z-10 top-0 pt-5 bg-space-dark rounded-t-md m-0 border-stellar-dark border-b-8 border-solid" role="tablist">
     {tabs.map((tab, index) => (
       <motion.li
         key={tab.id}
@@ -79,7 +79,11 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
    initial="false"
    transition={spring}
    > 
-   <div className="arrowSize">
+   <div className="arrowMobile block sm:hidden pt-5 relative">
+   <div className="h-2 w-12 rounded-full bg-stellar-light"></div>
+   </div>
+
+   <div className="arrowSize hidden sm:block">
     <div className='triangle bg-space-light'></div>
    </div>
   </motion.div>

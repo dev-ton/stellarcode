@@ -24,9 +24,12 @@ const MyWork = () => {
 
 <section id="mywork" className="container pb-20 sm:pb-40">
 
-      <h2 className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">
+
+    <div className="flex justify-center">
+      <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">
       My Work
       </h2>
+    </div>
 
       <div className="pb-12 lg:pb-16">
         {data.portfolio && data.portfolio.nodes.length > 0 ? (

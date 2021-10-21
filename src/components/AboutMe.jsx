@@ -45,8 +45,14 @@ const AboutMe = () => (
     
     
   <section id="aboutme" className="container pb-20 sm:pb-40">
-    <h2 className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">{data.aboutme.title}</h2>
 
+    <div className="flex justify-center">
+    <h2 className="text-4xl heading sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter">{data.aboutme.title}</h2>
+    </div>
+
+
+
+  
 
     
     <TabComponent tabs={tabs} />

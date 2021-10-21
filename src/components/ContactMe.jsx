@@ -13,9 +13,11 @@ const ContactMe = () => {
 
   <section id="contactme" className="container pb-20 sm:pb-40">
 
-  <h2 className="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight text-space-lighter pb-10 text-center">
+
+<div className="flex justify-center">
+  <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pb-10 text-center">
               Contact Me
-  </h2>
+  </h2></div>
 
   <div className=" bg-space-light bg-opacity-50 rounded-lg md:px-10 flex md:py-20 pt-10 pb-4 px-4 flex-wrap">
 

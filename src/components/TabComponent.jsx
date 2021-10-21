@@ -15,6 +15,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   const tabVariant = {
     activeSmall: {
       scale: 1.2,
+      textShadow: "0px 5px 11px rgba(178, 120, 0, 0.4)",
       transition: {
         type: "tween",
         duration: 0.2
@@ -22,6 +23,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     },
     active: {
       scale: 1,
+      textShadow: "none",
       transition: {
         type: "tween",
         duration: 0.2
@@ -29,6 +31,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     },
     inactive: {
       scale: 1,
+      textShadow: "none",
       transition: {
         type: "tween",
         duration: 0.2
@@ -64,9 +67,11 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
 
  
   <div>
+
+    
     
   <AnimateSharedLayout>
-  <ul className="tab-links flex justify-evenly sticky top-0 z-10 pt-5 bg-space-DEFAULT rounded-t-md m-0" role="tablist">
+  <ul className="tab-links flex justify-evenly sticky top-0 z-10 pt-5 bg-space-light border-b-2 border-solid border-space-dark rounded-t-md m-0" role="tablist">
     {tabs.map((tab, index) => (
       <motion.li
         key={tab.id}
@@ -78,9 +83,11 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
       >
         <a href={`#about${tab.id}`} className="text-base sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
           <div className="hidden sm:block">{tab.icon}</div>
-          <span className="whitespace-nowrap inline-block">{tab.title}</span>
+          <span className="whitespace-nowrap">{tab.title}</span>
         </a>
         
+      
+
         {activeTabIndex === index && (     
    <motion.div
    className="arrow"
@@ -104,7 +111,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   </ul>
   </AnimateSharedLayout>
 
-
+  
 
 	<div className="tabBoard p-1 bg-space-light w-full shadow-lg rounded-md pt-12 overflow-hidden">
     {tabs.map((tab, index) => (
@@ -127,6 +134,8 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
         }
     }}>
       
+      
+
 		  <tab.content
       key={tab.id}
       id={`${tab.id}-content`}

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+
 :root {
   --trackColor:#131313;
   --thumbColor:#4B3F72;
@@ -12,6 +13,9 @@
   --stellar-dark: #B27800;
   --stellar-light: #ffc857;
   --border-radius: 40px;
+  --underline-color: #1F2041;
+  --underline-color2: #ffc857;
+  
 }
 
 body, html {
@@ -38,6 +42,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid var(--trackColor);
 }
 
+.heading {
+  background-image: linear-gradient(180deg, var(--underline-color) 85%, var(--underline-color2) 15%);
+  background-position-y: bottom;
+  background-size: auto 30%;
+  background-repeat: no-repeat;
+  padding: 0 1rem;
+  margin-bottom: 2.5rem
+}
 
 
 p { 
@@ -64,6 +76,60 @@ nav > div.hidden.sm\:block > ul > a.active {
 .top-3 {
   top: 3px;
 }
+
+/* home title animation */
+
+.home-title span{
+  position: relative;
+  overflow: hidden;
+  display: block;
+  line-height: 1.2;
+}
+
+.home-title span::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+  transform: translateX(-101%);
+}
+
+.home-title span::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+  transform: translateX(0);
+}
+
+.home-title span:nth-of-type(1)::before,
+.home-title span:nth-of-type(1)::after{
+  animation-delay: 1s;
+}
+
+.home-title span:nth-of-type(2)::before,
+.home-title span:nth-of-type(2)::after{
+  animation-delay: 1.5s;
+}
+
+@keyframes a-ltr-after{
+  0% {transform: translateX(-100%)}
+  100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+  0% {transform: translateX(0)}
+  100% {transform: translateX(200%)}
+}
+
 
 /* animation of the stars in the logo */
 
@@ -249,6 +315,7 @@ transform: translateY(15px);
 
 .tab.active span {
   color: var(--tab-active-color);
+
 }
 
 .tab.active svg {

@@ -41,7 +41,7 @@ const letter = {
   <div className="flex justify-between">
       <div className="w-full md:w-1/2">
 
-    <motion.h1 className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight text-whitey"
+    <motion.h1 className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight textGradient"
     variants={sentence}
     initial="hidden"
     animate="visible"

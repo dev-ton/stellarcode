@@ -20,6 +20,7 @@ module.exports = {
         light: '#19647e',
         DEFAULT: '#4B3F72',
         dark: '#1F2041',
+        darker: '#121229',
         darkest: '#131313',
       },
       white: '#fff',
@@ -33,7 +34,9 @@ module.exports = {
       white: '#fff',
       stellar: '#ffc857',
       stellarDark: '#B27800',
-      spaceLight: '#119da4'
+      spaceLight: '#119da4',
+      spaceDarker: '#121229',
+      spaceDarkest: '#131313',
     },
     backgroundImage: {
       main: 'background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);',

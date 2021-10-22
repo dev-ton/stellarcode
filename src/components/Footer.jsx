@@ -22,7 +22,7 @@ const Footer = () => {
 
       <div className="mt-0 md:order-1">
         <p className="text-center text-sm md:text-base text-gray-600">
-          &copy; 2021 Antonin Jech. All rights reserved.
+          &copy; {new Date().getFullYear()} Antonin Jech. All rights reserved.
         </p>
       </div>
 

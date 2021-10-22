@@ -1,81 +1,92 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { motion } from "framer-motion";
 
 const Hero = () => {
 
-const line1 = "Welcome,"
-const line2 = "your way to the stellar website starts here."
+const data = useStaticQuery(graphql`
+{
+  contentfulAboutMe {
+    portraitImage {
+      localFile {
+        childImageSharp {
+          fluid(maxHeight: 1300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  }
+}
+`)
 
-const sentence = {
-  hidden: { opacity: 0},
+
+const appear = {
+  hidden: { opacity: 0,
+            x:200
+          },
   visible: {
     opacity: 1,
+    x:0,
     transition: {
-      delay: 0.5,
-      staggerChildren: 0.08,
+      delay: 0.3,
+      duration:0.3,
     },
   },
 }
-
-const letter = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity:  1,
-    y: 0
-  },
-}
-
-
 
 
   return (
 
 
-  <section id="home" className="container pb-20 sm:pb-40">
+  <motion.section id="home" className="container pb-20 sm:pb-40 shine"
+  >
 
 
   <div className="topSpace h-8 sm:h-24"></div>
 
-  <div className="flex justify-between">
-      <div className="w-full md:w-1/2">
+  <div className="flex justify-between sm:flex-row flex-col">
+      <div className="w-full sm:w-1/2">
 
-    <motion.h1 className="text-2xl sm:text-4xl font-extrabold leading-tight tracking-tight textGradient"
-    variants={sentence}
-    initial="hidden"
-    animate="visible"
+
+
+
+<h1 className="text-2xl sm:text-4xl font-bold leading-snug tracking-tight textGradient text-center sm:text-left"
     >
-   {line1.split("").map((char,index) => {
-       return (
-         <motion.span key={char + "-" + index} variants={letter}>
-           {char}
-         </motion.span>
-       )
-     })}
+         <span>
+         I’m Antonin,  
+         </span>
      <br/>
-    {line2.split("").map((char, index) => {
-      return (
-        <motion.span key={char + "-" + index} variants={letter}>
-          {char}
-        </motion.span>
-      )
-    })}
+        <span>
+        freelance Front-end developer
+        </span>
+      <br/>
+        <span>
+        and UI/UX designer.
+        </span>
+
+</h1>
 
 
-    </motion.h1>
-        <h2 className="text-xl sm:text-2xl font-bold text-spaceLight pt-10">
-        I’m Antonin, freelance Front-end developer and UI/UX designer. You can read more <AnchorLink href="#aboutme" offset="50">
-          <span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">
-            my work</span></AnchorLink> and if you have a project for me then <AnchorLink href="#contactme" offset="50"><span className="text-stellar hover:text-whitey transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
-        <br/>I’m looking forward to hear from you!
+
+        <h2 className="text-xl sm:text-2xl font-normal text-whitey pt-10 text-center sm:text-left">
+        Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50">
+          <span className="text-stellar hover:underline transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50"><span className="text-stellar hover:underline transition duration-150 ease-in-out">
+            my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50"><span className="text-stellar hover:underline transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
+        <br/><br/>I’m looking forward to<br className="inline sm:hidden"/> hear from you!
         </h2>
       </div>
 
-      <div className=" max-w-sm w-1/2 hidden md:block">
-      <Illustration/>
-      </div>  
-
+      <motion.div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-10 sm:pt-0"
+      variants={appear}
+      initial="hidden"
+      animate="visible">
+      <Img fluid={data.contentfulAboutMe.portraitImage.localFile.childImageSharp.fluid} alt="image" className="intro-img rounded-lg"/>
+      </motion.div>  
+    
     </div>
 
     <div className="mx-auto square50 hidden">
@@ -86,7 +97,7 @@ const letter = {
       </svg>
       </AnchorLink>
     </div>
-  </section>
+  </motion.section>
 )}
 
 export default Hero

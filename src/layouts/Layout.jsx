@@ -26,8 +26,8 @@ const Layout = ({ children, menuToggle }) => {
           transition={{
             type: "spring",
             mass: 0.35,
-            stiffness: 70,
-            duration: 0.3
+            stiffness: 65,
+            duration: 0.15
           }}
         >
       {children}

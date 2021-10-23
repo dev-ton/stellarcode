@@ -3,19 +3,19 @@ import React from "react";
 export default function useWindowSize() {
   const isSSR = typeof window !== "undefined";
   const [windowSize, setWindowSize] = React.useState({
-    width: isSSR ? 1200 : window.innerWidth,
-    height: isSSR ? 800 : window.innerHeight,
+    width: isSSR && 1200,
+    height: isSSR && 800,
   });
 
   function changeWindowSize() {
-    setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    setWindowSize({ width: isSSR && window.innerWidth, height: isSSR && window.innerHeight });
   }
 
   React.useEffect(() => {
-    window.addEventListener("resize", changeWindowSize);
+    isSSR && window.addEventListener("resize", changeWindowSize);
 
     return () => {
-      window.removeEventListener("resize", changeWindowSize);
+        isSSR && window.removeEventListener("resize", changeWindowSize);
     };
   }, []);
 

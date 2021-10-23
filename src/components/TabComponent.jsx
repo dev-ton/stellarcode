@@ -71,7 +71,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <ul className="tab-links flex justify-evenly sticky top-0 z-10 pt-5 bg-space-light border-b-2 border-solid border-space-dark rounded-t-md m-0" role="tablist">
+  <ul className="tab-links flex justify-evenly relative z-10 pt-5 bg-space-light border-b-2 border-solid border-space-dark rounded-t-md m-0" role="tablist">
     {tabs.map((tab, index) => (
       <motion.li
         key={tab.id}
@@ -111,9 +111,8 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   </ul>
   </AnimateSharedLayout>
 
-  
-
-	<div className="tabBoard p-1 bg-space-light w-full shadow-lg rounded-md pt-12 overflow-hidden">
+ 
+	<div className="tabBoard p-1 bg-space-light w-full shadow-lg rounded-md pt-12 scrolling-touch overflow-y-scroll sm:overflow-hidden">
     {tabs.map((tab, index) => (
       <motion.div
       initial="false"
@@ -126,11 +125,14 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
       onDragEnd={(e, { offset, velocity }) => {
         
         const swipe = swipePower(offset.x, velocity.x);
+        const scroller = document.querySelector(".tabBoard");
         if (swipe < -swipeConfidenceThreshold && tab.id !== "design") {
           onTabClick(index - 1);
+          scroller.scrollTop = 0;
         }
         else if (swipe > swipeConfidenceThreshold && tab.id !== "bio") {
           onTabClick(index + 1);
+          scroller.scrollTop = 0;
         }
     }}>
       
@@ -145,6 +147,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     ))}
   </div>
   </div>
+  
 );
 }
 

@@ -67,17 +67,6 @@ p {
   @apply py-2;
 }
 
-/* Scale from center */
-p h1 h2 h3 h4 h5 a::after {
-  opacity: 1;
-  transform: scale(0);
-  transform-origin: center;
-}
-
-p h1 h2 h3 h4 h5 a:hover::after,
-p h1 h2 h3 h4 h5 a:focus::after{
-  transform: scale(1);
-}
 
 .container {
   @apply max-w-screen-xl mx-auto px-4;
@@ -101,10 +90,8 @@ nav > div.hidden.sm\:block > ul > a.active {
 }
 
 .intro-img {
-  height: 16rem;
+  height: 20rem;
   box-shadow: 0px 6px 15px 5px rgba(62, 35, 97, 0.2);
-  border-radius: 50px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 /* animation of the stars in the logo */
@@ -233,8 +220,6 @@ transform: translateY(15px);
 .intro-img {
     height: 700px;
     box-shadow: 0px 6px 15px 5px rgba(62, 35, 97, 0.2);
-    border-radius: 50px;
-    transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
 .tab-links {
@@ -244,6 +229,22 @@ transform: translateY(15px);
   border-bottom: none;
   background-color: transparent;
 }
+
+.sticky-top-60 {
+  position:unset;
+  top:unset;
+}
+
+.about-height {
+  height: auto;
+}
+
+.tabBoard {
+  position: unset;
+  top: unset;
+  height: auto;
+} 
+
 }
 
 /*
@@ -317,7 +318,18 @@ transform: translateY(15px);
 .tabBoard {
   position: relative;
   top: -8px;
+  height: 450px;
 } 
+
+.sticky-top-60 {
+  position: -webkit-sticky;
+  position: sticky;
+  top:60px;
+}
+
+.about-height {
+  height: 1000px;
+}
 
 /* card */
 

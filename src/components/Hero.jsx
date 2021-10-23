@@ -1,16 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Illustration from "./Illustration"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { motion } from "framer-motion";
 
 const Hero = () => {
 
 const data = useStaticQuery(graphql`
 {
-  contentfulAboutMe {
-    portraitImage {
+  contentfulIntroSection {
+    portraitPhoto {
       localFile {
         childImageSharp {
           fluid(maxHeight: 1300) {
@@ -24,29 +22,15 @@ const data = useStaticQuery(graphql`
 `)
 
 
-const appear = {
-  hidden: { opacity: 0,
-            x:200
-          },
-  visible: {
-    opacity: 1,
-    x:0,
-    transition: {
-      delay: 0.3,
-      duration:0.3,
-    },
-  },
-}
-
 
   return (
 
 
-  <motion.section id="home" className="container pb-20 sm:pb-40 shine"
+  <section id="home" className="container pb-20 sm:pb-40 shine"
   >
 
 
-  <div className="topSpace h-8 sm:h-24"></div>
+  <div className="topSpace h-12 sm:h-24"></div>
 
   <div className="flex justify-between sm:flex-row flex-col">
       <div className="w-full sm:w-1/2">
@@ -61,7 +45,7 @@ const appear = {
          </span>
      <br/>
         <span>
-        freelance Front-end developer
+        freelance front-end developer
         </span>
       <br/>
         <span>
@@ -72,20 +56,17 @@ const appear = {
 
 
 
-        <h2 className="text-xl sm:text-2xl font-normal text-whitey pt-10 text-center sm:text-left">
+        <h2 className="text-xl sm:text-2xl font-normal text-whitey pt-12 text-center sm:text-left">
         Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50">
-          <span className="text-stellar hover:underline transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50"><span className="text-stellar hover:underline transition duration-150 ease-in-out">
-            my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50"><span className="text-stellar hover:underline transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
+          <span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50"><span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">
+            my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50"><span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
         <br/><br/>I’m looking forward to<br className="inline sm:hidden"/> hear from you!
         </h2>
       </div>
 
-      <motion.div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-10 sm:pt-0"
-      variants={appear}
-      initial="hidden"
-      animate="visible">
-      <Img fluid={data.contentfulAboutMe.portraitImage.localFile.childImageSharp.fluid} alt="image" className="intro-img rounded-lg"/>
-      </motion.div>  
+      <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
+      <Img fluid={data.contentfulIntroSection.portraitPhoto.localFile.childImageSharp.fluid} alt="image" className="intro-img rounded-md"/>
+      </div>  
     
     </div>
 
@@ -97,7 +78,7 @@ const appear = {
       </svg>
       </AnchorLink>
     </div>
-  </motion.section>
+  </section>
 )}
 
 export default Hero

@@ -286,21 +286,8 @@ transform: translateY(15px);
 }
 
 
-.tabBoard {
-  position: relative;
-  top: -8px;
-  height: 450px;
-} 
 
-.sticky-top-60 {
-  position: -webkit-sticky;
-  position: sticky;
-  top:60px;
-}
 
-.about-height {
-  height: 1000px;
-}
 
 /* card */
 
@@ -450,6 +437,13 @@ textarea:not(:placeholder-shown) ~ label {
   fill: #4caf50 ;
 }
 
+
+.textboxMask {
+  height: 450px;
+  -webkit-mask-image: linear-gradient(transparent, rgba(0,0,0,1) 6% 90%,transparent);
+  mask-image: linear-gradient(transparent, rgb(0, 0, 0) 6% 90%,transparent);
+}
+
 /* responsive */
 
 
@@ -476,20 +470,6 @@ textarea:not(:placeholder-shown) ~ label {
   font-weight: 700;
 }
 
-.sticky-top-60 {
-  position:unset;
-  top:unset;
-}
-
-.about-height {
-  height: auto;
-}
-
-.tabBoard {
-  position: unset;
-  top: unset;
-  height: auto;
-} 
 
 }
 

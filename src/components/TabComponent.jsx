@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import cn from "classnames";
 import { motion, AnimateSharedLayout } from "framer-motion";
-import useIsSmall from "../hooks/utils/usemediaquery"
+import useWindowSize from "../utils/useWindowSize";
 
 const TabComponent = ({ tabs, defaultIndex = 0 }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
@@ -10,7 +10,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     setActiveTabIndex(index);
   };
 
-  const isSmall = useIsSmall;
+  const { width } = useWindowSize();
 
   const tabVariant = {
     activeSmall: {
@@ -79,7 +79,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
         role="presentation"
         variants={tabVariant}
         initial={false}
-        animate={isSmall ? (activeTabIndex === index ? "activeSmall" : "inactive") : (activeTabIndex === index ? "active" : "inactive")}
+        animate={width > 600 ? (activeTabIndex === index ? "activeSmall" : "inactive") : (activeTabIndex === index ? "active" : "inactive")}
       >
         <a href={`#about${tab.id}`} className="text-base sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
           <div className="hidden sm:block">{tab.icon}</div>

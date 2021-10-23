@@ -131,10 +131,10 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
       onDragEnd={(e, { offset, velocity }) => {
         
         const swipe = swipePower(offset.x, velocity.x);
-        if (swipe < -swipeConfidenceThreshold && tab.id !== "design") {
+        if (swipe > -swipeConfidenceThreshold && tab.id !== "design") {
           onTabClick(index - 1);
         }
-        else if (swipe > swipeConfidenceThreshold && tab.id !== "bio") {
+        else if (swipe < swipeConfidenceThreshold && tab.id !== "bio") {
           onTabClick(index + 1);
         }
     }}>

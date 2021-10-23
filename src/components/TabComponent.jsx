@@ -97,9 +97,23 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
    initial="false"
    transition={spring}
    > 
-   <div className="arrowMobile block sm:hidden pt-5 relative">
+   <motion.div className="arrowMobile block sm:hidden pt-5 relative"
+   drag="x"
+   dragConstraints={{ left: 0, right: 0 }}
+   dragElastic={0.2}
+   dragTransition={{ bounceStiffness: 600, bounceDamping: 5 }}
+   onDragEnd={(e, { offset, velocity }) => {
+     
+     const swipe = swipePower(offset.x, velocity.x);
+     if (swipe > swipeConfidenceThreshold && tab.id !== "design") {
+       onTabClick(index - 1);
+     }
+     else if (swipe < -swipeConfidenceThreshold && tab.id !== "bio") {
+       onTabClick(index + 1);
+     }
+ }}>
    <div className="h-2 bg-stellar-light"></div>
-   </div>
+   </motion.div>
 
    <div className="arrowSize hidden sm:block">
     <div className='triangle bg-space-light'></div>

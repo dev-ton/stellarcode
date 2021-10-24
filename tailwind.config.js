@@ -31,8 +31,10 @@ module.exports = {
     },
     textColor: {
       whitey: '#eee',
+      whiteyDarker: '#E0E0E0',
       white: '#fff',
       stellar: '#ffc857',
+      stellarDarker: '#D9AF59',
       stellarDark: '#B27800',
       spaceLight: '#119da4',
       spaceDarker: '#121229',

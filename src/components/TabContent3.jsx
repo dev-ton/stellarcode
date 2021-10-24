@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "gatsby"
 import { motion } from "framer-motion";
+import { FaDownload } from "@react-icons/all-files/fa/FaDownload"
+import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt"
 
 
 
-const skillsCode = ["ReactJS", "Bootstrap", "Tailwind", "Bulma", "Styled Components", "GatsbyJS", "GraphQL", "Hubspot", "npm", "Github", "VS Code"];
+
 
 
 const tabContentVariant = {
@@ -18,22 +21,6 @@ const tabContentVariant = {
     }
   };
 
-  const contVariant = {
-    active: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5
-      }
-    },
-    inactive: {
-      opacity: 0,
-      y: 10,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
 
 
 const TabContent = ({ id, active }) => (
@@ -50,24 +37,15 @@ const TabContent = ({ id, active }) => (
   
         
                 
-              <div className="mx-auto text-center pt-2">
-                <motion.div variants={contVariant}>
-                <p className="text-whitey py-8 px-12 text-xl">I enjoy to create fast interface with smooth transitions and perfect accessibility.</p>
-                <h4 className="text-xl leading-relaxed text-stellar font-normal text-center py-4">Languages: </h4>
-                <p className="text-whitey py-4 px-12">HTML, CSS, JS, JSX<br/><br/></p>
-                <h4 className="text-xl leading-relaxed text-stellar font-normal text-center py-4">Tools/Frameworks: </h4>
-                </motion.div>
-
-               <div className="flex flex-wrap justify-center py-4 px-12 pb-12">
-
-
-               {skillsCode.map((skill, index) => (
-                <motion.div variants={contVariant} className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
-                </motion.div>
-                
-               ))}
-
-               </div>
+            <div className="mx-auto pt-2">
+              <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center py-6">
+                <a className=' w-full sm:w-1/2 block' href={"#"}>
+                <div className="bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 m-6 text-xs text-whiteyDarker uppercase hover:shadow-xl h transition ease-in-out duration-150"><FaDownload className="float-left mr-2"/>Download my resume</div>
+                </a>
+                <Link className='w-full sm:w-1/2 block' to="/about">
+                <div className=" text-whiteyDarker bg-transparent border-2 border-stellar-dark stellarButton p-3 m-6 text-xs uppercase hover:shadow-xl hover:text-whitey hover:bg-stellar-dark h transition ease-in-out duration-150"><FaUserAlt className="float-left mr-3"/>My biography</div>
+                </Link>
+              </div>
             </div>
 
     

@@ -8,12 +8,13 @@ import TabContent3 from "./TabContent3";
 
 const tabs = [
     {
-      title: "Design",
-      id: "design",
-      icon: <FaBezierCurve />,
+      title: "CV & Bio",
+      id: "bio",
+      icon: <FaUserAlt />,
       color: "#ffc857",
-      content: TabContent1
+      content: TabContent3
     },
+ 
     {
       title: "Front-end",
       id: "code",
@@ -21,13 +22,14 @@ const tabs = [
       color: "#ffc857",
       content: TabContent2
     },
+
     {
-      title: "CV & Bio",
-      id: "bio",
-      icon: <FaUserAlt />,
+      title: "Design",
+      id: "design",
+      icon: <FaBezierCurve />,
       color: "#ffc857",
-      content: TabContent3
-    }
+      content: TabContent1
+    },
   ];
   
   export default tabs;

@@ -54,22 +54,28 @@ const TabContent = ({ id, active }) => (
                
           <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant}>
-            <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">My Approach </h4>
-               <p className="text-whitey py-2">
-                 More and more businesses are finding out how dramatically can good UX design affect their productivity, sales & revenues, reduce development time & costs, reduce maintenance cost and increase customer satisfaction. </p>
-                 <p className="text-whitey py-2">
-                 As a UX designer I can adapt to the client needs, whether you’re used to work based on Design Thinking, Lean UX or any other framework. Are you looking for someone to work exclusively on the visuals, are you in need of rapidly made prototypes or you want someone to overlook the whole project from start to finish, then you don’t have to search anymore.</p>
-                 <p className="text-whitey py-2">
-                 And finally, having a knowledge of frontend development allows me to create developer-friendly designs, which speed up the hand-off process by reducing the back-and-forths between designer and development team.</p>
-                 <p className="text-whitey py-2">
-                 Regarding the tools, I’m used to work with Figma, Adobe XD, Sketch, Adobe Creative Suite and Pen & Paper. If your company uses different tools I will be able to grasp it quite quickly.</p>
+           
+              
+               <h3 className="text-stellarDarker">Why UX design?</h3>
+               <p className=" text-whiteyDarker py-2">
+More and more businesses are finding out how dramatically can good UX design affect their productivity, sales & revenues, reduce development time & costs, reduce maintenance cost and increase customer satisfaction. 
+</p>
+<h3 className="text-stellarDarker">What can I offer?</h3>
+<p className=" text-whiteyDarker py-2">
+My main passion is the interaction design, but I enjoy also other disciplines of UX design, whether it is research, usability testing or others. At the end always stands a perfectly usable product and thats what motivates me the most.
+</p>
+<h3 className="text-stellarDarker">What is my extra value?</h3>
+<p className=" text-whiteyDarker py-2">
+Having a knowledge of frontend development allows me to create developer-friendly designs, which speed up the hand-off process by reducing the back-and-forths between designer and development team.
+</p>
+
             </motion.div>
 
             <motion.div variants={contVariant} className="sm:pl-12">
-            <h4 className="text-xl leading-relaxed text-stellar font-normal text-left py-2">Tools </h4>
+            <h3 className="text-stellarDarker pb-2">What tools do I use?</h3>
                <div className="flex flex-wrap py-2">
                   {skillsDesign.map((skill, index) => (
-                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase" key={index}>{skill}
+                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}

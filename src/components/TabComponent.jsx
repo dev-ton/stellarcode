@@ -25,7 +25,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     },
     active: {
       scale: 1,
-      textShadow: "none",
+      textShadow: "0px 0px 0px rgba(178, 120, 0, 0)",
       transition: {
         type: "tween",
         duration: 0.2
@@ -33,7 +33,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     },
     inactive: {
       scale: 1,
-      textShadow: "none",
+      textShadow: "0px 0px 0px rgba(178, 120, 0, 0)",
       transition: {
         type: "tween",
         duration: 0.2
@@ -73,7 +73,7 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <ul className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-dark rounded-t-md m-0" role="tablist">
+  <ul className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-DEFAULT rounded-t-md m-0" role="tablist">
     {tabs.map((tab, index) => (
       <motion.li
         key={tab.id}
@@ -97,23 +97,9 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
    initial="false"
    transition={spring}
    > 
-   <motion.div className="arrowMobile block sm:hidden pt-5 relative"
-   drag="x"
-   dragConstraints={{ left: 0, right: 0 }}
-   dragElastic={0.2}
-   dragTransition={{ bounceStiffness: 600, bounceDamping: 5 }}
-   onDragEnd={(e, { offset, velocity }) => {
-     
-     const swipe = swipePower(offset.x, velocity.x);
-     if (swipe > swipeConfidenceThreshold && tab.id !== "design") {
-       onTabClick(index - 1);
-     }
-     else if (swipe < -swipeConfidenceThreshold && tab.id !== "bio") {
-       onTabClick(index + 1);
-     }
- }}>
-   <div className="h-2 bg-stellar-light"></div>
-   </motion.div>
+   <div className="arrowMobile block sm:hidden pt-5 relative">
+   <div className=" h-1 bg-stellar-light"></div>
+   </div>
 
    <div className="arrowSize hidden sm:block">
     <div className='triangle bg-space-light'></div>
@@ -145,10 +131,10 @@ const TabComponent = ({ tabs, defaultIndex = 0 }) => {
       onDragEnd={(e, { offset, velocity }) => {
         
         const swipe = swipePower(offset.x, velocity.x);
-        if (swipe > swipeConfidenceThreshold && tab.id !== "design") {
+        if (swipe > swipeConfidenceThreshold && tab.id !== "bio") {
           onTabClick(index - 1);
         }
-        else if (swipe < -swipeConfidenceThreshold && tab.id !== "bio") {
+        else if (swipe < -swipeConfidenceThreshold && tab.id !== "design") {
           onTabClick(index + 1);
         }
     }}>

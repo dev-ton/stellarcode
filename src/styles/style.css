@@ -92,7 +92,8 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .intro-img {
   height: 20rem;
-  box-shadow: 0px 6px 15px 5px rgba(62, 35, 97, 0.2);
+  -webkit-box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33); 
+  box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33);
 }
 
 /* animation of the stars in the logo */
@@ -214,7 +215,7 @@ transform: translateY(15px);
 }
 
 .arrowMobile {
-  top: 0;
+  top: 2px;
 }
 
 
@@ -448,9 +449,16 @@ textarea:not(:placeholder-shown) ~ label {
 
 
 @screen sm {
+
+  /*used in back button */
+  .top-3 {
+    top: 5px;
+  }
+
 .intro-img {
     height: 700px;
-    box-shadow: 0px 6px 15px 5px rgba(62, 35, 97, 0.2);
+    -webkit-box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33); 
+    box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33);
   }
 
 .tab-links {

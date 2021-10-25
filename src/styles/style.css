@@ -31,7 +31,22 @@ body {
   scrollbar-color: var(--thumbColor) var(--trackColor) !important;
   scrollbar-width: auto;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  text-rendering: optimizeLegibility;
   @apply font-sans antialiased;
+}
+
+::-moz-selection {
+    color: #C4C4C4;
+    background-color: var(--stellar-dark);
+    -moz-text-fill-color: #C4C4C4;
+}
+
+::selection {
+  color: #C4C4C4;
+  background-color: var(--stellar-dark);
+  -webkit-text-fill-color: #C4C4C4; 
 }
 
 body::-webkit-scrollbar-track {
@@ -43,6 +58,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 6px;
   border: 3px solid var(--trackColor);
 }
+
 
 .textGradient {
   background-color: #f3ec78;
@@ -216,6 +232,10 @@ transform: translateY(15px);
 
 .arrowMobile {
   top: 2px;
+}
+
+.arrowMobile > div {
+  height: 2px;
 }
 
 

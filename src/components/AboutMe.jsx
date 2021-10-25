@@ -1,13 +1,15 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
 import TabComponent from "../components/TabComponent"
-import tabs from "./tabs"
+
 
 
 
 
 
 const AboutMe = () => (
+
+  
 
   
   <StaticQuery
@@ -42,6 +44,8 @@ const AboutMe = () => (
     
 
     render={data => (
+
+  
     
  
   <section id="aboutme" className="container pb-20 sm:pb-40">
@@ -55,7 +59,7 @@ const AboutMe = () => (
   
 
     
-    <TabComponent tabs={tabs} />
+    <TabComponent/>
    
 
 

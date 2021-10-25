@@ -32,21 +32,25 @@ const Socials = () => {
                 href={links.twitter} 
                 icon={FaDribbble} 
                 label="Dribbble"
+                hide={false}
                  />
             <FooterLink 
                 href={links.facebook} 
                 icon={FaBehance} 
                 label="Behance"
+                hide={true}
                 />
             <FooterLink
                 href={links.instagram}
                 icon={FaLinkedinIn}
                 label="Linkedin"
+                hide={false}
             />
             <FooterLink
                 href={links.pinterest}
                 icon={FaGitAlt}
                 label="GitHub"
+                hide={false}
             />
           </ul>
     
@@ -54,9 +58,9 @@ const Socials = () => {
 }
 
 
-const FooterLink = ({ href, label, icon: Icon }) => {
+const FooterLink = ({ href, label, icon: Icon, hide }) => {
     return (
-      <li className="inline-block cursor-pointer p-3 bg-stellar-dark bg-opacity-0 rounded-full hover:bg-opacity-100 transition-opacity ease-in-out duration-100">
+      <li style={{display: hide ? 'none' : 'inlineBlock'}} className="cursor-pointer p-3 group">
         <a
           href={href}
           target="_blank"
@@ -65,6 +69,7 @@ const FooterLink = ({ href, label, icon: Icon }) => {
         >
           <span className="sr-only">{label}</span>
           <Icon className="w-5 h-5 fill-current" />
+          <div className="w-full h-full bg-stellar-dark opacity-0 rounded-full socialBg group-hover:opacity-100 transition-all ease-linear duration-200"></div>
         </a>
       </li>
     )

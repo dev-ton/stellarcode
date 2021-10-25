@@ -14,7 +14,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
   const tabVariant = {
     active: {
       scale: 1.2,
-      textShadow: "0px 5px 11px rgba(178, 120, 0, 0.4)",
+      textShadow: "0px 5px 12px rgba(178, 120, 0, 0.2)",
       transition: {
         type: "tween",
         duration: 0.2

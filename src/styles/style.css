@@ -16,8 +16,18 @@
   --border-radius: 40px;
   --underline-color: #121229;
   --underline-color2: #ffc857;
+}
 
-  
+a.fade_underlink {
+  border-bottom: 2px solid rgba(217, 175, 89, 1);
+  -webkit-transition: border 300ms ease;
+  -moz-transition: border 300ms ease;
+  -ms-transition: border 300ms ease;
+  -o-transition: border 300ms ease;
+  transition: border 300ms ease; 
+}
+a.fade_underlink:hover {
+  border-bottom: 2px solid rgba(217, 175, 89, 0);
 }
 
 body, html {
@@ -36,6 +46,8 @@ body {
   text-rendering: optimizeLegibility;
   @apply font-sans antialiased;
 }
+
+
 
 ::-moz-selection {
     color: #C4C4C4;
@@ -291,6 +303,7 @@ transform: translateY(15px);
 
 .tab.active span {
   color: var(--tab-active-color);
+  
 
 }
 
@@ -452,12 +465,19 @@ textarea:not(:placeholder-shown) ~ label {
 .copyIcon {
   fill: #aaa;
   outline: none;
+  transition: all ease .2s;
 }
 
 .copyIcon:hover {
-  fill: #4caf50 ;
+  fill: var(--stellar-light) ;
 }
 
+.socialBg {
+  position: relative;
+  top: -100%;
+  z-index: -1;
+  transform: scale(2);
+}
 
 .textboxMask {
   height: 450px;
@@ -531,6 +551,6 @@ textarea:not(:placeholder-shown) ~ label {
 
 @screen lg {
   .container {
-    @apply px-8;
+    @apply px-16;
   }
 }

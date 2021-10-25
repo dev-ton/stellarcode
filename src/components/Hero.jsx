@@ -57,9 +57,9 @@ const data = useStaticQuery(graphql`
 
 
         <h2 className="text-xl sm:text-2xl font-normal text-whiteyDarker pt-12 text-center sm:text-left">
-        Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50">
-          <span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50"><span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">
-            my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50"><span className="text-stellar underline hover:no-underline transition duration-150 ease-in-out">send me a message!</span></AnchorLink>
+        Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50" className="fade_underlink">
+          <span className="text-stellar">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50" className="fade_underlink"><span className="text-stellar">
+            my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50" className="fade_underlink"><span className="text-stellar">send me a message!</span></AnchorLink>
         <br/><br/>I’m looking forward to<br className="inline sm:hidden"/> hear from you!
         </h2>
       </div>

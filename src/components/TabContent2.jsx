@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 
-const skillsCode = ["ReactJS", "GatsbyJS", "GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Hubspot", "Wordpress", "Webflow", "npm", "Github", "VS Code"];
+const skillsCode = ["ReactJS", "GatsbyJS", "GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm", "Git", "VS Code"];
 
 
 const tabContentVariant = {

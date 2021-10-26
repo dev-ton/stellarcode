@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "gatsby"
 import { motion } from "framer-motion";
 import { FaDownload } from "@react-icons/all-files/fa/FaDownload"
 import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt"
+import Button from "./Button";
+import { navigate } from "gatsby";
+
 
 
 
@@ -21,9 +23,53 @@ const tabContentVariant = {
     }
   };
 
+  const contVariant = {
+    active: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    },
+    inactive: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  const bar = {
+    active: {
+      opacity: 1,
+      width: '100%',
+      y: 0,
+      transition: {
+        duration: 0.9,
+        ease: "easeOut",
+      }
+    },
+    inactive: {
+      opacity: 0,
+      width: 0,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        
+      }
+    }
+  };
 
 
-const TabContent = ({ id, active }) => (
+
+
+const TabContent = ({ id, active }) => {
+
+
+
+return (
   
   <motion.div
     role="tabpanel"
@@ -36,20 +82,50 @@ const TabContent = ({ id, active }) => (
   
   
         
-                
-            <div className="mx-auto pt-2">
-              <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center py-6">
-                <a className=' w-full sm:w-1/2 block' href={"#"}>
-                <div className="bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 m-6 text-xs text-whiteyDarker uppercase hover:shadow-xl h transition ease-in-out duration-150"><FaDownload className="float-left mr-2"/>Download my resume</div>
-                </a>
-                <Link className='w-full sm:w-1/2 block' to="/about">
-                <div className=" text-whiteyDarker bg-transparent border-2 border-stellar-dark stellarButton p-3 m-6 text-xs uppercase hover:shadow-xl hover:text-whitey hover:bg-stellar-dark h transition ease-in-out duration-150"><FaUserAlt className="float-left mr-3"/>My biography</div>
-                </Link>
-              </div>
-            </div>
+  <div className="mx-auto text-left flex flex-col pb-10 px-2 sm:px-8">
+
+<div>
+  <h3 className="text-stellarDarker">My Story</h3>
+<p className=" text-whiteyDarker py-2">
+I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovakia. Nowadays I live in Germany with my girlfriend. Most of my professional life is turning around the web-development. I designed and coded my first website someday in 2002 when I was 15 years old. After that I worked in my fathers company (real-estate) - taking care of websites and advertisement, I also spent few years in corporate advertisement agencies like Havas and Wunderman. And between that (that explains the gaps in my CV, which is attached) I was travelling and volunteering around Asia for 1 year and consequently working in Myanmar as a staff of a hostel and finally almost another year in Uganda as a hostel manager.
+</p>
+</div>
+
+
+<div className="flex">
+          <motion.div variants={contVariant} className="mr-4">
+          <Button
+          icon={<FaUserAlt/>}
+          title="Read more"
+          onClick={()=>{navigate("/about")}}
+          > </Button>
+          </motion.div>
+
+          <motion.div variants={contVariant}>
+          <Button
+          icon={<FaDownload/>}
+          title="My Resume (PDF)"
+          primary
+          href="https://www.seznam.cz"
+          />
+          </motion.div>
+
+</div>
+        
+
+
+
+
+<motion.div className=" h-16 w-3/5 rounded-lg bar"
+variants={bar}
+>
+
+<h1 className="text-whiteyDarker text-4xl pl-4">Javascript ES6</h1>
+
+</motion.div>
 
     
-
+</div>
 
 
 
@@ -57,6 +133,6 @@ const TabContent = ({ id, active }) => (
 
 
   </motion.div>
-);
+)};
 
 export default TabContent;

@@ -1,37 +1,74 @@
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import classNames from "classnames";
+import styles from "../styles/button.module.css";
+import { Link } from "gatsby";
 
-const Button = ({ children, href, ...params }) => {
-  const className =
-    "bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 text-xs text-whitey uppercase hover:shadow-xl h transition ease-in-out duration-150"
+const Button = ({icon, hasIconRight, title, href, onClick, primary, full}) => {
 
-  if (href) {
-    return (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+  const className = classNames(
+    [styles.button,
+    primary ? styles.primaryBG : styles.normalBG,
+    hasIconRight && styles.reverse,
+    full && styles.full
+    ])
+
+ 
+
+        if (href)  { return (
+          <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+        <button
         className={className}
-      >
-        {children}
-      </a>
-    )
-  } else {
-    return (
-      <button className={className} {...params}>
-        {children}
+        >
+           {!!icon && (
+        <span
+          className={classNames([
+            styles.icon,
+            hasIconRight && styles.iconRight,
+          ])}
+        >
+          {icon}
+        </span>
+      )}
+
+      <span>{title}</span>
       </button>
-    )
-  }
+        </a>
+        ) 
+
+        } else  {
+
+    return (
+
+    <button
+    className={className}
+    onClick={onClick}
+  >
+
+      {!!icon && (
+        <span
+          className={classNames([
+            styles.icon,
+            hasIconRight && styles.iconRight,
+          ])}
+        >
+          {icon}
+        </span>
+      )}
+
+      <span>{title}</span>
+
+
+  </button>
+  )
+};
+
 }
 
-Button.propTypes = {
-  children: PropTypes.node.isRequired,
-  href: PropTypes.string,
-}
 
-Button.defaultProps = {
-  href: null,
-}
 
-export default Button
+export default Button;

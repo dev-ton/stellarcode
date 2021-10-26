@@ -1,5 +1,4 @@
 import React from "react"
-import Socials from "../components/Socials"
 import ScrollUp from "../components/ScrollUp"
 
 

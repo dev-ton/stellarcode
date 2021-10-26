@@ -3,6 +3,7 @@ import {FaUserAlt} from "@react-icons/all-files/fa/FaUserAlt"
 import {FaPenNib} from "@react-icons/all-files/fa/FaPenNib"
 import {FaEnvelope} from "@react-icons/all-files/fa/FaEnvelope"
 import {FaPaperPlane} from "@react-icons/all-files/fa/FaPaperPlane"
+import Button from "./Button"
 
 
 
@@ -15,7 +16,7 @@ const Contact = () => {
 
 return (
 
-<div className="w-full md:w-2/3 flex justify-center md:border-gray-700 md:border-solid md:border-l-2 ">
+<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-gray-700 md:border-solid md:border-l-2 px-6">
 
 <form className="w-full max-w-lg" autoComplete="off">
 <div className="pb-8">
@@ -44,9 +45,13 @@ return (
 </div></div>
 
 <div className="w-full pb-8">
-<button className="shadow bg-stellar-dark stellarButton w-full transition ease-in-out duration-150 focus:shadow-outline focus:outline-none text-whitey font-bold py-2 px-4 rounded" type="button">
-        <FaPaperPlane className="float-left mr-3"/>Send
-</button></div>
+<Button
+ icon={<FaPaperPlane/>}
+ title="Send"
+ primary
+ full
+ />
+</div>
 </form>
 
 </div>

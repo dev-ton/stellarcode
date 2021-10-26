@@ -8,7 +8,7 @@
   --trackColor:#131313;
   --thumbColor:#4B3F72;
   --white: #fff;
-  --whitey: #eee;
+  --whitey: #E0E0E0;
   --black: #333;
   --tab-active-color: #ffc857;
   --stellar-dark: #B27800;
@@ -40,6 +40,8 @@ body {
   background-size: contain; 
   scrollbar-color: var(--thumbColor) var(--trackColor) !important;
   scrollbar-width: auto;
+  -webkit-scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  -webkit-scrollbar-width: auto;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   font-feature-settings: "kern", "liga", "clig", "calt";
@@ -47,6 +49,15 @@ body {
   @apply font-sans antialiased;
 }
 
+body::-webkit-scrollbar-track {
+  background: var(--trackColor);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbColor) ;
+  border-radius: 6px;
+  border: 3px solid var(--trackColor);
+}
 
 
 ::-moz-selection {
@@ -61,15 +72,7 @@ body {
   -webkit-text-fill-color: #C4C4C4; 
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--trackColor);
-}
 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbColor) ;
-  border-radius: 6px;
-  border: 3px solid var(--trackColor);
-}
 
 
 .textGradient {
@@ -84,13 +87,22 @@ body::-webkit-scrollbar-thumb {
 
 .heading {
   background-image: linear-gradient(180deg, var(--underline-color) 85%, var(--underline-color2) 15%);
+  background-image: -webkit-linear-gradient(270deg, var(--underline-color) 85%, var(--underline-color2) 15%);
   background-position-y: bottom;
-  background-size: auto 30%;
+  background-size: 100% 30%;
   background-repeat: no-repeat;
   padding: 0 1rem;
-  margin-bottom: 2.5rem
+  margin-bottom: 2.5rem;
+  color:var(--whitey);
 }
 
+.bar {
+  background-color: #f3ec78;
+  background-image: linear-gradient(318deg, rgba(255,151,59,1) 0%, rgba(75,63,114,1) 100%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: var(--whitey) solid 2px;
+}
 
 p { 
   @apply py-2;
@@ -284,7 +296,7 @@ transform: translateY(15px);
   /*height: 36px;*/
   width: 36px;
   min-width: 36px;
-  fill: var(--stellar-dark);
+  fill: var(--whitey);
   transition: fill 0.5s ease;
   margin: 0.1rem auto;
 }
@@ -335,20 +347,6 @@ transform: translateY(15px);
   height: 64px;
   fill: #1F2041;
 }
-
-/*  stellar button */
-.stellarButton {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-border-radius: 4px;
-}
-
-.stellarButton:hover {
-  transform: scale(1.05);
-  transition: all ease-in-out .75;
-  }
 
 
 /* footer */
@@ -474,8 +472,8 @@ textarea:not(:placeholder-shown) ~ label {
 
 .socialBg {
   position: relative;
-  top: -100%;
-  z-index: -1;
+  bottom: 20px;
+  z-index: 0;
   transform: scale(2);
 }
 
@@ -483,6 +481,16 @@ textarea:not(:placeholder-shown) ~ label {
   height: 450px;
   -webkit-mask-image: linear-gradient(transparent, rgba(0,0,0,1) 6% 90%,transparent);
   mask-image: linear-gradient(transparent, rgb(0, 0, 0) 6% 90%,transparent);
+}
+
+.textboxMask::-webkit-scrollbar-track {
+  background: var(--trackColor);
+}
+
+.textboxMask::-webkit-scrollbar-thumb {
+  background-color: var(--thumbColor) ;
+  border-radius: 6px;
+  border: 3px solid var(--trackColor);
 }
 
 /* responsive */
@@ -511,7 +519,7 @@ textarea:not(:placeholder-shown) ~ label {
 
 .tab a {
   text-decoration: none;
-  color: var(--stellar-dark);
+  color: var(--whitey);
 }
 
 .tab span {

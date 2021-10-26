@@ -68,7 +68,7 @@ const FooterLink = ({ href, label, icon: Icon, hide }) => {
           className="text-whitey"
         >
           <span className="sr-only">{label}</span>
-          <Icon className="w-5 h-5 fill-current" />
+          <Icon className="w-5 h-5 fill-current relative top-0 z-10" />
           <div className="w-full h-full bg-stellar-dark opacity-0 rounded-full socialBg group-hover:opacity-100 transition-all ease-linear duration-200"></div>
         </a>
       </li>

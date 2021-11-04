@@ -5,34 +5,53 @@ import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 
 const AboutPage = () => (
+
+  
   <StaticQuery
     query={graphql`
     {
-      aboutme: contentfulAboutMe {
-        portraitImage {
-          localFile {
-            childImageSharp {
-              fluid(maxWidth: 444, maxHeight: 342, quality: 85) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-          title
+      contentfulMyStory {
+        title
+        subHeadline {
+          subHeadline
+        }
+        firstParagraph {
+          firstParagraph
+        }
+        secondParagraph {
+          secondParagraph
+        }
+        thirdParagraph {
+          thirdParagraph
+        }
+        fourthParagraph {
+          fourthParagraph
+        }
+        fifthParagraph {
+          fifthParagraph
+        }
+        sixthParagraph {
+          sixthParagraph
+        }
+        seventhParagraph {
+          seventhParagraph
+        }
+        eightParagraph {
+          eightParagraph
         }
         resume {
-          file {
+          localFile {
             url
           }
         }
-        textContent {
-          childMarkdownRemark {
-            html
+        msImage1 {
+          fluid(toFormat: WEBP, cropFocus: FACE, maxWidth: 800) {
+            ...GatsbyContentfulFluid
           }
         }
-        title
       }
     }
-    `}
+  `}
 
     
 
@@ -45,24 +64,22 @@ const AboutPage = () => (
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
             <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-whitey sm:text-4xl">
-            {data.aboutme.title}
+            {data.contentfulMyStory.title}
             </h1>
 
             <h2 className="text-xl leading-tight font-semibold tracking-tight text-stellar sm:text-2xl">
-              Interdum et malesuada fames ac ante.
+            {data.contentfulMyStory.subHeadline.subHeadline}
             </h2>
             <div className="mt-4 leading-loose">
 
-            <span className=" text-gray-400 pt-3 text-xl"
-        dangerouslySetInnerHTML={{
-          __html: data.aboutme.textContent.childMarkdownRemark.html,
-          }}>
-        </span>
+            <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.firstParagraph.firstParagraph}
+          </span>
 
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <Img className="rounded-lg" fluid={data.aboutme.portraitImage.localFile.childImageSharp.fluid} alt={data.aboutme.portraitImage.title} />
+            <Img className="rounded-lg" fluid={data.contentfulMyStory.msImage1.fluid} alt={data.contentfulMyStory.msImage1.title} />
           </div>
         </div>
       </div>

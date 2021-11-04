@@ -78,6 +78,7 @@ const data = useStaticQuery(graphql`
       </svg>
       </AnchorLink>
     </div>
+
   </section>
 )}
 

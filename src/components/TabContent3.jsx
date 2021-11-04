@@ -124,6 +124,14 @@ variants={bar}
 
 </motion.div>
 
+<div className="mb-1 flex justify-between">
+  <span className="text-base text-blue-700 font-medium">Themesberg project</span>
+  <span className="text-sm font-medium text-blue-700">45%</span>
+</div>
+<div className="w-full bg-gray-200 rounded-full h-4">
+  <motion.div className="bg-blue-600 h-4 rounded-full" variants={bar}></motion.div>
+</div>
+
     
 </div>
 

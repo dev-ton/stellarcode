@@ -47,7 +47,13 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+    resolve: `gatsby-plugin-sharp`,
+    options: {
+      // Set to false to allow builds to continue on image errors
+      failOnError: false,
+    },
+  },
     {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {

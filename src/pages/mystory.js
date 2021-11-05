@@ -44,8 +44,8 @@ const AboutPage = () => (
             url
           }
         }
-        msImage1 {
-          fluid(toFormat: WEBP, cropFocus: FACE, maxWidth: 800) {
+        msImage2 {
+          fluid(maxWidth: 800) {
             ...GatsbyContentfulFluid
           }
         }
@@ -60,26 +60,60 @@ const AboutPage = () => (
     <SiteMetadata title="About" description="Sample description" />
 
     
-      <div className="container py-12 lg:pb-16 pt-40 md:pt-64">
+      <div className="container py-12 lg:pb-16">
+      <div className="topSpace h-12 sm:h-24"></div>
+
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-whitey sm:text-4xl">
+          <div className="mt-4">
+
+            <article className="prose lg:prose-xl">
+            <h1>
             {data.contentfulMyStory.title}
             </h1>
 
-            <h2 className="text-xl leading-tight font-semibold tracking-tight text-stellar sm:text-2xl">
+            <h2>
             {data.contentfulMyStory.subHeadline.subHeadline}
             </h2>
-            <div className="mt-4 leading-loose">
+            
 
-            <span className=" text-gray-400 pt-3 text-xl">
+            <p>
             {data.contentfulMyStory.firstParagraph.firstParagraph}
+            </p>
+
+            <p>
+            {data.contentfulMyStory.secondParagraph.secondParagraph}
+            </p>
+            </article>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.thirdParagraph.thirdParagraph}
+          </span>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.fourthParagraph.fourthParagraph}
+          </span>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.fifthParagraph.fifthParagraph}
+          </span>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.sixthParagraph.sixthParagraph}
+          </span>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.seventhParagraph.seventhParagraph}
+          </span>
+
+          <span className=" text-gray-400 pt-3 text-xl">
+            {data.contentfulMyStory.eightParagraph.eightParagraph}
           </span>
 
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <Img className="rounded-lg" fluid={data.contentfulMyStory.msImage1.fluid} alt={data.contentfulMyStory.msImage1.title} />
+            <Img className="rounded-lg" fluid={data.contentfulMyStory.msImage2.fluid} alt={data.contentfulMyStory.msImage2.title} />
           </div>
         </div>
       </div>

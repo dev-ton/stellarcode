@@ -2,8 +2,8 @@ import React from "react"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
 import Swiper from "react-id-swiper"
+//*import "swiper/css/swiper.css"
 
-import "swiper/css/swiper.css"
 import "./Carousel.css"
 
 export const Carousel = ({ images }) => {

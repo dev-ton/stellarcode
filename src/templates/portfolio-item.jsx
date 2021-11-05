@@ -7,7 +7,7 @@ import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
 import Layout from "../layouts/Layout"
 
-export default props => {
+const portfolioItem =  (props) => {
   const {
     description,
     gallery,
@@ -52,7 +52,7 @@ export default props => {
               )}
               {url && (
                 <div className="mt-8">
-                  <Button href={url}>More info</Button>
+                  <Button href={url} primary title="More info">More info</Button>
                 </div>
               )}
             </div>
@@ -73,6 +73,8 @@ export default props => {
     </Layout>
   )
 }
+
+export default portfolioItem 
 
 export const query = graphql`
   query PortfolioItemQUery($slug: String!) {

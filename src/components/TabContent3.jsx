@@ -97,7 +97,7 @@ I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovaki
           <Button
           icon={<FaUserAlt/>}
           title="Read more"
-          onClick={()=>{navigate("/about")}}
+          onClick={()=>{navigate("/mystory")}}
           > </Button>
           </motion.div>
 

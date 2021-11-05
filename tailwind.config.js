@@ -4,6 +4,7 @@ module.exports = {
   },
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
   theme: {
+    
     container: {
       center: true,
       padding: "4rem",
@@ -45,6 +46,9 @@ module.exports = {
     }
   }
 },
+plugins: [
+  require('@tailwindcss/typography')
+],
   variants: {
     opacity: ["responsive", "hover", "focus", "group-hover"],
     display: ["responsive", "hover", "focus", "last"],

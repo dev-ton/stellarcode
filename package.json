@@ -39,7 +39,6 @@
   "devDependencies": {
     "chalk": "^4.1.2",
     "contentful-import": "^8.2.24",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.25",
     "inquirer": "^8.2.0",
     "prettier": "^2.4.1",
     "styled-components": "^5.3.3"

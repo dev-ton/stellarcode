@@ -55,13 +55,6 @@ module.exports = {
     },
   },
     {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-        disable: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Antonin Jech`,

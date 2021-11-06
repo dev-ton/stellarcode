@@ -2,9 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaDownload } from "@react-icons/all-files/fa/FaDownload"
 import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt"
-import Button from "./Button";
 import { navigate } from "gatsby";
-
+import Button from "./Button";
 
 
 

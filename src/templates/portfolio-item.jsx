@@ -2,10 +2,10 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import SiteMetadata from "../components/SiteMetadata"
-import Button from "../components/Button"
 import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
 import Layout from "../layouts/Layout"
+import Button from "../components/Button"
 
 const portfolioItem =  (props) => {
   const {

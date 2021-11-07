@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --trackColor:#131313;
   --thumbColor:#4B3F72;
@@ -562,3 +560,4 @@ textarea:not(:placeholder-shown) ~ label {
     @apply px-16;
   }
 }
+

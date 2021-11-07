@@ -1,7 +1,7 @@
 import React from "react"
+import "../styles/style.css";
 import PropTypes from "prop-types"
 import { motion } from "framer-motion"
-import "../styles/style.css"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Header2 from "../components/Header2"

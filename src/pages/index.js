@@ -1,6 +1,6 @@
 import React from "react"
-import Hero from "../components/Hero"
 import Layout from "../layouts/Layout"
+import Hero from "../components/Hero"
 import SiteMetadata from "../components/SiteMetadata"
 import AboutMe from "../components/AboutMe"
 import MyWork from "../components/MyWork"

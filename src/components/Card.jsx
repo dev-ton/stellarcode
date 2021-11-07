@@ -1,7 +1,7 @@
+import React from "react"
 import Img from "gatsby-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import { motion } from "framer-motion"
 import { FaAngleRight } from "@react-icons/all-files/fa/FaAngleRight"
 

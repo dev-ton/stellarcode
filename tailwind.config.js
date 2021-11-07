@@ -40,9 +40,6 @@ module.exports = {
       spaceDarker: '#121229',
       spaceDarkest: '#131313',
     },
-    backgroundImage: {
-      main: 'background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);',
-    }
   }
 },
   variants: {

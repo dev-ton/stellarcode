@@ -57,6 +57,7 @@ const AboutPage = () => (
             )
           }
         }
+        title
       }
       }
     }
@@ -76,7 +77,7 @@ const AboutPage = () => (
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
           <div className="mt-4">
 
-            <article className="prose lg:prose-xl">
+            <article className="prose prose-sm prose-lg">
             <h1>
             {data.contentfulMyStory.title}
             </h1>
@@ -86,38 +87,51 @@ const AboutPage = () => (
             </h2>
             
 
-            <p>
+            <h3>
             {data.contentfulMyStory.firstParagraph.firstParagraph}
-            </p>
+            </h3>
 
             <p>
             {data.contentfulMyStory.secondParagraph.secondParagraph}
             </p>
+
+            <blockquote>
+            {data.contentfulMyStory.thirdParagraph.thirdParagraph}
+            </blockquote>
+
+            <ul>
+              <li>First item</li>
+              <li>Second item</li>
+              <li>Third item</li>
+              <li>Fourth item</li>
+              <li>Fifth item</li>
+            </ul>
+
             </article>
 
-          <span className=" text-gray-400 pt-3 text-xl">
-            {data.contentfulMyStory.thirdParagraph.thirdParagraph}
-          </span>
-
-          <span className=" text-gray-400 pt-3 text-xl">
+         
+            <article className="prose">
+          <p>
             {data.contentfulMyStory.fourthParagraph.fourthParagraph}
-          </span>
+          </p>
 
-          <span className=" text-gray-400 pt-3 text-xl">
+          <p>
             {data.contentfulMyStory.fifthParagraph.fifthParagraph}
-          </span>
+          </p>
 
-          <span className=" text-gray-400 pt-3 text-xl">
+          <p>
             {data.contentfulMyStory.sixthParagraph.sixthParagraph}
-          </span>
+          </p>
 
-          <span className=" text-gray-400 pt-3 text-xl">
+          <p>
             {data.contentfulMyStory.seventhParagraph.seventhParagraph}
-          </span>
+          </p>
 
-          <span className=" text-gray-400 pt-3 text-xl">
+          <p>
             {data.contentfulMyStory.eightParagraph.eightParagraph}
-          </span>
+          </p>
+
+          </article>
 
             </div>
           </div>

@@ -12,6 +12,28 @@ module.exports = {
       sans: ["Futura", "Inter var", "system-ui", "sans-serif"],
     },
     extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#E0E0E0',
+            h1: {
+              color: '#E0E0E0',
+            },
+            h2: {
+              color: '#ffc857',
+              fontWeight: 500,
+            },
+            h3: {
+              color: '#E0E0E0',
+              fontWeight: 500,
+            },
+            blockquote: {
+              color: '#E0E0E0',
+              borderLeftColor: '#ffc857',
+            },
+          },
+        },
+      },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

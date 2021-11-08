@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Hero = () => {
@@ -11,9 +11,12 @@ const data = useStaticQuery(graphql`
     portraitPhoto {
       localFile {
         childImageSharp {
-          fluid(maxHeight: 1300) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+              height: 1300
+              quality: 85
+              formats: [AUTO, AVIF]
+              placeholder: BLURRED
+            )
         }
       }
     }
@@ -21,7 +24,7 @@ const data = useStaticQuery(graphql`
 }
 `)
 
-
+const image = getImage(data.contentfulIntroSection.portraitPhoto.localFile.childImageSharp)
 
   return (
 
@@ -65,7 +68,7 @@ const data = useStaticQuery(graphql`
       </div>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <Img fluid={data.contentfulIntroSection.portraitPhoto.localFile.childImageSharp.fluid} alt="image" className="intro-img rounded-md"/>
+      <GatsbyImage image={image} alt="image" className="intro-img rounded-md"/>
       </div>  
     
     </div>

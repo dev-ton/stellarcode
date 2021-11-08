@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import { motion } from "framer-motion"
@@ -41,6 +41,8 @@ const arrowMotion = {
 const Card = props => {
   const { name, slug, summary, thumbnail } = props
 
+  const image = getImage(thumbnail.localFile.childImageSharp)
+
   return (
     <motion.div className="bg-space-light h-full shadow-lg rounded-md overflow-hidden group card"
       initial="rest"
@@ -51,7 +53,7 @@ const Card = props => {
       
       <Link to={`/${slug}`}>
         <div className="pt-3 group-hover:opacity-75 transition duration-150 ease-in-out">
-          <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
+        <GatsbyImage image={image} alt={name} />
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
@@ -90,9 +92,13 @@ export const query = graphql`
     thumbnail {
       localFile {
         childImageSharp {
-          fluid(maxWidth: 444, maxHeight: 342, quality: 85) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
+          gatsbyImageData(
+              height: 342
+              width: 444
+              quality: 85
+              formats: [AUTO, AVIF]
+              placeholder: BLURRED
+            )
         }
       }
     }

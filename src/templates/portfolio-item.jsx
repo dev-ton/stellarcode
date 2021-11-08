@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../layouts/Layout"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import SiteMetadata from "../components/SiteMetadata"
 import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
@@ -18,6 +18,8 @@ const portfolioItem =  (props) => {
     url,
   } = props.data.item
 
+  
+
   return (
     <Layout>
       <SiteMetadata
@@ -31,8 +33,8 @@ const portfolioItem =  (props) => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
-                <Img
-                  fluid={gallery[0].localFile.childImageSharp.fluid}
+                <GatsbyImage
+                  image={gallery[0].localFile.childImageSharp.gatsbyImageData}
                   alt={name}
                 />
               )}
@@ -86,9 +88,13 @@ export const query = graphql`
         id
         localFile {
           childImageSharp {
-            fluid(maxWidth: 960, maxHeight: 540, quality: 85) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(
+              height: 540
+              width: 960
+              quality: 85
+              formats: [AUTO, AVIF]
+              placeholder: BLURRED
+            )
           }
         }
         title

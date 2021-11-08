@@ -1,8 +1,10 @@
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import React from "react"
 import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
+import { graphql, StaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+
+
 
 const AboutPage = () => (
 
@@ -44,11 +46,18 @@ const AboutPage = () => (
             url
           }
         }
-        msImage2 {
-          fluid(maxWidth: 800) {
-            ...GatsbyContentfulFluid
+      msImage2 {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(
+              height: 800
+              quality: 85
+              formats: [AUTO, AVIF]
+              placeholder: BLURRED
+            )
           }
         }
+      }
       }
     }
   `}
@@ -113,7 +122,7 @@ const AboutPage = () => (
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <Img className="rounded-lg" fluid={data.contentfulMyStory.msImage2.fluid} alt={data.contentfulMyStory.msImage2.title} />
+            <GatsbyImage className="rounded-lg" image={data.contentfulMyStory.msImage2.localFile.childImageSharp.gatsbyImageData} alt={data.contentfulMyStory.msImage2.title} />
           </div>
         </div>
       </div>

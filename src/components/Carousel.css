@@ -1,9 +1,9 @@
 .swiper-container {
-  --swiper-theme-color: theme("colors.blue.500");
+  --swiper-theme-color: theme("colors.space.light");
 }
 
 .swiper-pagination-bullet {
-  @apply bg-white;
+  @apply bg-white-white;
 }
 
 

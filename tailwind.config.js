@@ -48,7 +48,11 @@ module.exports = {
         darker: '#121229',
         darkest: '#131313',
       },
-      white: '#fff',
+      white: {
+        white: '#fff',
+        whitey: '#eee',
+        whiteyDarker: '#E0E0E0',
+      },
       stellar: {
         light: '#ffc857',
         dark: '#B27800',

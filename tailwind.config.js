@@ -31,6 +31,9 @@ module.exports = {
               color: '#E0E0E0',
               borderLeftColor: '#ffc857',
             },
+            a: {
+              textDecoration: 'none',
+            },
           },
         },
       },

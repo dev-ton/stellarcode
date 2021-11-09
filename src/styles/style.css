@@ -16,20 +16,8 @@
   --underline-color2: #ffc857;
 }
 
-a.fade_underlink {
-  border-bottom: 2px solid rgba(217, 175, 89, 1);
-  -webkit-transition: border 300ms ease;
-  -moz-transition: border 300ms ease;
-  -ms-transition: border 300ms ease;
-  -o-transition: border 300ms ease;
-  transition: border 300ms ease; 
-}
-a.fade_underlink:hover {
-  border-bottom: 2px solid rgba(217, 175, 89, 0);
-}
-
-body, html {
-  scrollbar-track-color: var(--trackColor) !important;
+.container {
+  @apply max-w-screen-xl mx-auto px-4;
 }
 
 body {
@@ -79,6 +67,7 @@ body::-webkit-scrollbar-thumb {
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent; 
   -moz-text-fill-color: transparent;
 }
@@ -94,6 +83,7 @@ body::-webkit-scrollbar-thumb {
   color:var(--whitey);
 }
 
+
 .bar {
   background-color: #f3ec78;
   background-image: linear-gradient(318deg, rgba(255,151,59,1) 0%, rgba(75,63,114,1) 100%);
@@ -106,10 +96,21 @@ p {
   @apply py-2;
 }
 
+/* Fade underline on links */
 
-.container {
-  @apply max-w-screen-xl mx-auto px-4;
+a.fade_underlink {
+  border-bottom: 2px solid rgba(217, 175, 89, 1);
+  -webkit-transition: border 300ms ease;
+  -moz-transition: border 300ms ease;
+  -ms-transition: border 300ms ease;
+  -o-transition: border 300ms ease;
+  transition: border 300ms ease; 
 }
+a.fade_underlink:hover {
+  border-bottom: 2px solid rgba(217, 175, 89, 0);
+}
+
+
 
 nav > div.hidden.sm\:block > ul > a.active {
   @apply border-blue-600 text-stellar;
@@ -165,27 +166,6 @@ nav > div.hidden.sm\:block > ul > a.active {
   animation-delay: 500ms;
 }
 
-/* Bounce animation 'animation-bounce' did not work, doing it manually */
-
-.square50 {
-  width: 50px;
-  height: 50px;
-}
-
-.bouncyBounce {
-  animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animationTimingFunction: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animationTimingFunction: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
 
 /* About Me section */
 
@@ -211,12 +191,13 @@ nav > div.hidden.sm\:block > ul > a.active {
 }
 
 /* tab component */
+ /*
 .arrow {
-  /*
   padding-top: 1.0em;
   position: relative;
-  left: 46.5%; */
-}
+  left: 46.5%; 
+}*/
+
 .arrowSize {
 transform: translateY(15px);
 }

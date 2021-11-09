@@ -48,6 +48,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-less`,
     {
     resolve: `gatsby-plugin-sharp`,
     options: {

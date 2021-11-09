@@ -110,7 +110,7 @@ const AboutPage = () => (
             </article>
 
          
-            <article className="prose">
+            <article className="prose prose-sm prose-lg">
           <p>
             {data.contentfulMyStory.fourthParagraph.fourthParagraph}
           </p>
@@ -136,7 +136,7 @@ const AboutPage = () => (
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <GatsbyImage className="rounded-lg" image={data.contentfulMyStory.msImage2.localFile.childImageSharp.gatsbyImageData} alt={data.contentfulMyStory.msImage2.title} />
+            <GatsbyImage className="intro-img rounded-md" image={data.contentfulMyStory.msImage2.localFile.childImageSharp.gatsbyImageData} alt={data.contentfulMyStory.msImage2.title} />
           </div>
         </div>
       </div>

@@ -39,8 +39,8 @@ const arrowMotion = {
 };
 
 const Card = props => {
-  const { name, slug, summary, thumbnail } = props
 
+  const { name, slug, summary, thumbnail } = props
   const image = getImage(thumbnail.localFile.childImageSharp)
 
   return (

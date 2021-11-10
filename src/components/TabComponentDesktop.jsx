@@ -81,7 +81,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
   
 
    <div className="arrowSize">
-    <div className='triangle bg-space-dark bg-opacity-40'></div>
+    <div className=' bg-space-dark triangle '></div>
    </div>
   </motion.div>
         )}
@@ -93,7 +93,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
   </AnimateSharedLayout>
 
  
-	<div className="p-1 bg-space-dark w-full shadow-lg rounded-b-md sm:rounded-md pt-12 bg-opacity-40">
+	<div className="p-1 bg-space-dark w-full shadow-lg rounded-b-md sm:rounded-md pt-12">
     
     
   

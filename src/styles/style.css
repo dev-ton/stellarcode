@@ -21,9 +21,12 @@
   @apply max-w-screen-xl mx-auto px-4;
 }
 
+/* original bg_gradient: , linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%) */
+
 body {
-  background: url("../images/landscape.svg") no-repeat bottom center, linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);
+  background: url("../images/landscape.svg") no-repeat bottom center;
   background-size: contain; 
+  background-color: #121229;
   scrollbar-color: var(--thumbColor) var(--trackColor) !important;
   scrollbar-width: auto;
   -webkit-scrollbar-color: var(--thumbColor) var(--trackColor) !important;
@@ -84,7 +87,7 @@ h3 {
 
 .textGradient {
   background-color: #f3ec78;
-  background-image: linear-gradient(318deg, rgba(255,151,59,1) 0%, rgba(75,63,114,1) 100%);
+  background-image: linear-gradient(95deg, rgba(255,151,59,1) 0%, rgba(75,63,114,1) 70%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;

@@ -41,7 +41,7 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto.localFile.child
 
 
 
-<div>
+<div className="sm:pr-6">
 
 <h1 className="textGradient text-center sm:text-left">
    

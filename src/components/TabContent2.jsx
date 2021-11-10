@@ -185,7 +185,7 @@ My main focus was always on HTML/CSS/JS and building modern looking websites and
             <h2 className="text-stellarDarker pb-2">Which other tools/frameworks I use?</h2>
                <div className="flex flex-wrap py-2">
                   {skillsCode.map((skill, index) => (
-                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darker rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}

@@ -58,7 +58,7 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <div className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space rounded-t-md m-0" role="tablist" aria-label="About me Tabs">
+  <div className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-dark border-b-2 border-solid border-space rounded-t-md m-0" role="tablist" aria-label="About me Tabs">
     {tabs.map((tab, index) => (
       <motion.div
         key={tab.id}
@@ -96,14 +96,14 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
   </AnimateSharedLayout>
 
  
-	<div className="p-1 bg-space-light w-full shadow-lg rounded-b-md">
+	<div className="p-1 bg-space-dark w-full shadow-lg rounded-b-md">
     <div className="textboxMask scrolling-touch overflow-y-scroll pt-10 mb-10">
 
     {tabs.map((tab, index) => (
       <motion.div
       initial="false"
       key={tab.id}
-      active={activeTabIndex === index}
+      active={+(activeTabIndex === index)}
       drag="x"
       dragConstraints={{ left: 0, right: 0 }}
       dragElastic={0.7}
@@ -121,7 +121,7 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
 		  <tab.content
       key={tab.id}
       id={tab.id}
-      active={activeTabIndex === index}
+      active={+(activeTabIndex === index)}
       aria-labelledby={`tab-${index}`}
       />
       </motion.div>

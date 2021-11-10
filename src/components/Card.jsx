@@ -44,7 +44,7 @@ const Card = props => {
   const image = getImage(thumbnail.localFile.childImageSharp)
 
   return (
-    <motion.div className=" bg-space-dark h-full shadow-lg rounded-md overflow-hidden group card"
+    <motion.div className=" bg-space-dark bg-opacity-40 h-full shadow-lg rounded-md overflow-hidden group card"
       initial="rest"
       whileHover="hover"
       animate="rest"

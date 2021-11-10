@@ -12,30 +12,18 @@ module.exports = {
       sans: ["Futura", "Inter var", "system-ui", "sans-serif"],
     },
     extend: {
-      typography: {
-        DEFAULT: {
-          css: {
-            color: '#E0E0E0',
-            h1: {
-              color: '#E0E0E0',
-            },
-            h2: {
-              color: '#ffc857',
-              fontWeight: 500,
-            },
-            h3: {
-              color: '#E0E0E0',
-              fontWeight: 500,
-            },
-            blockquote: {
-              color: '#E0E0E0',
-              borderLeftColor: '#ffc857',
-            },
-            a: {
-              textDecoration: 'none',
-            },
-          },
-        },
+    fontSize: {
+        xs: ['0.75rem', '1rem'],
+        sm: ['0.875rem', '1.25rem'],
+        base: ['1rem', '1.75rem'],
+        lg: ['1.125rem', '2rem'],
+        xl: ['1.25rem', '2.25rem'],
+        '2xl': ['1.5rem','2rem'],
+        '3xl': ['1.875rem','2.5rem'],
+        '4xl': ['2.25rem','3rem'],
+        '5xl': ['3rem','4rem'],
+        '6xl': ['3.75rem','4.5rem'],
+        '7xl': ['4.5rem','5.25rem'],
       },
     colors: {
       transparent: 'transparent',
@@ -71,9 +59,6 @@ module.exports = {
     }
   }
 },
-plugins: [
-  require('@tailwindcss/typography')
-],
   variants: {
     opacity: ["responsive", "hover", "focus", "group-hover"],
     display: ["responsive", "hover", "focus", "last"],

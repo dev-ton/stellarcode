@@ -135,9 +135,10 @@ const TabContent = ({ id, active }) => (
 
             <motion.div variants={contVariant}>
            
-  <article className="prose max-w-none">
+  <article className=" text-whiteyDarker px-2">
                <h2 className="text-stellarDarker">Tech stack:</h2>
 
+            <div className="pb-4">
                 <div className="mb-1 flex justify-between">
                   <span className="text-base font-medium">HTML/CSS</span>
                   <span className="text-sm font-medium">Expert</span>
@@ -169,7 +170,7 @@ const TabContent = ({ id, active }) => (
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
                   <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar4}></motion.div>
                 </div>
-
+            </div>
 
 <h2 className="text-stellarDarker">What can I code for you?</h2>
 <p className=" text-whiteyDarker py-2">
@@ -179,7 +180,7 @@ My main focus was always on HTML/CSS/JS and building modern looking websites and
 
             </motion.div>
 
-            <motion.div variants={contVariant} className="sm:pl-12">
+            <motion.div variants={contVariant} className="sm:pl-12 px-2">
               <article className="prose max-w-none">
             <h2 className="text-stellarDarker pb-2">Which other tools/frameworks I use?</h2>
                <div className="flex flex-wrap py-2">

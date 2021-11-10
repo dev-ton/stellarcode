@@ -62,15 +62,15 @@ return (
         
   <div className="mx-auto text-left flex flex-col pb-10 px-2 sm:px-8">
 
-<article className="prose max-w-none">
+<article className="px-2">
   <h2 className="text-stellarDarker">My Story</h2>
-<p className="py-2">
+<p className=" text-whiteyDarker">
 I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovakia. Nowadays I live in Germany with my girlfriend. Most of my professional life is turning around the web-development. I designed and coded my first website someday in 2002 when I was 15 years old. After that I worked in my fathers company (real-estate) - taking care of websites and advertisement, I also spent few years in corporate advertisement agencies like Havas and Wunderman. And between that (that explains the gaps in my CV, which is attached) I was travelling and volunteering around Asia for 1 year and consequently working in Myanmar as a staff of a hostel and finally almost another year in Uganda as a hostel manager.
 </p>
 </article>
 
 
-<div className="flex">
+<div className="flex px-2">
           <motion.div variants={contVariant} className="mr-4">
           <Button
           icon={<FaUserAlt/>}

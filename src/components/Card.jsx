@@ -41,7 +41,7 @@ const arrowMotion = {
 const Card = props => {
 
   const { name, slug, summary, thumbnail } = props
-  const image = getImage(thumbnail.localFile.childImageSharp)
+  const image = getImage(thumbnail.localFile)
 
   return (
     <motion.div className=" bg-space-dark h-full shadow-lg rounded-md overflow-hidden group card"

@@ -25,7 +25,7 @@ const portfolioItem =  (props) => {
       <SiteMetadata
         title={name}
         description={summary}
-        image={thumbnail.localFile.publicURL}
+        image={thumbnail.localFile.childImageSharp.gatsbyImageData}
       />
       
         <div className="container pb-20 sm:pb-40">
@@ -106,7 +106,9 @@ export const query = graphql`
       summary
       thumbnail {
         localFile {
-          publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
       url

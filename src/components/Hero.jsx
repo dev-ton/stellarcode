@@ -66,7 +66,7 @@ and UI/UX designer.
       </div>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} alt="image" className="img-space-dark-shadow rounded-md"/>
+      <GatsbyImage image={image} alt="image" className="space-dark-shadow rounded-md image-height-regulator"/>
       </div>  
     
     </div>

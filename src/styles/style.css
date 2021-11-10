@@ -123,9 +123,13 @@ nav > div.hidden.sm\:block > ul > a.active {
   top: 3px;
 }
 
-.img-space-dark-shadow {
+.space-dark-shadow {
   -webkit-box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33); 
   box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33);
+}
+
+.img-height-regulator {
+  height:20rem;
 }
 
 /* animation of the stars in the logo */
@@ -407,11 +411,14 @@ textarea:not(:placeholder-shown) ~ label {
     top: 5px;
   }
 
-.intro-img {
-    height: 700px;
+.space-dark-shadow {
     -webkit-box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33); 
     box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33);
   }
+
+.img-height-regulator {
+  height:700px;
+}
 
 .tab-links {
   margin: 30px 0px 20px;

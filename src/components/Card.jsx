@@ -41,7 +41,7 @@ const arrowMotion = {
 const Card = props => {
 
   const { name, slug, summary, thumbnail } = props
-  const image = getImage(thumbnail.localFile)
+  const image = getImage(thumbnail)
 
   return (
     <motion.div className=" bg-space-dark h-full shadow-lg rounded-md overflow-hidden group card"
@@ -90,18 +90,13 @@ export const query = graphql`
     name
     slug
     thumbnail {
-      localFile {
-        childImageSharp {
           gatsbyImageData(
               height: 342
               width:446
               quality: 85
               formats: [AUTO, WEBP]
               placeholder: BLURRED
-              transformOptions: {cropFocus: CENTER, fit: COVER}
             )
-        }
-      }
     }
     summary
   }

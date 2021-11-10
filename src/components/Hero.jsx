@@ -9,23 +9,19 @@ const data = useStaticQuery(graphql`
 {
   contentfulIntroSection {
     portraitPhoto {
-      localFile {
-        childImageSharp {
           gatsbyImageData(
               height: 1300
               quality: 85
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
-        }
-      }
       title
     }
   }
 }
 `)
 
-const image = getImage(data.contentfulIntroSection.portraitPhoto.localFile.childImageSharp)
+const image = getImage(data.contentfulIntroSection.portraitPhoto)
 
   return (
 

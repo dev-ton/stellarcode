@@ -42,21 +42,17 @@ const AboutPage = () => (
           eightParagraph
         }
         resume {
-          localFile {
-            url
-          }
+          file {
+          url
+        }
         }
       msImage2 {
-        localFile {
-          childImageSharp {
             gatsbyImageData(
               height: 800
               quality: 85
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
-          }
-        }
         title
       }
       }
@@ -136,7 +132,7 @@ const AboutPage = () => (
             </div>
           </div>
           <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <GatsbyImage className="space-dark-shadow rounded-md img-height-regulator" image={data.contentfulMyStory.msImage2.localFile.childImageSharp.gatsbyImageData} alt={data.contentfulMyStory.msImage2.title} />
+            <GatsbyImage className="space-dark-shadow rounded-md img-height-regulator" image={data.contentfulMyStory.msImage2.gatsbyImageData} alt={data.contentfulMyStory.msImage2.title} />
           </div>
         </div>
       </div>

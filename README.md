@@ -10,5 +10,9 @@ Live demo is available at: [stellarcodemaster.gtsb.io](https://stellarcodemaster
 - Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
 - Uses utility-first [TailwindCSS](https://tailwindcss.com/) framework
 
+## Current issues
+
+- gatsby-source-contentful is returning localFile: null when downloadLocal: true, see [33871](https://github.com/gatsbyjs/gatsby/issues/33871)
+
 
 

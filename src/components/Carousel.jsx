@@ -28,7 +28,7 @@ export const Carousel = ({ images }) => {
         return (
           <div key={`slide_${image.id}`}>
             <GatsbyImage
-              image={image.localFile.childImageSharp.gatsbyImageData}
+              image={image.gatsbyImageData}
               alt={image.title}
             />
           </div>

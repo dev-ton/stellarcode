@@ -25,7 +25,7 @@ const portfolioItem =  (props) => {
       <SiteMetadata
         title={name}
         description={summary}
-        image={thumbnail.localFile.childImageSharp.gatsbyImageData}
+        image={thumbnail.gatsbyImageData}
       />
       
         <div className="container pb-20 sm:pb-40">
@@ -34,7 +34,7 @@ const portfolioItem =  (props) => {
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
                 <GatsbyImage
-                  image={gallery[0].localFile.childImageSharp.gatsbyImageData}
+                  image={gallery[0].gatsbyImageData}
                   alt={name}
                 />
               )}
@@ -86,8 +86,6 @@ export const query = graphql`
       }
       gallery {
         id
-        localFile {
-          childImageSharp {
             gatsbyImageData(
               height: 540
               width: 960
@@ -95,8 +93,6 @@ export const query = graphql`
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
-          }
-        }
         title
       }
       name
@@ -105,11 +101,7 @@ export const query = graphql`
       }
       summary
       thumbnail {
-        localFile {
-          childImageSharp {
             gatsbyImageData
-          }
-        }
       }
       url
     }

@@ -52,7 +52,7 @@ const AboutPage = () => (
             gatsbyImageData(
               height: 800
               quality: 85
-              formats: [AUTO, AVIF]
+              formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
           }

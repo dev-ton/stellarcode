@@ -14,7 +14,7 @@ const data = useStaticQuery(graphql`
           gatsbyImageData(
               height: 1300
               quality: 85
-              formats: [AUTO, AVIF]
+              formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
         }
@@ -66,7 +66,7 @@ and UI/UX designer.
       </div>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} alt="image" className="space-dark-shadow rounded-md image-height-regulator"/>
+      <GatsbyImage image={image} alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
       </div>  
     
     </div>

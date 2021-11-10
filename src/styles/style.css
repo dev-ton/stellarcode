@@ -275,7 +275,7 @@ transform: translateY(15px);
 .cardArrow {
   width: 64px;
   height: 64px;
-  fill: #1F2041;
+  fill: var(--stellar-light);
 }
 
 

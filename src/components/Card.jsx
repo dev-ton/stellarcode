@@ -96,7 +96,7 @@ export const query = graphql`
               height: 342
               width:446
               quality: 85
-              formats: [AUTO, AVIF]
+              formats: [AUTO, WEBP]
               placeholder: BLURRED
               transformOptions: {cropFocus: CENTER, fit: COVER}
             )

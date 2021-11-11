@@ -1,12 +1,14 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
-import Swiper from "react-id-swiper"
-import "swiper/swiper-bundle.min.css"
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import "./Carousel.css"
 
 export const Carousel = ({ images }) => {
+  
   const swiperParams = {
     pagination: {
       el: ".swiper-pagination",
@@ -27,10 +29,13 @@ export const Carousel = ({ images }) => {
       {images.map(image => {
         return (
           <div key={`slide_${image.id}`}>
+            <SwiperSlide>
             <GatsbyImage
               image={image.gatsbyImageData}
               alt={image.title}
+              loading="lazy"
             />
+            </SwiperSlide>
           </div>
         )
       })}

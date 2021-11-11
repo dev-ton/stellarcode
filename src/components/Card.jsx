@@ -53,7 +53,7 @@ const Card = props => {
       
       <Link to={`/${slug}`}>
         <div className="pt-3 group-hover:opacity-75 transition duration-150 ease-in-out">
-        <GatsbyImage image={image} alt={name} />
+        <GatsbyImage image={image} alt={name} loading="lazy" />
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">

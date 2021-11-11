@@ -33,8 +33,11 @@ const Email = () => {
 
       {data.map((text, index) => (
           <div className="flex space-between" key={index}>
-     <FaEnvelope className="float-left mr-2 relative top-3" style={{fill:'#ffc857'}}/><a href={`mailto:${text}?subject=Quote&body=I%20would%20like%20to%20accept%20this%20quote`} className="relative form-label-align text-stellar fade_underlink">
-         {text}</a> <a onClick={notify} onKeyPress={notify} role="button" tabIndex={0} title="Copy to clipboard"><FaCopy className="mx-4 relative top-3 copyIcon" onClick={() => setCopyText(text)} onKeyDown={() => setCopyText(text)} role="button" tabIndex={0}/></a>
+     <FaEnvelope className="float-left mr-4 relative top-3" style={{fill:'#ffc857'}}/>
+     <a href={`mailto:${text}?subject=Quote&body=I%20would%20like%20to%20accept%20this%20quote`} className="relative form-label-align text-stellar fade_underlink">{text}</a>
+      <button onClick={notify} onKeyPress={notify} tabIndex={0} title="Copy to clipboard">
+      <FaCopy className="mx-4 relative copyIcon" onClick={() => setCopyText(text)} onKeyDown={() => setCopyText(text)} role="button" tabIndex={0}/>
+      </button>
          </div>
       ))}
       <CopyToClipElement text={copyText} />

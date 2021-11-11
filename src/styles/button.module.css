@@ -1,59 +1,58 @@
 .button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 20px 0px;
-    cursor: pointer;
-    font-weight: 500;
-    padding: 13px 25px;
-    border-radius: 15px;
-    font-size: 1rem;
-    border: none;
-    color: #E0E0E0;
-    transition: all 0.25s ease;
-  }
-  
-  .button:hover {
-    transform: translateY(-5px);
-    color: #fff;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 13px 25px;
+  border-radius: 15px;
+  font-size: 1rem;
+  border: none;
+  color: #fff;
+  transition: all 0.25s ease-in-out;
+}
 
-  .button::-moz-focus-inner {
-    border: 0;
-  }
-  
-  .reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .primaryBG {
-    background: #B27800;
-  }
-  
-  .primaryBG:hover {
-    box-shadow: 0 10px 20px -10px rgba(102, 69, 0, 0.6);
-  }
-  
-  .normalBG {
-    background: #31324F;
-  }
-  
-  .normalBG:hover {
-    box-shadow: 0 10px 20px -10px rgba(54, 52, 73, 0.6);
-  }
-  
-  .icon {
-    margin-bottom: 0px;
-    margin-right: 12px;
-    margin-left: 0px;
-  }
-  
-  .iconRight {
-    margin-right: 0px;
-    margin-left: 12px;
-  }
+.button:hover {
+  transform: translateY(-5px);
+}
 
-  .full {
-    width: 100%;
-  }
+.button::-moz-focus-inner {
+  border: 0;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.primaryBG {
+  background: #B27800;
+}
+
+.primaryBG:hover {
+  box-shadow: 0 10px 20px -10px rgba(102, 69, 0, 0.6);
+}
+
+.normalBG {
+  background: #31324F;
+}
+
+.normalBG:hover {
+  box-shadow: 0 10px 20px -10px rgba(54, 52, 73, 0.6);
+}
+
+.icon {
+  margin-bottom: 0px;
+  margin-right: 12px;
+  margin-left: 0px;
+}
+
+.iconRight {
+  margin-right: 0px;
+  margin-left: 12px;
+}
+
+.full {
+  width: 100%;
+}

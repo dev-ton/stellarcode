@@ -2,9 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaDownload } from "@react-icons/all-files/fa/FaDownload"
 import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt"
-import Button from "./Button";
 import { navigate } from "gatsby";
-
+import Button from "./Button";
 
 
 
@@ -40,27 +39,6 @@ const tabContentVariant = {
     }
   };
 
-  const bar = {
-    active: {
-      opacity: 1,
-      width: '100%',
-      y: 0,
-      transition: {
-        duration: 0.9,
-        ease: "easeOut",
-      }
-    },
-    inactive: {
-      opacity: 0,
-      width: 0,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut",
-        
-      }
-    }
-  };
 
 
 
@@ -84,20 +62,20 @@ return (
         
   <div className="mx-auto text-left flex flex-col pb-10 px-2 sm:px-8">
 
-<div>
+<article className="px-2 pb-4">
   <h3 className="text-stellarDarker">My Story</h3>
-<p className=" text-whiteyDarker py-2">
+<p className="text-whiteyDarker">
 I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovakia. Nowadays I live in Germany with my girlfriend. Most of my professional life is turning around the web-development. I designed and coded my first website someday in 2002 when I was 15 years old. After that I worked in my fathers company (real-estate) - taking care of websites and advertisement, I also spent few years in corporate advertisement agencies like Havas and Wunderman. And between that (that explains the gaps in my CV, which is attached) I was travelling and volunteering around Asia for 1 year and consequently working in Myanmar as a staff of a hostel and finally almost another year in Uganda as a hostel manager.
 </p>
-</div>
+</article>
 
 
-<div className="flex">
+<div className="flex px-2">
           <motion.div variants={contVariant} className="mr-4">
           <Button
           icon={<FaUserAlt/>}
           title="Read more"
-          onClick={()=>{navigate("/about")}}
+          onClick={()=>{navigate("/mystory")}}
           > </Button>
           </motion.div>
 
@@ -115,22 +93,6 @@ I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovaki
 
 
 
-
-<motion.div className=" h-16 w-3/5 rounded-lg bar"
-variants={bar}
->
-
-<h1 className="text-whiteyDarker text-4xl pl-4">Javascript ES6</h1>
-
-</motion.div>
-
-<div className="mb-1 flex justify-between">
-  <span className="text-base text-blue-700 font-medium">Themesberg project</span>
-  <span className="text-sm font-medium text-blue-700">45%</span>
-</div>
-<div className="w-full bg-gray-200 rounded-full h-4">
-  <motion.div className="bg-blue-600 h-4 rounded-full" variants={bar}></motion.div>
-</div>
 
     
 </div>

@@ -1,7 +1,7 @@
-import Img from "gatsby-image"
+import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
 import { motion } from "framer-motion"
 import { FaAngleRight } from "@react-icons/all-files/fa/FaAngleRight"
 
@@ -39,10 +39,12 @@ const arrowMotion = {
 };
 
 const Card = props => {
+
   const { name, slug, summary, thumbnail } = props
+  const image = getImage(thumbnail)
 
   return (
-    <motion.div className="bg-space-light h-full shadow-lg rounded-md overflow-hidden group card"
+    <motion.div className=" bg-space-dark cyber-bg h-full shadow-lg rounded-md overflow-hidden group card"
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -51,15 +53,15 @@ const Card = props => {
       
       <Link to={`/${slug}`}>
         <div className="pt-3 group-hover:opacity-75 transition duration-150 ease-in-out">
-          <Img fluid={thumbnail.localFile.childImageSharp.fluid} alt={name} />
+        <GatsbyImage image={image} alt={name} loading="lazy" />
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
-            <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
-            <div className="bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
           </div>
           <div className="w-8/12 float-left inline-block">
-          <h1 className="sm:text-lg text-2xl text-whitey font-bold">{name}</h1>
+          <h3 className="sm:text-lg text-2xl text-whitey font-bold pb-0">{name}</h3>
           <p className="text-sm sm:text-base text-stellar">{summary}</p>
           </div>
           <motion.div className="w-4/12 inline-block" variants={arrowMotion}>
@@ -88,13 +90,12 @@ export const query = graphql`
     name
     slug
     thumbnail {
-      localFile {
-        childImageSharp {
-          fluid(maxWidth: 444, maxHeight: 342, quality: 85) {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
+          gatsbyImageData(
+              height: 342
+              width:446
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+            )
     }
     summary
   }

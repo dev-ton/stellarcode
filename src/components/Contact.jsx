@@ -16,29 +16,29 @@ const Contact = () => {
 
 return (
 
-<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-gray-700 md:border-solid md:border-l-2 px-6">
+<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-white-whiteyDarker md:border-solid md:border-l-2 px-6">
 
 <form className="w-full max-w-lg" autoComplete="off">
 <div className="pb-8">
 <div className=" w-full relative input-effect">
-  <input aria-labelledby="lblname" className="effect-16 appearance-none" type="text" name="name" placeholder=" " />
-  <label id="lblname"><FaUserAlt className="float-left mr-3"/><span className="relative form-label-align">Name<sup>*</sup>:</span> </label>
+  <input aria-labelledby="lblname" id="sender" className="effect-16 appearance-none" type="text" name="name" placeholder=" " />
+  <label id="lblname" htmlFor="sender"><FaUserAlt className="float-left mr-3"/><span className="relative form-label-align">Name<sup>*</sup>:</span> </label>
   <span className="default-border" />
   <span className="focus-border" />
 </div></div>
 
 <div className="pb-8">
 <div className=" w-full relative input-effect">
-  <input aria-labelledby="lblemail" className="effect-16 appearance-none" type="email" name="email" placeholder=" " required/>
-  <label id="lblemail"><FaEnvelope className="float-left mr-3"/><span className="relative form-label-align">Email<sup>*</sup>:</span></label>
+  <input aria-labelledby="lblemail" id="email" className="effect-16 appearance-none" type="email" name="email" placeholder=" " required/>
+  <label id="lblemail" htmlFor="email"><FaEnvelope className="float-left mr-3"/><span className="relative form-label-align">Email<sup>*</sup>:</span></label>
   <span className="default-border" />
   <span className="focus-border" />
 </div></div>
 
 <div className="pb-8">
 <div className=" w-full relative input-effect">
-  <textarea aria-labelledby="lblemessage" className="effect-16 relative textarea-align appearance-none" name="message" rows="7" placeholder=" "></textarea>
-  <label id="lblemessage"><FaPenNib className="float-left mr-3"/><span className="relative form-label-align">Message:</span></label>
+  <textarea aria-labelledby="lblemessage" id="message" className="effect-16 relative textarea-align appearance-none" name="message" rows="7" placeholder=" "></textarea>
+  <label id="lblemessage" htmlFor="message"><FaPenNib className="float-left mr-3"/><span className="relative form-label-align">Message:</span></label>
   <span className="default-border" />
   <span className="focus-border" />
   

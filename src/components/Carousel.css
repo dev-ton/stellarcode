@@ -1,9 +1,21 @@
 .swiper-container {
-  --swiper-theme-color: theme("colors.blue.500");
+  --swiper-theme-color: theme("colors.space.light") !important;
 }
 
 .swiper-pagination-bullet {
-  @apply bg-white;
+  @apply bg-white-white;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply text-spaceDarkest w-5 h-full bg-white-whiteyDarker bg-opacity-25 px-6 top-0 m-0;
+}
+
+.swiper-button-next {
+  @apply right-0 left-auto;
+}
+
+.swiper-button-prev {
+  @apply left-0 right-auto;
 }
 
 

@@ -19,7 +19,7 @@ const ContactMe = () => {
               Contact Me
   </h2></div>
 
-  <div className=" bg-space-light bg-opacity-50 rounded-lg md:px-10 flex md:py-20 pt-10 pb-4 px-4 flex-wrap">
+  <div className=" bg-space-dark bg-opacity-50 rounded-lg md:px-10 flex md:py-20 pt-10 pb-4 px-4 flex-wrap cyber-bg">
 
   
 

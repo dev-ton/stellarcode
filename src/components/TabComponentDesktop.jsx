@@ -51,15 +51,18 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <ul className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-DEFAULT rounded-t-md m-0" role="tablist">
+  <div className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-DEFAULT rounded-t-md m-0" role="tablist" aria-label="About me Tabs">
     {tabs.map((tab, index) => (
-      <motion.li
+      <motion.div
         key={tab.id}
+        id={`tab-${index}`}
         className={cn("tab", { active: activeTabIndex === index })}
-        role="presentation"
+        role="tab"
         variants={tabVariant}
         initial={false}
         animate={activeTabIndex === index ? "active" : "inactive"}
+        aria-selected={activeTabIndex === index ? "true" : "false"}
+        aria-controls={tab.id}
       >
         <a href={`#about${tab.id}`} className="sm:text-xl md:text-2xl" onClick={() => onTabClick(index)}>
           <div>{tab.icon}</div>
@@ -78,19 +81,19 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
   
 
    <div className="arrowSize">
-    <div className='triangle bg-space-light'></div>
+    <div className=' bg-space-dark triangle'></div>
    </div>
   </motion.div>
         )}
 
-      </motion.li>
+      </motion.div>
     ))}
     
-  </ul>
+  </div>
   </AnimateSharedLayout>
 
  
-	<div className="p-1 bg-space-light w-full shadow-lg rounded-b-md sm:rounded-md pt-12">
+	<div className="p-1 bg-space-dark w-full shadow-lg rounded-b-md sm:rounded-md pt-12 cyber-bg relative z-0">
     
     
   
@@ -99,8 +102,9 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
 
 		  <tab.content
       key={tab.id}
-      id={`${tab.id}-content`}
+      id={tab.id}
       active={activeTabIndex === index}
+      aria-labelledby={`tab-${index}`}
       />
     
     ))}

@@ -10,7 +10,7 @@ const tabContentVariant = {
     active: {
       display: "block",
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.1
       }
     },
     inactive: {
@@ -23,7 +23,8 @@ const tabContentVariant = {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
+        duration: 0.5,
+        staggerChildren: 0.5
       }
     },
     inactive: {
@@ -31,6 +32,86 @@ const tabContentVariant = {
       y: 10,
       transition: {
         duration: 0.5
+      }
+    }
+  };
+
+  const bar1 = {
+    active: {
+      opacity: 1,
+      width: '100%',
+      transition: {
+        duration: 0.9,
+        ease: "easeOut",
+      }
+    },
+    inactive: {
+      opacity: 0,
+      width: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        
+      }
+    }
+  };
+
+  const bar2 = {
+    active: {
+      opacity: 1,
+      width: '80%',
+      transition: {
+        duration: 0.9,
+        ease: "easeOut",
+      }
+    },
+    inactive: {
+      opacity: 0,
+      width: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        
+      }
+    }
+  };
+
+  const bar3 = {
+    active: {
+      opacity: 1,
+      width: '50%',
+      transition: {
+        duration: 0.9,
+        ease: "easeOut",
+      }
+    },
+    inactive: {
+      opacity: 0,
+      width: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        
+      }
+    }
+  };
+
+  const bar4 = {
+    active: {
+      opacity: 1,
+      width: '50%',
+      transition: {
+        duration: 0.9,
+        ease: "easeOut",
+      }
+    },
+    inactive: {
+      opacity: 0,
+      width: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+        
       }
     }
   };
@@ -51,30 +132,67 @@ const TabContent = ({ id, active }) => (
         
                 
   <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
+
             <motion.div variants={contVariant}>
            
-              
-               <h3 className="text-stellarDarker">What is my experience?</h3>
-               <p className=" text-whiteyDarker py-2">
-               I coded my first website more than 15 years ago. Mostly I build projects based on HTML/CSS/JS. At the beginning of 2021 I started to learn ReactJS. And not long after that I discovered static site generators and started learning GatsbyJS and using JAMstack architecure.
-</p>
-<h3 className="text-stellarDarker">What technologies do I use?</h3>
+  <article className=" text-whiteyDarker px-2">
+               <h3 className="text-stellarDarker">Tech stack:</h3>
+
+            <div className="pb-4">
+                <div className="mb-1 flex justify-between">
+                  <span className="text-base font-medium">HTML/CSS</span>
+                  <span className="text-sm font-medium">Expert</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
+                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar1}></motion.div>
+                </div>
+
+                <div className="mb-1 flex justify-between">
+                  <span className="text-base font-medium">Javascript ES6</span>
+                  <span className="text-sm font-medium">Advanced</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
+                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar2}></motion.div>
+                </div>
+
+                <div className="mb-1 flex justify-between">
+                  <span className="text-basefont-medium">ReactJS</span>
+                  <span className="text-sm font-medium">Medium</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
+                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar3}></motion.div>
+                </div>
+
+                <div className="mb-1 flex justify-between">
+                  <span className="text-base font-medium">JAMstack (GatsbyJS/GraphQL)</span>
+                  <span className="text-sm font-medium">Medium</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
+                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar4}></motion.div>
+                </div>
+            </div>
+</article>
+
+<article>
+<h3 className="text-stellarDarker">What can I code for you?</h3>
 <p className=" text-whiteyDarker py-2">
 My main focus was always on HTML/CSS/JS and building modern looking websites and CMS templates. Recently I started working with ReactJS, especially together with GatsbyJS. With this technology I’m now able to build lightning-fast websites. Websites that are fast perform better in search engines, usability scores, and in converting visitors to customers.
 </p>
-
+</article>
 
             </motion.div>
 
-            <motion.div variants={contVariant} className="sm:pl-12">
-            <h3 className="text-stellarDarker pb-2">With what tools/frameworks I work?</h3>
-               <div className="flex flex-wrap py-2">
+            <motion.div variants={contVariant} className="sm:pl-12 px-2">
+              <article>
+            <h3 className="text-stellarDarker">Which other tools/frameworks<br/> I use?</h3>
+               <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
                   {skillsCode.map((skill, index) => (
-                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}
                </div>
+               </article>
             </motion.div>
             </div>
 

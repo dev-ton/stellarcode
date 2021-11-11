@@ -12,6 +12,19 @@ module.exports = {
       sans: ["Futura", "Inter var", "system-ui", "sans-serif"],
     },
     extend: {
+    fontSize: {
+        xs: ['0.75rem', '1rem'],
+        sm: ['0.875rem', '1.25rem'],
+        base: ['1rem', '1.75rem'],
+        lg: ['1.125rem', '2rem'],
+        xl: ['1.25rem', '2.25rem'],
+        '2xl': ['1.5rem','2rem'],
+        '3xl': ['1.875rem','2.5rem'],
+        '4xl': ['2.25rem','3rem'],
+        '5xl': ['3rem','4rem'],
+        '6xl': ['3.75rem','4.5rem'],
+        '7xl': ['4.5rem','5.25rem'],
+      },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
@@ -23,7 +36,11 @@ module.exports = {
         darker: '#121229',
         darkest: '#131313',
       },
-      white: '#fff',
+      white: {
+        white: '#fff',
+        whitey: '#eee',
+        whiteyDarker: '#E0E0E0',
+      },
       stellar: {
         light: '#ffc857',
         dark: '#B27800',
@@ -39,9 +56,6 @@ module.exports = {
       spaceLight: '#119da4',
       spaceDarker: '#121229',
       spaceDarkest: '#131313',
-    },
-    backgroundImage: {
-      main: 'background: linear-gradient(180deg, rgba(19,19,19,1) 0%, rgba(75,63,114,1) 30%, rgba(31,32,65,1) 66%);',
     }
   }
 },

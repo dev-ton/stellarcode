@@ -1,13 +1,13 @@
-import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import React from "react"
+import Layout from "../layouts/Layout"
+import { graphql } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import SiteMetadata from "../components/SiteMetadata"
-import Button from "../components/Button"
 import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
-import Layout from "../layouts/Layout"
+import Button from "../components/Button"
 
-export default props => {
+const portfolioItem =  (props) => {
   const {
     description,
     gallery,
@@ -18,12 +18,14 @@ export default props => {
     url,
   } = props.data.item
 
+  
+
   return (
     <Layout>
       <SiteMetadata
         title={name}
         description={summary}
-        image={thumbnail.localFile.publicURL}
+        image={thumbnail.gatsbyImageData}
       />
       
         <div className="container pb-20 sm:pb-40">
@@ -31,8 +33,8 @@ export default props => {
           <div className="flex flex-wrap">
             <div className="w-full lg:w-2/3 pb-8">
               {gallery && gallery.length === 1 && (
-                <Img
-                  fluid={gallery[0].localFile.childImageSharp.fluid}
+                <GatsbyImage
+                  image={gallery[0].gatsbyImageData}
                   alt={name}
                 />
               )}
@@ -52,7 +54,7 @@ export default props => {
               )}
               {url && (
                 <div className="mt-8">
-                  <Button href={url}>More info</Button>
+                  <Button href={url} primary title="More info">More info</Button>
                 </div>
               )}
             </div>
@@ -74,6 +76,8 @@ export default props => {
   )
 }
 
+export default portfolioItem 
+
 export const query = graphql`
   query PortfolioItemQUery($slug: String!) {
     item: contentfulPortfolio(slug: { eq: $slug }) {
@@ -82,13 +86,12 @@ export const query = graphql`
       }
       gallery {
         id
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 960, maxHeight: 540, quality: 85) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
+            gatsbyImageData(
+              height: 540
+              width: 960
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+            )
         title
       }
       name
@@ -97,9 +100,7 @@ export const query = graphql`
       }
       summary
       thumbnail {
-        localFile {
-          publicURL
-        }
+            gatsbyImageData
       }
       url
     }

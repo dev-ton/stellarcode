@@ -36,7 +36,7 @@ module.exports = {
       options: {
         spaceId: CONTENTFUL_SPACE_ID,
         accessToken: CONTENTFUL_ACCESS_TOKEN,
-        downloadLocal: true,
+        downloadLocal: false,
       },
     },
     {
@@ -47,6 +47,8 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-less`,
     {
     resolve: `gatsby-plugin-sharp`,
     options: {
@@ -54,13 +56,6 @@ module.exports = {
       failOnError: false,
     },
   },
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
-      options: {
-        devMode: true,
-        disable: true,
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -71,21 +66,6 @@ module.exports = {
         theme_color: `#1F2041`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        // CommonMark mode (default: true)
-        commonmark: true,
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // Pedantic mode (default: true)
-        pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [],
       },
     },
   ],

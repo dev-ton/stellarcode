@@ -55,25 +55,31 @@ const TabContent = ({ id, active }) => (
           <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant}>
            
-              
+              <article>
                <h3 className="text-stellarDarker">Why UX design?</h3>
                <p className=" text-whiteyDarker py-2">
 More and more businesses are finding out how dramatically can good UX design affect their productivity, sales & revenues, reduce development time & costs, reduce maintenance cost and increase customer satisfaction. 
 </p>
+</article>
+
+<article>
 <h3 className="text-stellarDarker">What can I offer?</h3>
 <p className=" text-whiteyDarker py-2">
 My main passion is the interaction design, but I enjoy also other disciplines of UX design, whether it is research, usability testing or others. At the end always stands a perfectly usable product and thats what motivates me the most.
 </p>
+</article>
+
+<article>
 <h3 className="text-stellarDarker">What is my extra value?</h3>
 <p className=" text-whiteyDarker py-2">
 Having a knowledge of frontend development allows me to create developer-friendly designs, which speed up the hand-off process by reducing the back-and-forths between designer and development team.
 </p>
-
+</article>
             </motion.div>
 
             <motion.div variants={contVariant} className="sm:pl-12">
             <h3 className="text-stellarDarker pb-2">What tools do I use?</h3>
-               <div className="flex flex-wrap py-2">
+               <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
                   {skillsDesign.map((skill, index) => (
                     <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
                     </div>

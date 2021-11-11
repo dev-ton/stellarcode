@@ -71,44 +71,44 @@ body::-webkit-scrollbar-thumb {
 /* basic typography */
 
 p { 
-  @apply text-base 2xl:text-xl py-2;
+  @apply text-base 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5;
 }
 
 h1 {
-  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold 
+  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold  pb-2 lg:pb-6 tracking-wide
 }
 
 h2 {
-  @apply text-xl sm:text-xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal mb-2
+  @apply text-xl sm:text-xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal  pb-2 lg:pb-6
 }
 
 h3 {
-  @apply text-lg sm:text-lg md:text-xl lg:text-xl 2xl:text-2xl font-normal
+  @apply text-lg sm:text-lg md:text-lg lg:text-lg 2xl:text-2xl font-bold pb-2 lg:pb-4
 }
 
-/* Headroom */
+article {
+  @apply pb-6
+}
 
-.headroom {
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--whitey-darker);
+  border-left-width: 0.25rem;
+  border-left-color: var(--stellar-light);
+  quotes: "\\201C""\\201D""\\2018""\\2019";
+  padding-left: 2rem;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
 }
-.headroom--unfixed {
-  position: relative;
-  transform: translateY(0);
+blockquote p:first-of-type::before {
+  content: open-quote;
 }
-.headroom--scrolled {
-  transition: transform 250ms ease-in-out;
+blockquote p:last-of-type::after {
+  content: close-quote;
 }
-.headroom--unpinned {
-  position: fixed;
-  transform: translateY(-100%);
-}
-.headroom--pinned {
-  position: fixed;
-  transform: translateY(0%);
-}
+
+
 
 /* Headline gradient on Intro screen */
 

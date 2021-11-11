@@ -57,11 +57,11 @@ const Card = props => {
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
-            <div className="bg-space-darker rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
-            <div className="bg-space-darker rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
           </div>
           <div className="w-8/12 float-left inline-block">
-          <h1 className="sm:text-lg text-2xl text-whitey font-bold">{name}</h1>
+          <h3 className="sm:text-lg text-2xl text-whitey font-bold pb-0">{name}</h3>
           <p className="text-sm sm:text-base text-stellar">{summary}</p>
           </div>
           <motion.div className="w-4/12 inline-block" variants={arrowMotion}>

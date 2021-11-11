@@ -50,7 +50,7 @@ and UI/UX designer.
 
 
 
-        <h2 className="text-whiteyDarker pt-12 text-center sm:text-left">
+        <h2 className="text-whiteyDarker text-center sm:text-left">
         Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50" className="fade_underlink">
           <span className="text-stellar">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50" className="fade_underlink"><span className="text-stellar">
             my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50" className="fade_underlink"><span className="text-stellar">send me a message!</span></AnchorLink>
@@ -61,7 +61,7 @@ and UI/UX designer.
       </div>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} loading="lazy" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
+      <GatsbyImage image={image} loading="eager" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
       </div>  
     
     </div>

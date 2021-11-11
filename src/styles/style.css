@@ -86,8 +86,29 @@ h3 {
   @apply text-lg sm:text-lg md:text-xl lg:text-xl 2xl:text-2xl font-normal
 }
 
+/* Headroom */
 
-
+.headroom {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.headroom--unfixed {
+  position: relative;
+  transform: translateY(0);
+}
+.headroom--scrolled {
+  transition: transform 250ms ease-in-out;
+}
+.headroom--unpinned {
+  position: fixed;
+  transform: translateY(-100%);
+}
+.headroom--pinned {
+  position: fixed;
+  transform: translateY(0%);
+}
 
 /* Headline gradient on Intro screen */
 

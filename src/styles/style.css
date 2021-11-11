@@ -51,15 +51,15 @@ body::-webkit-scrollbar-thumb {
 /* Selection color */
 
 ::-moz-selection {
-    color: #C4C4C4;
+    color: #fff;
     background-color: var(--stellar-dark);
-    -moz-text-fill-color: #C4C4C4;
+    -moz-text-fill-color: #fff;
 }
 
 ::selection {
-  color: #C4C4C4;
+  color: #fff;
   background-color: var(--stellar-dark);
-  -webkit-text-fill-color: #C4C4C4; 
+  -webkit-text-fill-color: #fff; 
 }
 
 /* basic typography */

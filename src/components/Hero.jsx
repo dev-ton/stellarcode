@@ -11,7 +11,6 @@ const data = useStaticQuery(graphql`
     portraitPhoto {
           gatsbyImageData(
               height: 1300
-              quality: 85
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
@@ -39,7 +38,7 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
 
 <div className="sm:pr-6">
 
-<h1 className="textGradient text-center sm:text-left">
+<h1 className="textGradient text-center sm:text-left tracking-wide">
    
 I’m Antonin,  
 <br/>
@@ -62,7 +61,7 @@ and UI/UX designer.
       </div>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
+      <GatsbyImage image={image} loading="lazy" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
       </div>  
     
     </div>

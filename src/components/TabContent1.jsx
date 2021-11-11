@@ -75,7 +75,7 @@ Having a knowledge of frontend development allows me to create developer-friendl
             <h3 className="text-stellarDarker pb-2">What tools do I use?</h3>
                <div className="flex flex-wrap py-2">
                   {skillsDesign.map((skill, index) => (
-                    <div className=" bg-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}

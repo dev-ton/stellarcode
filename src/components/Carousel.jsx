@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from "prop-types"
 import Swiper from "react-id-swiper"
-import "swiper/swiper.min.css"
+import "swiper/swiper-bundle.min.css"
 
 import "./Carousel.css"
 

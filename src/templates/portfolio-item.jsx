@@ -89,7 +89,6 @@ export const query = graphql`
             gatsbyImageData(
               height: 540
               width: 960
-              quality: 85
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )

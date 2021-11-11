@@ -96,7 +96,7 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
   </AnimateSharedLayout>
 
  
-	<div className="p-1 bg-space-dark w-full shadow-lg rounded-b-md">
+	<div className="p-1 bg-space-dark cyber-bg w-full shadow-lg rounded-b-md relative z-0">
     <div className="textboxMask scrolling-touch overflow-y-scroll pt-10 mb-10">
 
     {tabs.map((tab, index) => (

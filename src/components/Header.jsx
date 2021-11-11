@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <Headroom>
-    <div className="bg-space-dark w-full shadow-xl z-50">
+    <div className="bg-space-dark w-full shadow-xl z-50 border-b-2 border-space-darkest">
       <div className="flex justify-between items-center container py-2 sm:py-3">
         <Link to="/" className="outline-none">
         <div className="flex justify-items-start items-center">

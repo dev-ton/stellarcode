@@ -25,7 +25,7 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
   return (
 
 
-  <section id="home" className="container pb-20 sm:pb-40 shine"
+  <section id="home" className="container pb-20 sm:pb-40"
   >
 
 

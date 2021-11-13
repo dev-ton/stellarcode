@@ -1,5 +1,5 @@
 import React from "react"
-import ScrollUp from "../components/ScrollUp"
+
 
 
 const Footer = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
 
     </div>
 
-    <ScrollUp/>
+    
 
 
     </footer>

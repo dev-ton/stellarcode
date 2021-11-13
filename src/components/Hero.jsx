@@ -32,11 +32,11 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
   <div className="topSpace h-12 sm:h-24"></div>
 
   <div className="flex justify-between sm:flex-row flex-col">
-      <div className="w-full sm:w-1/2">
+      <header className="w-full sm:w-1/2 sm:pr-6">
 
 
 
-<div className="sm:pr-6">
+
 
 <h1 className="textGradient text-center sm:text-left tracking-wide">
    
@@ -57,8 +57,8 @@ and UI/UX designer.
         <br/><br/>I’m looking forward to<br className="inline sm:hidden"/> hear from you!
         </h2>
 
-      </div>
-      </div>
+     
+      </header>
 
       <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
       <GatsbyImage image={image} loading="eager" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>

@@ -7,6 +7,7 @@ import Cards from "../components/Cards"
 import Carousel from "../components/Carousel"
 import Button from "../components/Button"
 
+
 const portfolioItem =  (props) => {
   const {
     description,
@@ -71,6 +72,8 @@ const portfolioItem =  (props) => {
           <Cards items={related} hideLastItemOnMobile={false} />
         </div>
       )}
+
+ 
       
     </Layout>
   )

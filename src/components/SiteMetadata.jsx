@@ -44,7 +44,9 @@ const SiteMetadata = ({ title, description, image }) => {
 SiteMetadata.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  image: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object])
 }
 
 SiteMetadata.defaultProps = {

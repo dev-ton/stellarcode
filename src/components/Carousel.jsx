@@ -23,18 +23,20 @@ export const Carousel = ({ images }) => {
     pagination={{ clickable: true }}
     onSwiper={(swiper) => console.log(swiper)}
     onSlideChange={() => console.log('slide change')}
+    className="rounded-md"
     >
       {images.map(image => {
         return (
-          <div key={`slide_${image.id}`}>
-            <SwiperSlide>
+          
+            <SwiperSlide key={`slide_${image.id}`}>
             <GatsbyImage
               image={image.gatsbyImageData}
               alt={image.title}
               loading="lazy"
+              className="space-dark-shadow rounded-md"
             />
             </SwiperSlide>
-          </div>
+         
         )
       })}
     </Swiper>

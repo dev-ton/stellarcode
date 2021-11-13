@@ -6,6 +6,7 @@ import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
 
 
 
+
 const AboutPage = () => (
 
   
@@ -138,7 +139,7 @@ const AboutPage = () => (
         </div>
       </div>
     
-    
+
   </Layout>
 
 

@@ -3,9 +3,10 @@ import Layout from "../layouts/Layout"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import SiteMetadata from "../components/SiteMetadata"
-import Cards from "../components/Cards"
-import Carousel from "../components/Carousel"
 import Button from "../components/Button"
+import Carousel from "../components/Carousel"
+import Cards from "../components/Cards"
+
 
 
 

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import classNames from "classnames"
-import PropTypes from "prop-types"
 import Card from "./Card"
 import Button from "./Button"
 import { motion } from "framer-motion"
@@ -76,8 +75,5 @@ const CardsDesktop = ({ items, hideLastItemOnMobile = false }) => {
   )
 }
 
-CardsDesktop.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
 
 export default CardsDesktop

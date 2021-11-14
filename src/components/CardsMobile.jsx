@@ -1,6 +1,5 @@
 import React from "react"
 import classNames from "classnames"
-import PropTypes from "prop-types"
 import Card from "./Card"
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide} from 'swiper/react';
@@ -45,8 +44,6 @@ const CardsMobile = ({ items, hideLastItemOnMobile = false }) => {
   )
 }
 
-CardsMobile.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-}
+
 
 export default CardsMobile

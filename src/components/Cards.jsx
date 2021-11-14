@@ -6,17 +6,20 @@ import CardsDesktop from "./CardsDesktop"
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
 
-const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
-
+  const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
+  const notMobile = useMediaQuery({ query: '(min-width: 600px)' })
 
 return (
   <div>
-{isMobile ?
-(<CardsMobile items={items}/>)
-  :
-(<CardsDesktop items={items} />)
-}
- 
+
+
+{isMobile && <CardsMobile items={items} />}
+
+
+
+{notMobile && <CardsDesktop items={items} />}
+
+
 </div>
   )
 }

@@ -2,6 +2,7 @@ module.exports = {
   future: {
     purgeLayersByDefault: true,
   },
+  mode: 'jit',
   purge: ["./src/**/*.jsx", "./src/**/*.js"],
   theme: {
     container: {

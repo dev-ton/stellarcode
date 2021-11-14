@@ -5,7 +5,7 @@ import SiteMetadata from "../components/SiteMetadata"
 import AboutMe from "../components/AboutMe"
 import MyWork from "../components/MyWork"
 import ContactMe from "../components/ContactMe"
-import ScrollUp from "../components/ScrollUp"
+
 
 
 
@@ -27,8 +27,6 @@ const IndexPage = () => {
       
       <ContactMe/>
 
-      <ScrollUp/>
-     
     </Layout>
   )
 }

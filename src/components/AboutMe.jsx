@@ -5,10 +5,6 @@ import TabComponentDesktop from "./TabComponentDesktop";
 import tabs from "./tabs"
 
 
-
-
-
-
 const AboutMe = () => {
   
   const isMobile = useMediaQuery({ query: '(max-width: 599px)' })

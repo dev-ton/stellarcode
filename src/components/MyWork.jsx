@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Cards from "../components/Cards"
+import Cards from "./Cards"
+
+
 
 
 
@@ -18,20 +20,22 @@ const MyWork = () => {
   }
 `)
 
+
+
   
 
     return (
 
-<section id="mywork" className="container pb-20 sm:pb-40">
+<section id="mywork" className="sm:container pb-20 sm:pb-40">
 
 
     <div className="flex justify-center">
-      <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-8 text-center">
+      <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-0 sm:pb-8 text-center">
       My Work
       </h2>
     </div>
 
-      <div className="pb-12 lg:pb-16">
+      <div className="pb-0 sm:pb-12 lg:pb-16">
         {data.portfolio && data.portfolio.nodes.length > 0 ? (
           <Cards items={data.portfolio.nodes} />
         ) : (

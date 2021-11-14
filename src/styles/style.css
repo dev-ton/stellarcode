@@ -133,8 +133,9 @@ blockquote p:last-of-type::after {
   background-size: 100% 30%;
   background-repeat: no-repeat;
   padding: 0 1rem;
-  margin-bottom: 2.5rem;
   color:var(--whitey);
+
+  @apply mb-4  sm:mb-10
 }
 
 
@@ -161,7 +162,7 @@ nav > div.hidden.sm\:block > ul > a.active {
 /* top-3 utility class - used in back button */
 
 .top-3 {
-  top: 3px;
+  top: 7px;
 }
 
 .space-dark-shadow {

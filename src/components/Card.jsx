@@ -58,13 +58,13 @@ const Card = props => {
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
             <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs  text-whitey uppercase">Design</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Design</div>
           </div>
-          <div className="w-8/12 float-left inline-block">
-          <h3 className="sm:text-lg text-2xl text-whitey font-bold pb-0">{name}</h3>
-          <p className="text-sm sm:text-base text-stellar">{summary}</p>
+          <div className="w-full sm:w-8/12 sm:float-left inline-block">
+          <h3 className=" text-whitey font-bold pb-0">{name}</h3>
+          <p className="text-stellar">{summary}</p>
           </div>
-          <motion.div className="w-4/12 inline-block" variants={arrowMotion}>
+          <motion.div className="hidden sm:w-4/12 sm:inline-block" variants={arrowMotion}>
             <FaAngleRight className="cardArrow mx-auto opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out"/>
           </motion.div>
         </div>

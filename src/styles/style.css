@@ -75,7 +75,7 @@ p {
 }
 
 h1 {
-  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold  pb-2 lg:pb-6 tracking-wide
+  @apply text-3xl lg:text-4xl 2xl:text-5xl font-bold pb-8 lg:pb-16 tracking-wide
 }
 
 h2 {
@@ -408,7 +408,7 @@ textarea:not(:placeholder-shown) ~ label {
   cursor: pointer;
   animation: fadeIn 0.3s;
   transition: all ease 0.4s;
-  right: 10px;
+  right: 20px;
 }
 
 .scrollTop:hover{

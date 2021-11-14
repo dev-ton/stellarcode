@@ -10,7 +10,7 @@ const data = useStaticQuery(graphql`
   contentfulIntroSection {
     portraitPhoto {
           gatsbyImageData(
-              height: 1300
+              height: 700
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
@@ -39,13 +39,11 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
 
 
 <h1 className="textGradient text-center sm:text-left tracking-wide">
-   
 I’m Antonin,  
 <br/>
-freelance front-end developer
-<br/>
-and UI/UX designer.
-
+freelance front-end 
+developer and <br/>
+UI/UX designer.
 </h1>
 
 

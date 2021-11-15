@@ -95,7 +95,7 @@ const AboutPage = () => (
 
         <section className="flex flex-wrap pb-5">
             <header className="w-8/12 pr-0 sm:pr-16">
-            <h1 className="text-stellarDarker tracking-wide heading -mb-8 sm:-mb-0">
+            <h1 className="text-whiteyDarker tracking-wide heading -mb-8 sm:-mb-0">
             {data.contentfulMyStory.title}
             </h1>
             </header>
@@ -105,9 +105,9 @@ const AboutPage = () => (
             </div>
         </section>
 
-        <section className="flex flex-wrap pb-10">
+        <section className="flex flex-wrap pb-10 sm:pt-6">
             <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
-            <h2 className="text-stellarDarker">
+            <h2 className="text-whiteyDarker">
             {data.contentfulMyStory.subHeadline.subHeadline}
             </h2>
 
@@ -152,12 +152,12 @@ const AboutPage = () => (
                   {data.contentfulMyStory.fourthParagraph.fourthParagraph}
             </h3>
 
-            <p className="text-whiteyDarker py-6 sm:py-0">
+            <p className="text-whiteyDarker py-6 sm:py-6">
             {data.contentfulMyStory.fifthParagraph.fifthParagraph}
             </p>
 
-            <div className="w-full block sm:hidden py-6 sm:py-0">
-            <GatsbyImage className="space-dark-shadow rounded-md" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
+            <div className="w-full py-6 sm:py-0 block sm:hidden">
+            <GatsbyImage className="space-dark-shadow rounded-md block sm:hidden" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
             </div>
 
             <p className="text-whiteyDarker py-6 sm:py-0">
@@ -171,7 +171,7 @@ const AboutPage = () => (
 
         <section className="flex flex-wrap pt-0 sm:pt-5 pb-6 sm:pb-10">
 
-        <div className="w-full sm:w-4/12 pb-6 sm:pb-0">
+        <div className="w-full sm:w-4/12 pb-6 sm:pb-0 block sm:hidden">
           <GatsbyImage className="space-dark-shadow rounded-md block sm:hidden" image={data.contentfulMyStory.msImage3.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage3.title} />
           </div>
 

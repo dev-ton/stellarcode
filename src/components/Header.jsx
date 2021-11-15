@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <Headroom style={{zIndex:100}}>
     <div className="bg-space-dark w-full shadow-xl z-50 border-b-2 border-space-darkest">
-      <div className="flex justify-between items-center container py-2 sm:py-3">
+      <div className="flex justify-between items-center container py-2 sm:py-3 flex-wrap">
         <Link to="/" className="outline-none">
         <div className="flex justify-items-start items-center">
           
@@ -40,7 +40,7 @@ const Header = () => {
         </svg>
         </motion.div>
 
-          <div className="font-extrabold leading-relaxed tracking-wide text-xl md:text-4xl"><span className="text-stellar">Stellar</span><span className="text-whitey">Code</span>
+          <div className="font-extrabold leading-relaxed tracking-wide text-xl md:text-4xl"><span className="text-stellar">Stellar</span><span className="text-whiteyDarker">Code</span>
           </div>
         </div>  
         </Link>

@@ -25,7 +25,7 @@ const IndexPage = () => {
       
       <MyWork/>
       
-      <ContactMe/>
+      <ContactMe hasContainer={true}/>
 
     </Layout>
   )

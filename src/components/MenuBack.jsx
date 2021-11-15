@@ -12,7 +12,7 @@ const MenuBack = () => {
 
         <div className="block">    
                     <Link
-                    className="ml-6 sm:ml-8 text-lg sm:text-2xl font-bold px-px border-b-2 pb-2 pt-1 border-transparent text-whitey hover:text-stellar transition duration-150 ease-in-out"
+                    className="ml-6 sm:ml-8 text-lg sm:text-2xl font-bold px-px border-b-2 pb-2 pt-1 border-transparent text-whiteyDarker hover:text-stellar transition duration-150 ease-in-out"
                     to='/'
                     >
                     <div className="inline-block"><FaArrowCircleLeft className="float-left mr-3 relative top-3"/><span className="relative">Go back</span></div>

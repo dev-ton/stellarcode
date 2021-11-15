@@ -1,11 +1,15 @@
+import React, { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
-import React, { useEffect } from "react"
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
 
 const backgroundVariants = {
   closed: {
     opacity: 0,
+    right: 0,
+    top: 0,
+    left: 0,
+    bottom: 0,
     transitionEnd: { display: "none" },
   },
   open: {
@@ -43,12 +47,16 @@ const childrenVariants = {
   },
 }
 
+
+
 function Overlay({ children, isOpen, setIsOpen }) {
   function closeOnEscapeKey(event) {
     if (event.keyCode === 27 && isOpen) {
       setIsOpen(false)
     }
   }
+
+  const ref = useRef()
 
   useEffect(() => {
     window.addEventListener("keydown", closeOnEscapeKey)
@@ -63,7 +71,28 @@ function Overlay({ children, isOpen, setIsOpen }) {
       .forEach(e => e.classList[isOpen ? "add" : "remove"]("overflow-hidden"))
   }, [isOpen])
 
+
+
+
+  useEffect(() => {
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (isOpen && ref.current && !ref.current.contains(e.target)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [isOpen, setIsOpen])
+
+
+
   return (
+    <div className="wrapper w-full" ref={ref}>
     <motion.div
       animate={isOpen ? "open" : "closed"}
       className="fixed z-50 block bg-gray-900 text-white"
@@ -91,6 +120,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
         </motion.div>
       </div>
     </motion.div>
+    </div>
   )
 }
 

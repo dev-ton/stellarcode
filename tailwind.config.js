@@ -39,7 +39,6 @@ module.exports = {
       },
       white: {
         white: '#fff',
-        whitey: '#eee',
         whiteyDarker: '#E0E0E0',
       },
       stellar: {
@@ -48,7 +47,6 @@ module.exports = {
       },
     },
     textColor: {
-      whitey: '#eee',
       whiteyDarker: '#E0E0E0',
       white: '#fff',
       stellar: '#ffc857',

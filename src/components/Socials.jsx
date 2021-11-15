@@ -65,7 +65,7 @@ const FooterLink = ({ href, label, icon: Icon, hide }) => {
           href={href}
           target="_blank"
           rel="noreferrer noopener"
-          className="text-whitey"
+          className="text-whiteyDarker"
         >
           <span className="sr-only">{label}</span>
           <Icon className="w-5 h-5 fill-current relative top-0 z-10" />

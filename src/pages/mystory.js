@@ -129,14 +129,18 @@ const AboutPage = () => (
 
         <section className="flex flex-wrap py-10">
 
+            <div className="w-full sm:w-4/12 block sm:hidden">
+            <StaticImage className="w-full block sm:hidden" src="../images/auc_icon.svg" alt="design with accessibility and usability in mind" placeholder="blurred" layout="constrained" objectPosition="50% 50%" objectFit="contain"/>
+            </div>
+
             <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
             <p className="text-whiteyDarker">
             {data.contentfulMyStory.secondParagraph.secondParagraph}
             </p>
             </article>
 
-            <div className="w-full sm:w-4/12">
-            <StaticImage className="w-full" src="../images/auc_icon.svg" alt="design with accessibility and usability in mind" placeholder="blurred" layout="constrained" objectPosition="50% 50%" objectFit="contain"/>
+            <div className="w-full sm:w-4/12 hidden sm:block">
+            <StaticImage className="w-full hidden sm:block" src="../images/auc_icon.svg" alt="design with accessibility and usability in mind" placeholder="blurred" layout="constrained" objectPosition="50% 50%" objectFit="contain"/>
             </div>
         </section>
 
@@ -144,7 +148,7 @@ const AboutPage = () => (
         <section className="flex flex-wrap pt-0 sm:pt-5 pb-6 sm:pb-10">
 
             <div className="w-full sm:w-4/12 hidden sm:block">
-            <GatsbyImage className="space-dark-shadow rounded-md" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
+            <GatsbyImage className="space-dark-shadow rounded-md hidden sm:block" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
             </div>
 
             <article className="w-full sm:w-8/12 pl-0 sm:pl-16">
@@ -186,14 +190,14 @@ const AboutPage = () => (
           </p>
           </article>
 
-          <div className="w-full sm:w-4/12">
+          <div className="w-full sm:w-4/12 hidden sm:block">
           <GatsbyImage className="space-dark-shadow rounded-md hidden sm:block" image={data.contentfulMyStory.msImage3.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage3.title} />
           </div>
 
 
         </section>
 
-        <ContactMe/>
+        <ContactMe hasContainer={false}/>
         
       </div>
     

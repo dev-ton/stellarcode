@@ -52,16 +52,16 @@ const Card = props => {
       
       
       <Link to={`/${slug}`}>
-        <div className="pt-3 group-hover:opacity-75 transition duration-150 ease-in-out">
+        <div className="pt-3 opacity-80 group-hover:opacity-100 transition duration-150 ease-in-out">
         <GatsbyImage image={image} alt={name} loading="lazy" />
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Development</div>
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whitey uppercase">Design</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase">Development</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase">Design</div>
           </div>
           <div className="w-full sm:w-8/12 sm:float-left inline-block">
-          <h3 className=" text-whitey font-bold pb-0">{name}</h3>
+          <h3 className=" text-whiteyDarker font-bold pb-0">{name}</h3>
           <p className="text-stellar">{summary}</p>
           </div>
           <motion.div className="hidden sm:w-4/12 sm:inline-block" variants={arrowMotion}>

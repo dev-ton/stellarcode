@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout"
 import SiteMetadata from "../components/SiteMetadata"
 import { graphql, StaticQuery } from "gatsby"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import ContactMe from "../components/ContactMe"
 
 
 
@@ -47,9 +48,28 @@ const AboutPage = () => (
           url
         }
         }
+        msImage1 {
+            gatsbyImageData(
+              height: 400
+              width: 400
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+            )
+        title
+      }
       msImage2 {
             gatsbyImageData(
-              height: 800
+              height: 400
+              width: 400
+              formats: [AUTO, WEBP]
+              placeholder: BLURRED
+            )
+        title
+      }
+      msImage3 {
+            gatsbyImageData(
+              height: 400
+              width: 400
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
@@ -65,78 +85,116 @@ const AboutPage = () => (
   <Layout>
     <SiteMetadata title="About" description="Sample description" />
 
-      
+   
 
       <div className="container py-12 lg:pb-16">
-      <StaticImage src="../images/bild.jpg" alt="meine wenigkeit" placeholder="blurred" layout="constrained"/>
-       <div className="topSpace h-12 sm:h-24"></div>
+      
+       <div className="topSpace h-0 sm:h-12"></div>
 
-        <div className="flex flex-wrap">
-          <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-          
+    
 
-            <article>
-            <h1 className="text-stellarDarker tracking-wide">
+        <section className="flex flex-wrap pb-5">
+            <header className="w-8/12 pr-0 sm:pr-16">
+            <h1 className="text-stellarDarker tracking-wide heading -mb-8 sm:-mb-0">
             {data.contentfulMyStory.title}
             </h1>
+            </header>
 
-            <h2 className="text-whiteyDarker">
+            <div className="w-4/12 block sm:hidden">
+            <GatsbyImage className="space-dark-shadow rounded-full block sm:hidden w-16 h-16 mx-8" image={data.contentfulMyStory.msImage2.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage2.title} />
+            </div>
+        </section>
+
+        <section className="flex flex-wrap pb-10">
+            <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
+            <h2 className="text-stellarDarker">
             {data.contentfulMyStory.subHeadline.subHeadline}
             </h2>
-            
 
-            <h3 className="text-whiteyDarker font-bold">
+            <p className="text-whiteyDarker pt-10 sm:pt-0">
             {data.contentfulMyStory.firstParagraph.firstParagraph}
-            </h3>
+            </p>
+            </article>
 
+            <div className="w-full sm:w-4/12">
+            <GatsbyImage className="space-dark-shadow rounded-md hidden sm:block" image={data.contentfulMyStory.msImage2.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage2.title} />
+            </div>
+        </section>
+
+        <section className="py-6 sm:py-12">
+        <blockquote className="text-whiteyDarker">
+            {data.contentfulMyStory.thirdParagraph.thirdParagraph}
+        </blockquote>
+        </section>
+
+        <section className="flex flex-wrap py-10">
+
+            <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
             <p className="text-whiteyDarker">
             {data.contentfulMyStory.secondParagraph.secondParagraph}
             </p>
-
-            <blockquote className="text-whiteyDarker">
-            {data.contentfulMyStory.thirdParagraph.thirdParagraph}
-            </blockquote>
-
-            <ul className="text-whiteyDarker list-disc list-inside py-2 sm:py-3 lg:py-4 xl:py-5 pl-4">
-              <li>First item</li>
-              <li>Second item</li>
-              <li>Third item</li>
-              <li>Fourth item</li>
-              <li>Fifth item</li>
-            </ul>
-
             </article>
 
-         
-                  <article className="text-whiteyDarker">
-                <p>
+            <div className="w-full sm:w-4/12">
+            <StaticImage className="w-full" src="../images/auc_icon.svg" alt="design with accessibility and usability in mind" placeholder="blurred" layout="constrained" objectPosition="50% 50%" objectFit="contain"/>
+            </div>
+        </section>
+
+
+        <section className="flex flex-wrap pt-0 sm:pt-5 pb-6 sm:pb-10">
+
+            <div className="w-full sm:w-4/12 hidden sm:block">
+            <GatsbyImage className="space-dark-shadow rounded-md" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
+            </div>
+
+            <article className="w-full sm:w-8/12 pl-0 sm:pl-16">
+            <h3 className="font-bold text-stellarDarker">
                   {data.contentfulMyStory.fourthParagraph.fourthParagraph}
-                </p>
+            </h3>
 
-                <p>
-                  {data.contentfulMyStory.fifthParagraph.fifthParagraph}
-                </p>
+            <p className="text-whiteyDarker py-6 sm:py-0">
+            {data.contentfulMyStory.fifthParagraph.fifthParagraph}
+            </p>
 
-                <p>
-                  {data.contentfulMyStory.sixthParagraph.sixthParagraph}
-                </p>
+            <div className="w-full block sm:hidden py-6 sm:py-0">
+            <GatsbyImage className="space-dark-shadow rounded-md" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
+            </div>
 
-                <p>
-                  {data.contentfulMyStory.seventhParagraph.seventhParagraph}
-                </p>
+            <p className="text-whiteyDarker py-6 sm:py-0">
+            {data.contentfulMyStory.sixthParagraph.sixthParagraph}
+            </p>
+            </article>
 
-                <p>
-                  {data.contentfulMyStory.eightParagraph.eightParagraph}
-                </p>
+           
+        </section>
 
-                </article>
 
-            
+        <section className="flex flex-wrap pt-0 sm:pt-5 pb-6 sm:pb-10">
+
+        <div className="w-full sm:w-4/12 pb-6 sm:pb-0">
+          <GatsbyImage className="space-dark-shadow rounded-md block sm:hidden" image={data.contentfulMyStory.msImage3.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage3.title} />
           </div>
-          <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
-            <GatsbyImage className="space-dark-shadow rounded-md img-height-regulator" image={data.contentfulMyStory.msImage2.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage2.title} />
+
+          <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
+
+          <p className="text-whiteyDarker py-6 sm:py-0">
+          {data.contentfulMyStory.seventhParagraph.seventhParagraph}
+          </p>
+
+          <p className="text-whiteyDarker font-bold">
+          {data.contentfulMyStory.eightParagraph.eightParagraph}
+          </p>
+          </article>
+
+          <div className="w-full sm:w-4/12">
+          <GatsbyImage className="space-dark-shadow rounded-md hidden sm:block" image={data.contentfulMyStory.msImage3.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage3.title} />
           </div>
-        </div>
+
+
+        </section>
+
+        <ContactMe/>
+        
       </div>
     
 

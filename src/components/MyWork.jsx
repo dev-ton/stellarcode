@@ -30,7 +30,7 @@ const MyWork = () => {
 
 
     <div className="flex justify-center">
-      <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pt-3 pb-0 sm:pb-8 text-center">
+      <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight text-space-lighter pt-3 text-center">
       My Work
       </h2>
     </div>

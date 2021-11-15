@@ -32,7 +32,7 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
   <div className="topSpace h-12 sm:h-24"></div>
 
   <div className="flex justify-between sm:flex-row flex-col">
-      <header className="w-full sm:w-1/2 sm:pr-6">
+      <header className="w-full sm:w-3/5 sm:pr-6">
 
 
 
@@ -42,7 +42,7 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
 I’m Antonin,  
 <br/>
 freelance front-end 
-developer and <br/>
+developer and <br className="inline sm:hidden"/> 
 UI/UX designer.
 </h1>
 
@@ -58,8 +58,8 @@ UI/UX designer.
      
       </header>
 
-      <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} loading="eager" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
+      <div className="w-full sm:w-2/5 pl-0 sm:pl-10 pt-12 sm:pt-0">
+      <GatsbyImage image={image} loading="eager" alt={data.contentfulIntroSection.portraitPhoto.title} className="space-dark-shadow rounded-md img-height-regulator"/>
       </div>  
     
     </div>

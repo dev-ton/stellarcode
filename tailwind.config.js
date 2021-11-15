@@ -19,7 +19,7 @@ module.exports = {
         base: ['1rem', '1.75rem'],
         lg: ['1.125rem', '2rem'],
         xl: ['1.25rem', '2.25rem'],
-        '2xl': ['1.5rem','2rem'],
+        '2xl': ['1.5rem','2.35rem'],
         '3xl': ['1.875rem','2.5rem'],
         '4xl': ['2.25rem','3rem'],
         '5xl': ['3rem','4rem'],

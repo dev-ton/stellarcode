@@ -13,7 +13,7 @@
   --stellar-dark: #B27800;
   --stellar-light: #ffc857;
   --border-radius: 40px;
-  --underline-color: #121229;
+  --underline-color: #131313;
   --underline-color2: #ffc857;
 }
 
@@ -71,7 +71,7 @@ body::-webkit-scrollbar-thumb {
 /* basic typography */
 
 p { 
-  @apply text-base 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5;
+  @apply text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5;
 }
 
 h1 {
@@ -79,11 +79,11 @@ h1 {
 }
 
 h2 {
-  @apply text-xl sm:text-xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal  pb-2 lg:pb-6
+  @apply text-2xl sm:text-2xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal  pb-2 lg:pb-6
 }
 
 h3 {
-  @apply text-lg sm:text-lg md:text-lg lg:text-lg 2xl:text-2xl font-bold pb-2 lg:pb-4
+  @apply text-xl sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl font-bold pb-2 lg:pb-4
 }
 
 article {
@@ -100,6 +100,7 @@ blockquote {
   padding-left: 2rem;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
+  @apply text-3xl
 }
 blockquote p:first-of-type::before {
   content: open-quote;
@@ -172,6 +173,7 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .img-height-regulator {
   height:20rem;
+  width:100%;
 }
 
 /* animation of the stars in the logo */
@@ -381,7 +383,7 @@ textarea:not(:placeholder-shown) ~ .focus-border  {
   top: 9px; 
   color: var(--whitey-darker);
   transition: 0.3s; 
-  z-index: auto; 
+  z-index: -1; 
   letter-spacing: 0.5px;
 }
 
@@ -462,6 +464,7 @@ textarea:not(:placeholder-shown) ~ label {
 
 .img-height-regulator {
   height:700px;
+  width:100%;
 }
 
 .tab-links {

@@ -7,7 +7,7 @@
 }
 
 .swiper-button-next, .swiper-button-prev {
-  @apply text-spaceDarkest w-5 h-full bg-white-whiteDarker bg-opacity-25 px-6 top-0 m-0;
+  @apply text-spaceDarkest w-5 h-full bg-white-white bg-opacity-25 px-6 top-0 m-0;
 }
 
 .swiper-button-next {

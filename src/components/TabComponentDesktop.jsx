@@ -73,17 +73,14 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
 
         {activeTabIndex === index && (     
    <motion.div
-   className="arrow"
+   className="arrow arrowSize triangle"
    layoutId="arrow"
    initial="false"
-   transition={spring}
-   > 
+   transition={{type: "spring", bounce: 0.25}}
+   /> 
   
 
-   <div className="arrowSize">
-    <div className=' bg-space-dark triangle'></div>
-   </div>
-  </motion.div>
+ 
         )}
 
       </motion.div>

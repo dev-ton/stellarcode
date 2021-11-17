@@ -206,19 +206,20 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 /* tab component */
 
-.arrowSize {
-transform: translateY(15px);
-position:relative;
-z-index: -10;
-}
+
 
 .triangle {
-  /*
-	position: relative;
-	text-align: left;
-  top: 0.5em;*/
   margin: auto;
+	background-image: url("data:image/svg+xml,%3Csvg width='68' height='50' viewBox='0 0 68 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.8713 3.44732C31.2077 -0.400859 36.7923 -0.400864 39.1287 3.44731L68 51H0L28.8713 3.44732Z' fill='%231F2041'/%3E%3C/svg%3E");
+  width: 68px;
+  height: 50px;
+  position:relative;
+  z-index: -10;
+  top: 25px;
 }
+
+
+/*  in case I decide to have css triangle instead of svg
 
 .triangle:before,
 .triangle:after {
@@ -245,6 +246,7 @@ z-index: -10;
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
 
+*/
 .arrowMobile {
   top: 2px;
 }

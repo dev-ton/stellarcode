@@ -45,14 +45,14 @@ const portfolioItem =  (props) => {
               {gallery && gallery.length > 1 && <Carousel images={gallery} />}
             </div>
             <div className="w-full lg:w-1/3 lg:pl-8 xl:pl-12">
-              <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-Darker heading sm:text-4xl mb-1">
+              <h1 className="text-3xl leading-tight font-extrabold tracking-tight heading sm:text-4xl mb-1">
                 {name}
               </h1>
               <h2 className=" text-stellar">
                 {summary}
               </h2>
               {description && (
-                <div className="my-4 text-base text-whiteyDarker whitespace-pre-line">
+                <div className="my-4 text-base text-whiteDarker whitespace-pre-line">
                   {description.description}
                 </div>
               )}

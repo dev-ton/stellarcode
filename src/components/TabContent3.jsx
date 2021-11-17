@@ -70,7 +70,7 @@ I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovaki
 </article>
 
 
-<div className="flex px-2">
+<div className="flex px-2 flex-wrap">
           <motion.div variants={contVariant} className="mr-4">
           <Button
           icon={<FaUserAlt/>}

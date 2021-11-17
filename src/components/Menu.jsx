@@ -50,7 +50,7 @@ const Menu = () => {
                 {site.data.menu.map((link, key) => (
                     <AnchorLink
                     key={`menu_desktop_link${key}`}
-                    className="ml-6 sm:ml-8 text-2xl sm:text-base font-bold px-px border-b-2 pb-2 border-transparent text-whiteyDarker hover:text-stellar transition duration-150 ease-in-out"
+                    className="ml-6 sm:ml-8 text-2xl sm:text-base font-bold px-px border-b-2 pb-2 border-transparent text-whiteLighter hover:text-stellar transition duration-150 ease-in-out"
                     href={link.to}
                     offset='50'
                     >

@@ -3,17 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --trackColor:#131313;
-  --thumbColor:#4B3F72;
+  --space-darkest:#131313;
+  --space-dark:#1f2041;
   --white: #fff;
-  --whiteyDarker: #E0E0E0;
-  --black: #333;
-  --tab-active-color: #ffc857;
+  --white-darker: #C4C4C9;
+  --white-lighter: #C7C7CF;
   --stellar-dark: #B27800;
   --stellar-light: #ffc857;
   --border-radius: 40px;
-  --underline-color: #131313;
-  --underline-color2: #ffc857;
+
 }
 
 .container {
@@ -26,9 +24,9 @@ body {
   background: url("../images/landscape.svg") no-repeat bottom center;
   background-size: contain; 
   background-color: #121229;
-  scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  scrollbar-color: var(--space-dark) var(--space-darkest) !important;
   scrollbar-width: auto;
-  -webkit-scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  -webkit-scrollbar-color: var(--space-dark) var(--space-darkest) !important;
   -webkit-scrollbar-width: auto;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -38,13 +36,13 @@ body {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--trackColor);
+  background: var(--space-darkest);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbColor) ;
+  background-color: var(--space-dark) ;
   border-radius: 6px;
-  border: 3px solid var(--trackColor);
+  border: 3px solid var(--space-darkest);
 }
 
 /* Selection color */
@@ -92,7 +90,7 @@ article {
 blockquote {
   font-weight: 500;
   font-style: italic;
-  color: var(--whiteyDarker);
+  color: var(--white-darker);
   border-left-width: 0.25rem;
   border-left-color: var(--stellar-light);
   quotes: "\\201C""\\201D""\\2018""\\2019";
@@ -127,13 +125,13 @@ blockquote p:last-of-type::after {
 /* Styling of the section headings */
 
 .heading {
-  background-image: linear-gradient(180deg, var(--underline-color) 85%, var(--underline-color2) 15%);
-  background-image: -webkit-linear-gradient(270deg, var(--underline-color) 85%, var(--underline-color2) 15%);
+  background-image: linear-gradient(180deg, var(--space-darkest) 85%, var(--stellar-light) 15%);
+  background-image: -webkit-linear-gradient(270deg, var(--space-darkest) 85%, var(--stellar-light) 15%);
   background-position-y: bottom;
   background-size: 100% 30%;
   background-repeat: no-repeat;
   padding: 0 1rem;
-  color:var(--whiteyDarker);
+  color:var(--white-darker);
 
   @apply mb-4  sm:mb-10
 }
@@ -258,19 +256,19 @@ z-index: -10;
 
 .tab a {
   text-decoration: none;
-  color: var(--whiteyDarker);
+  color: var(--white-darker);
 }
 
 .tab svg {
   width: 36px;
   min-width: 36px;
-  fill: var(--whiteyDarker);
+  fill: var(--white-darker);
   transition: fill 0.5s ease;
   margin: 0.3rem auto;
 }
 
 .tab.active::before {
-  background: var(--tab-active-color);
+  background: var(--stellar-light);
 }
 
 .tab span {
@@ -281,11 +279,11 @@ z-index: -10;
 }
 
 .tab.active span {
-  color: var(--tab-active-color);
+  color: var(--stellar-light);
 }
 
 .tab.active svg {
-  fill: var(--tab-active-color);
+  fill: var(--stellar-light);
 }
 
 .tab-content {
@@ -305,13 +303,13 @@ z-index: -10;
 }
 
 .textboxMask::-webkit-scrollbar-track {
-  background: var(--trackColor);
+  background: var(--space-darkest);
 }
 
 .textboxMask::-webkit-scrollbar-thumb {
-  background-color: var(--thumbColor) ;
+  background-color: var(--space-dark) ;
   border-radius: 6px;
-  border: 3px solid var(--trackColor);
+  border: 3px solid var(--space-darkest);
 }
 
 
@@ -330,7 +328,7 @@ z-index: -10;
 
 input[type="text"], input[type="email"], textarea  {
   font: 16px/26px "Lato", Arial, sans-serif; 
-  color: var(--whiteyDarker); 
+  color: var(--white-lighter); 
   width: 100%; 
   box-sizing: border-box; 
   letter-spacing: 1px;
@@ -364,7 +362,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus  {
     width: 100%; 
     height: 1px;
     z-index: auto; 
-    background-color: var(--whiteyDarker);
+    background-color: var(--white-lighter);
   }
 
 .effect-16:focus ~ .focus-border,
@@ -380,7 +378,7 @@ textarea:not(:placeholder-shown) ~ .focus-border  {
   left: 0; 
   width: 100%; 
   top: 9px; 
-  color: var(--whiteyDarker);
+  color: var(--white-lighter);
   transition: 0.3s; 
   z-index: -1; 
   letter-spacing: 0.5px;
@@ -429,7 +427,7 @@ textarea:not(:placeholder-shown) ~ label {
 }
 
 .copyIcon {
-  fill: #aaa;
+  fill: var(--white-lighter);
   outline: none;
   transition: all ease .2s;
 }
@@ -476,7 +474,7 @@ textarea:not(:placeholder-shown) ~ label {
 
 .tab a {
   text-decoration: none;
-  color: var(--whiteyDarker);
+  color: var(--white-darker);
 }
 
 .tab span {

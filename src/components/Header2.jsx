@@ -39,7 +39,7 @@ const Header2 = () => {
         </g>
         </svg>
         </motion.div> 
-          <div className="font-extrabold leading-relaxed tracking-wide text-xl md:text-4xl"><span className="text-stellar">Stellar</span><span className="text-whiteyDarker">Code</span>
+          <div className="font-extrabold leading-relaxed tracking-wide text-xl md:text-4xl"><span className="text-stellar">Stellar</span><span className="text-whiteLighter">Code</span>
           </div>
         </div>  
         </Link>

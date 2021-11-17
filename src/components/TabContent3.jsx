@@ -64,7 +64,7 @@ return (
 
 <article className="px-2 pb-4">
   <h3 className="text-stellarDarker">My Story</h3>
-<p className="text-whiteyDarker">
+<p className="text-whiteLighter">
 I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovakia. Nowadays I live in Germany with my girlfriend. Most of my professional life is turning around the web-development. I designed and coded my first website someday in 2002 when I was 15 years old. After that I worked in my fathers company (real-estate) - taking care of websites and advertisement, I also spent few years in corporate advertisement agencies like Havas and Wunderman. And between that (that explains the gaps in my CV, which is attached) I was travelling and volunteering around Asia for 1 year and consequently working in Myanmar as a staff of a hostel and finally almost another year in Uganda as a hostel manager.
 </p>
 </article>

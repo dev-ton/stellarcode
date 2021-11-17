@@ -38,7 +38,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
 
   useEffect(() => {
     document.documentElement.style.setProperty(
-      "--tab-active-color",
+      "--stellar-light",
       tabs[activeTabIndex].color
     );
   }, [activeTabIndex, tabs]);
@@ -51,7 +51,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <div className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-DEFAULT rounded-t-md m-0" role="tablist" aria-label="About me Tabs">
+  <div className="tab-links flex justify-evenly relative z-auto pt-5" role="tablist" aria-label="About me Tabs">
     {tabs.map((tab, index) => (
       <motion.div
         key={tab.id}

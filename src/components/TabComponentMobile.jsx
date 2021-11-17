@@ -45,7 +45,7 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
   
   useEffect(() => {
     document.documentElement.style.setProperty(
-      "--tab-active-color",
+      "--stellar-light",
       tabs[activeTabIndex].color
     );
   }, [activeTabIndex, tabs]);

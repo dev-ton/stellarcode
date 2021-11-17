@@ -8,26 +8,30 @@ const backgroundVariants = {
     opacity: 0,
     right: 0,
     top: 0,
-    left: 0,
-    bottom: 0,
-    transitionEnd: { display: "none" },
+    width: 0,
+    transitionEnd: { 
+      display: "none" },
   },
   open: {
-    bottom: 0,
     display: "block",
-    left: 0,
     opacity: 1,
     right: 0,
     top: 0,
+    width: '100%',
   },
 }
 
 const closeButtonVariants = {
   closed: {
     opacity: 0,
+    rotate: 0,
+    transition: {
+      duration: 0.15,
+    },
   },
   open: {
     opacity: 1,
+    rotate: 90,
     transition: {
       delay: 0.75,
       duration: 0.5,
@@ -66,15 +70,6 @@ function Overlay({ children, isOpen, setIsOpen }) {
   })
 
   useEffect(() => {
-    document
-      .querySelectorAll("body, html")
-      .forEach(e => e.classList[isOpen ? "add" : "remove"]("overflow-hidden"))
-  }, [isOpen])
-
-
-
-
-  useEffect(() => {
     const checkIfClickedOutside = e => {
       // If the menu is open and the clicked target is not within the menu,
       // then close the menu
@@ -95,7 +90,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
     <div className="wrapper w-full" ref={ref}>
     <motion.div
       animate={isOpen ? "open" : "closed"}
-      className="fixed z-50 block bg-gray-900 text-white"
+      className="fixed z-50 block text-whiteLighter"
       initial="closed"
       variants={backgroundVariants}
     >
@@ -105,7 +100,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             variants={closeButtonVariants}
-            className="text-white focus:outline-none select-none highlight-none"
+            className="text-whiteLighter focus:outline-none select-none highlight-none"
             onClick={() => setIsOpen(false)}
           >
             <FaTimes className="h-8 w-auto fill-current" />

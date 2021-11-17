@@ -95,7 +95,7 @@ const AboutPage = () => (
 
         <section className="flex flex-wrap pb-5">
             <header className="w-8/12 pr-0 sm:pr-16">
-            <h1 className="text-whiteyDarker tracking-wide heading -mb-8 sm:-mb-0">
+            <h1 className="text-whiteDarker tracking-wide heading -mb-8 sm:-mb-0">
             {data.contentfulMyStory.title}
             </h1>
             </header>
@@ -107,11 +107,11 @@ const AboutPage = () => (
 
         <section className="flex flex-wrap pb-10 sm:pt-6">
             <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
-            <h2 className="text-whiteyDarker">
+            <h2 className="text-whiteDarker">
             {data.contentfulMyStory.subHeadline.subHeadline}
             </h2>
 
-            <p className="text-whiteyDarker pt-10 sm:pt-0">
+            <p className="text-whiteDarker pt-10 sm:pt-0">
             {data.contentfulMyStory.firstParagraph.firstParagraph}
             </p>
             </article>
@@ -122,7 +122,7 @@ const AboutPage = () => (
         </section>
 
         <section className="py-6 sm:py-12">
-        <blockquote className="text-whiteyDarker">
+        <blockquote className="text-whiteDarker">
             {data.contentfulMyStory.thirdParagraph.thirdParagraph}
         </blockquote>
         </section>
@@ -134,7 +134,7 @@ const AboutPage = () => (
             </div>
 
             <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
-            <p className="text-whiteyDarker">
+            <p className="text-whiteDarker">
             {data.contentfulMyStory.secondParagraph.secondParagraph}
             </p>
             </article>
@@ -156,7 +156,7 @@ const AboutPage = () => (
                   {data.contentfulMyStory.fourthParagraph.fourthParagraph}
             </h3>
 
-            <p className="text-whiteyDarker py-6 sm:py-6">
+            <p className="text-whiteDarker py-6 sm:py-6">
             {data.contentfulMyStory.fifthParagraph.fifthParagraph}
             </p>
 
@@ -164,7 +164,7 @@ const AboutPage = () => (
             <GatsbyImage className="space-dark-shadow rounded-md block sm:hidden" image={data.contentfulMyStory.msImage1.gatsbyImageData} loading="lazy" alt={data.contentfulMyStory.msImage1.title} />
             </div>
 
-            <p className="text-whiteyDarker py-6 sm:py-0">
+            <p className="text-whiteDarker py-6 sm:py-0">
             {data.contentfulMyStory.sixthParagraph.sixthParagraph}
             </p>
             </article>
@@ -181,11 +181,11 @@ const AboutPage = () => (
 
           <article className="w-full sm:w-8/12 pr-0 sm:pr-16">
 
-          <p className="text-whiteyDarker py-6 sm:py-0">
+          <p className="text-whiteDarker py-6 sm:py-0">
           {data.contentfulMyStory.seventhParagraph.seventhParagraph}
           </p>
 
-          <p className="text-whiteyDarker font-bold">
+          <p className="text-whiteDarker font-bold">
           {data.contentfulMyStory.eightParagraph.eightParagraph}
           </p>
           </article>

@@ -16,7 +16,7 @@ const Contact = () => {
 
 return (
 
-<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-white-whiteyDarker md:border-solid md:border-l-[1px] px-6">
+<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-white-whiteDarker md:border-solid md:border-l-[1px] px-6">
 
 <form className="w-full max-w-lg relative z-10" autoComplete="off">
 <div className="pb-8">

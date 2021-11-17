@@ -21,8 +21,8 @@ module.exports = {
         xl: ['1.25rem', '2.25rem'],
         '2xl': ['1.5rem','2.35rem'],
         '3xl': ['1.875rem','2.5rem'],
-        '4xl': ['2.25rem','3rem'],
-        '5xl': ['3rem','4rem'],
+        '4xl': ['2.25rem','3.5rem'],
+        '5xl': ['3rem','4.25rem'],
         '6xl': ['3.75rem','4.5rem'],
         '7xl': ['4.5rem','5.25rem'],
       },
@@ -39,7 +39,8 @@ module.exports = {
       },
       white: {
         white: '#fff',
-        whiteyDarker: '#E0E0E0',
+        whiteDarker: '#C4C4C9',
+        whiteLighter: '#C7C7CF',
       },
       stellar: {
         light: '#ffc857',
@@ -47,7 +48,8 @@ module.exports = {
       },
     },
     textColor: {
-      whiteyDarker: '#E0E0E0',
+      whiteDarker: '#C4C4C9',
+      whiteLighter: '#C7C7CF',
       white: '#fff',
       stellar: '#ffc857',
       stellarDarker: '#D9AF59',

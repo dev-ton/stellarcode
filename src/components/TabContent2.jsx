@@ -135,7 +135,7 @@ const TabContent = ({ id, active }) => (
 
             <motion.div variants={contVariant}>
            
-  <article className=" text-whiteyDarker px-2">
+  <article className=" text-whiteLighter px-2">
                <h3 className="text-stellarDarker">Tech stack:</h3>
 
             <div className="pb-4">
@@ -175,7 +175,7 @@ const TabContent = ({ id, active }) => (
 
 <article>
 <h3 className="text-stellarDarker">What can I code for you?</h3>
-<p className=" text-whiteyDarker py-2">
+<p className=" text-whiteLighter py-2">
 My main focus was always on HTML/CSS/JS and building modern looking websites and CMS templates. Recently I started working with ReactJS, especially together with GatsbyJS. With this technology I’m now able to build lightning-fast websites. Websites that are fast perform better in search engines, usability scores, and in converting visitors to customers.
 </p>
 </article>
@@ -187,7 +187,7 @@ My main focus was always on HTML/CSS/JS and building modern looking websites and
             <h3 className="text-stellarDarker">Which other tools/frameworks<br/> I use?</h3>
                <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
                   {skillsCode.map((skill, index) => (
-                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}

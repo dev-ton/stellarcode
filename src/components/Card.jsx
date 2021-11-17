@@ -44,7 +44,7 @@ const Card = props => {
   const image = getImage(thumbnail)
 
   return (
-    <motion.div className=" bg-space-dark cyber-bg h-full shadow-lg rounded-md overflow-hidden group card"
+    <motion.div className="bg-space-dark cyber-bg h-full shadow-lg rounded-md overflow-hidden group card"
       initial="rest"
       whileHover="hover"
       animate="rest"
@@ -57,11 +57,11 @@ const Card = props => {
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase">Development</div>
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase">Design</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase">Development</div>
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase">Design</div>
           </div>
           <div className="w-full sm:w-8/12 sm:float-left inline-block">
-          <h3 className=" text-whiteyDarker font-bold pb-0">{name}</h3>
+          <h3 className=" text-whiteLighter font-bold pb-0">{name}</h3>
           <p className="text-stellar">{summary}</p>
           </div>
           <motion.div className="hidden sm:w-4/12 sm:inline-block" variants={arrowMotion}>

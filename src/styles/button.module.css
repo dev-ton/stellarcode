@@ -19,10 +19,13 @@
 .primaryBG {
   background: #B27800;
   background: linear-gradient(90.98deg, #493200 -43.78%, #B27800 73.04%, #FAAF57 131.21%);
+  transition: all ease-in-out .3s;
+  background-size: 150% auto;
 }
 
 .primaryBG:hover {
   box-shadow: 0 10px 20px -10px rgba(102, 69, 0, 0.6);
+  background-position: right center;
 }
 
 .normalBG {

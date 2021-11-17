@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 
-const skillsCode = ["ReactJS", "GatsbyJS", "GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm", "Git", "VS Code"];
+const skillsCode = ["GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm/yarn", "Git", "and more"];
 
 
 const tabContentVariant = {
@@ -144,7 +144,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Expert</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar1}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar1}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -152,7 +152,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Advanced</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar2}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar2}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -160,7 +160,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Medium</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar3}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar3}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -168,7 +168,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Medium</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar4}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar4}></motion.div>
                 </div>
             </div>
 </article>
@@ -176,7 +176,7 @@ const TabContent = ({ id, active }) => (
 <article>
 <h3 className="text-stellarDarker">What can I code for you?</h3>
 <p className=" text-whiteLighter py-2">
-My main focus was always on HTML/CSS/JS and building modern looking websites and CMS templates. Recently I started working with ReactJS, especially together with GatsbyJS. With this technology I’m now able to build lightning-fast websites. Websites that are fast perform better in search engines, usability scores, and in converting visitors to customers.
+  Basically everything based on mighty trio HTML/CSS/JS, from highly converting landing pages to lightning fast modern websites including e-shops. Besides that I can use my animation skills and help you out with eye-catching animated banners or code a flawless email newsletters.
 </p>
 </article>
 

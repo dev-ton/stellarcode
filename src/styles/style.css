@@ -206,7 +206,10 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 /* tab component */
 
-
+.buttonGradient {
+  background: linear-gradient(90.98deg, #493200 -43.78%, #B27800 73.04%, #FAAF57 131.21%);
+  background-size: 100% auto;
+}
 
 .triangle {
   margin: auto;

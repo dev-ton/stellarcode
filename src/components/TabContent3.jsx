@@ -62,12 +62,14 @@ return (
         
   <div className="mx-auto text-left flex flex-col pb-10 px-2 sm:px-8">
 
-<article className="px-2 pb-4">
-  <h3 className="text-stellarDarker">My Story</h3>
+<motion.article className="px-2 pb-4" variants={contVariant}>
+  <h3 className="text-stellarDarker">Basic facts about me</h3>
 <p className="text-whiteLighter">
-I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovakia. Nowadays I live in Germany with my girlfriend. Most of my professional life is turning around the web-development. I designed and coded my first website someday in 2002 when I was 15 years old. After that I worked in my fathers company (real-estate) - taking care of websites and advertisement, I also spent few years in corporate advertisement agencies like Havas and Wunderman. And between that (that explains the gaps in my CV, which is attached) I was travelling and volunteering around Asia for 1 year and consequently working in Myanmar as a staff of a hostel and finally almost another year in Uganda as a hostel manager.
+I’m 35 years old, currently living in Regensburg, Germany, but coming out of Prague, Czech Republic. <br/>You can talk with me Czech, English and German.</p>
+<p className="text-whiteLighter">
+ Currently I'm working as a freelancer, but I’m open to fixed employment offers as well. I’m working in web design industry already more than a decade and I can offer you complex digital solutions from design to a functional website, depending on your needs. I value good communication and fair play...
 </p>
-</article>
+</motion.article>
 
 
 <div className="flex px-2 flex-wrap">
@@ -82,7 +84,7 @@ I'm Antonin, I was born on one nice autumnal day in 1986 in former Czechoslovaki
           <motion.div variants={contVariant}>
           <Button
           icon={<FaDownload/>}
-          title="My Resume (PDF)"
+          title="Download My Resume (PDF)"
           primary
           href="https://www.seznam.cz"
           />

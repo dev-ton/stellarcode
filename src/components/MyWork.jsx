@@ -11,7 +11,7 @@ import Cards from "./Cards"
 const MyWork = () => {
   const data = useStaticQuery(graphql`
   query MyWorkQuery {
-    portfolio: allContentfulPortfolio {
+    portfolio: allContentfulPortfolio(filter: {node_locale: {eq: "en-US"}}) {
       nodes {
         ...PortfolioCard
       }
@@ -26,8 +26,9 @@ const MyWork = () => {
 
     return (
 
-<section id="mywork" className="sm:container pb-20 sm:pb-40">
+     
 
+<section id="mywork" className="sm:container pb-20 sm:pb-40">
 
     <div className="flex justify-center">
       <h2 className="text-4xl sm:text-6xl heading font-extrabold leading-tight tracking-tight pt-3 text-center">

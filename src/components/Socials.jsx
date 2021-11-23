@@ -27,7 +27,7 @@ const Socials = () => {
 
     return (
         
-          <ul className="flex justify-center md:order-2">
+          <ul className="flex justify-center sm:justify-start md:order-2">
             <FooterLink 
                 href={links.twitter} 
                 icon={FaDribbble} 

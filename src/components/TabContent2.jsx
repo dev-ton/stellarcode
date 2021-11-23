@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 
 const skillsCode = ["GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm/yarn", "Git", "and more"];
 
+const certsCode = ["JavaScript Algorithms and Data Structures - freecodecamp.org", "Adobe AEM - Accenture", "Sitecore CMS", "EpiServer CMS" ];
+
 
 const tabContentVariant = {
     active: {
@@ -133,8 +135,8 @@ const TabContent = ({ id, active }) => (
                 
   <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
 
-            <motion.div variants={contVariant}>
-           
+        
+  <motion.div variants={contVariant}>         
   <article className=" text-whiteLighter px-2">
                <h3 className="text-stellarDarker">Tech stack:</h3>
 
@@ -176,12 +178,13 @@ const TabContent = ({ id, active }) => (
 <article>
 <h3 className="text-stellarDarker">What can I code for you?</h3>
 <p className=" text-whiteLighter py-2">
-  Basically everything based on mighty trio HTML/CSS/JS, from highly converting landing pages to lightning fast modern websites including e-shops. Besides that I can use my animation skills and help you out with eye-catching animated banners or code a flawless email newsletters.
+  Basically everything based on mighty trio <span className="font-bold">HTML/CSS/JS</span>, from highly converting landing pages to lightning fast <span className="font-bold">modern websites</span> including <span className="font-bold">e-shops</span>, all that with a great Lighthouse score.</p><p className=" text-whiteLighter py-2"> Besides that I can use my animation skills and help you out with eye-catching <span className="font-bold">animated banners</span> or code a flawless <span className="font-bold">email newsletters</span>.
 </p>
 </article>
 
             </motion.div>
 
+<div className="mx-auto text-left pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant} className="sm:pl-12 px-2">
               <article>
             <h3 className="text-stellarDarker">Which other tools/frameworks<br/> I use?</h3>
@@ -194,8 +197,22 @@ const TabContent = ({ id, active }) => (
                </div>
                </article>
             </motion.div>
-            </div>
 
+            <motion.div variants={contVariant} className="sm:pl-12 px-2">
+              <article>
+            <h3 className="text-stellarDarker">Certifications:</h3>
+               <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
+                 <ul className="list-disc pl-4">
+                  {certsCode.map((cert, index) => (
+                    <li className="text-whiteLighter" key={index}>{cert}
+                    </li>
+                  ))}
+                  </ul>
+               </div>
+               </article>
+            </motion.div>
+            </div>
+</div>
     
 
 

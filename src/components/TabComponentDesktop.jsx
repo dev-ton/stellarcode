@@ -30,12 +30,6 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
     }
   };
 
-  const spring = {
-    type: "spring",
-    stiffness: 500,
-    damping: 30
-  };
-
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--stellar-light",

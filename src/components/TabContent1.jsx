@@ -57,7 +57,7 @@ const TabContent = ({ id, active }) => (
 
 <article>
 <h3 className="text-stellarDarker">What can I offer?</h3>
-<p className=" text-whiteLighter py-2">
+<span className=" text-whiteLighter py-2">
   <ul className="list-disc pl-4">
     <li className="text-whiteLighter">Performing of complete user research and drive design decisions based on that</li>
     <li className="text-whiteLighter">Building of sophisticated user-flows and information architectures</li>
@@ -66,7 +66,7 @@ const TabContent = ({ id, active }) => (
     <li className="text-whiteLighter">Creation of convincing presentations and presenting the ideas to the stake-holders</li>
     <li className="text-whiteLighter">Building of the new design systems</li>
   </ul>
-</p>
+</span>
 </article>
 
 <article>

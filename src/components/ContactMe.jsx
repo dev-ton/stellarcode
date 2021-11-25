@@ -27,14 +27,15 @@ const ContactMe = (hasContainer) => {
   
 
     <div className="w-full md:w-5/12 lg:w-1/3 md:h-full text-whiteLighter px-6 text-center sm:text-left pb-10 md:pb-0">
-    <h3 className="text-2xl leading-relaxed text-stellar font-bold text-center sm:text-left py-2 md:py-4">Interested in working together?</h3><h4 className="text-xl leading-relaxed text-stellar font-normal text-center sm:text-left py-2 md:py-4"> Or just wanna say Hi? </h4><p> Contact me with the awesome form <span className="hidden md:inline">on the right</span> or any of the contacts below.</p><p> Im looking forward to hear from you!</p>
+    <h3 className="text-2xl leading-relaxed text-stellar font-bold text-center sm:text-left py-2 md:py-4">Interested in working together?</h3><h4 className="text-xl leading-relaxed text-stellar font-normal text-center sm:text-left py-2 md:py-4"> Or just wanna say Hi? </h4><p> Contact me with the awesome form <span className="hidden md:inline">on the right</span> or any of the contacts below:</p>
 
-    <ul className="flex flex-col items-center sm:items-start">
+    <ul className="flex flex-col items-center">
       <li className="hidden py-6"><FaMapMarkerAlt className="float-left mr-2"/><span className="relative form-label-align">Regensburg, Germany</span></li>
       <li className=" py-6"><Email/></li>
+      <li><Socials/></li>
     </ul>
     
-    <Socials/>
+    
     </div>
 
     <Contact/>

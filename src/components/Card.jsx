@@ -40,8 +40,9 @@ const arrowMotion = {
 
 const Card = props => {
 
-  const { name, slug, summary, thumbnail } = props
+  const { name, slug, summary, thumbnail, metadata } = props
   const image = getImage(thumbnail)
+  const tags = metadata.tags
 
   return (
     <motion.div className="bg-space-dark cyber-bg h-full shadow-lg rounded-md overflow-hidden group card"
@@ -57,8 +58,9 @@ const Card = props => {
         </div>
         <div className="p-4 pb-6 sm:p-5">
           <div className="flex">
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase">Development</div>
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase">Design</div>
+          {tags.map((tag, index) => (
+            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{tag.name}</div>
+          ))}
           </div>
           <div className="w-full sm:w-8/12 sm:float-left inline-block">
           <h3 className=" text-whiteLighter font-bold pb-0">{name}</h3>
@@ -77,6 +79,7 @@ Card.propTypes = {
   name: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   summary: PropTypes.string.isRequired,
+  metadata: PropTypes.object.isRequired,
   thumbnail: PropTypes.shape({
     localFile: PropTypes.object,
   }),
@@ -98,5 +101,10 @@ export const query = graphql`
             )
     }
     summary
+    metadata {
+      tags {
+        name
+      }
+    }
   }
 `

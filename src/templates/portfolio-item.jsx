@@ -18,11 +18,13 @@ const portfolioItem =  (props) => {
     name,
     related,
     summary,
+    metadata,
     thumbnail,
+    fileToDownload,
     url,
   } = props.data.item
 
-
+const tags = metadata.tags
 
   return (
     <Layout>
@@ -48,17 +50,27 @@ const portfolioItem =  (props) => {
               <h1 className="text-3xl leading-tight font-extrabold tracking-tight heading sm:text-4xl mb-1">
                 {name}
               </h1>
+              <div className="flex">
+                {tags.map((tag, index) => (
+                  <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{tag.name}</div>
+                ))}
+              </div>
               <h2 className=" text-stellar">
                 {summary}
               </h2>
               {description && (
-                <div className="my-4 text-base text-whiteDarker whitespace-pre-line">
+                <p className="my-4 text-whiteDarker whitespace-pre-line">
                   {description.description}
-                </div>
+                </p>
               )}
               {url && (
                 <div className="mt-8">
                   <Button href={url} primary title="More info">More info</Button>
+                </div>
+              )}
+               {fileToDownload && (
+                <div className="mt-8">
+                  <Button href={fileToDownload.file.url} primary title={fileToDownload.description}></Button>
                 </div>
               )}
             </div>
@@ -102,6 +114,11 @@ export const query = graphql`
         title
       }
       name
+      metadata {
+        tags {
+          name
+            }
+          }
       related {
         ...PortfolioCard
       }
@@ -109,6 +126,12 @@ export const query = graphql`
       thumbnail {
             gatsbyImageData
       }
+      fileToDownload {
+          file {
+            url
+          }
+          description
+        }
       url
     }
   }

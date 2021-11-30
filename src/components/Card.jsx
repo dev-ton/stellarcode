@@ -62,13 +62,10 @@ const Card = props => {
             <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{tag.name}</div>
           ))}
           </div>
-          <div className="w-full sm:w-8/12 sm:float-left inline-block">
-          <h3 className=" text-whiteLighter font-bold pb-0">{name}</h3>
-          <p className="text-stellar">{summary}</p>
+          <div className="w-full flex flex-col">
+          <h3 className=" text-whiteLighter font-bold pb-0 group-hover:text-white transition duration-150 ease-in-out">{name}</h3>
+          <p className=" text-stellarDarker group-hover:text-stellar transition duration-150 ease-in-out">{summary}</p>
           </div>
-          <motion.div className="hidden sm:w-4/12 sm:inline-block" variants={arrowMotion}>
-            <FaAngleRight className="cardArrow mx-auto opacity-0 group-hover:opacity-100 transition duration-150 ease-in-out"/>
-          </motion.div>
         </div>
       </Link>
     </motion.div>

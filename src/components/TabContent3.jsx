@@ -43,7 +43,7 @@ const tabContentVariant = {
 
 
 
-const TabContent = ({ id, active }) => {
+const TabContent = ({ id, cv, active }) => {
 
 
 
@@ -86,7 +86,7 @@ I’m 35 years old, currently living in Regensburg, Germany, but coming out of P
           icon={<FaDownload/>}
           title="Download My Resume (PDF)"
           primary
-          href="https://www.seznam.cz"
+          href={cv}
           />
           </motion.div>
 

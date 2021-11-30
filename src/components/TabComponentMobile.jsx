@@ -3,7 +3,7 @@ import cn from "classnames";
 import { motion, AnimateSharedLayout } from "framer-motion";
 
 
-const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
+const TabComponentMobile = ({ tabs, cv, defaultIndex = 0 }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
 
   const onTabClick = (index) => {
@@ -123,6 +123,7 @@ const TabComponentMobile = ({ tabs, defaultIndex = 0 }) => {
       id={tab.id}
       active={+(activeTabIndex === index)}
       aria-labelledby={`tab-${index}`}
+      cv={cv}
       />
       </motion.div>
     ))}

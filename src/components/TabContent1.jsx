@@ -58,7 +58,7 @@ const TabContent = ({ id, active }) => (
 <article>
 <h3 className="text-stellarDarker">What can I offer?</h3>
 <span className=" text-whiteLighter py-2">
-  <ul className="list-disc pl-4">
+  <ul className="list-disc pl-4 text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5">
     <li className="text-whiteLighter">Performing of complete user research and drive design decisions based on that</li>
     <li className="text-whiteLighter">Building of sophisticated user-flows and information architectures</li>
     <li className="text-whiteLighter">Rapid creation of cross-platform wireframes and prototypes</li>

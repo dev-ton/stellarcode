@@ -43,11 +43,6 @@ const AboutPage = () => (
         eightParagraph {
           eightParagraph
         }
-        resume {
-          file {
-          url
-        }
-        }
         msImage1 {
             gatsbyImageData(
               height: 400

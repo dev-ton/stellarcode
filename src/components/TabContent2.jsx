@@ -202,7 +202,7 @@ const TabContent = ({ id, active }) => (
               <article>
             <h3 className="text-stellarDarker">Certifications:</h3>
                <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
-                 <ul className="list-disc pl-4">
+                 <ul className="list-disc pl-4 text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5">
                   {certsCode.map((cert, index) => (
                     <li className="text-whiteLighter" key={index}>{cert}
                     </li>

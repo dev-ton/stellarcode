@@ -1,4 +1,5 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { useMediaQuery } from 'react-responsive'
 import TabComponentMobile from "./TabComponentMobile";
 import TabComponentDesktop from "./TabComponentDesktop";
@@ -9,6 +10,22 @@ const AboutMe = () => {
   
   const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
   const notMobile = useMediaQuery({ query: '(min-width: 600px)' })
+
+  const data = useStaticQuery(graphql`
+  {
+    contentfulAboutMe {
+      resume {
+        title
+        description
+        file {
+          url
+        }
+      }
+    }
+  }
+`)
+
+const cv = data.contentfulAboutMe.resume.file.url
 
    return (
 
@@ -21,8 +38,8 @@ const AboutMe = () => {
     </div>
 
 
-   {isMobile && <TabComponentMobile tabs={tabs}/>}
-   {notMobile && <TabComponentDesktop tabs={tabs}/>}
+   {isMobile && <TabComponentMobile tabs={tabs} cv={cv}/>}
+   {notMobile && <TabComponentDesktop tabs={tabs} cv={cv}/>}
   
    
 

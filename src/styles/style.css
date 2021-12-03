@@ -331,9 +331,9 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 
 
-input[type="text"], input[type="email"], textarea  {
+input[type="text"], input[type="email"], textarea, input:-internal-autofill-selected, textarea:-internal-autofill-selected    {
   font: 16px/26px "Lato", Arial, sans-serif; 
-  color: var(--white-lighter); 
+  color: var(--white-lighter) !important; 
   width: 100%; 
   box-sizing: border-box; 
   letter-spacing: 1px;
@@ -344,10 +344,10 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus  {
   outline: none;
 }
 
-.effect-16 {
+.effect-16, input:-internal-autofill-selected, textarea:-internal-autofill-selected {
   border: 0;
   padding: 4px 0;
-  background-color: transparent; 
+  background-color: transparent !important; 
 }
 
 .effect-16 ~ .focus-border {

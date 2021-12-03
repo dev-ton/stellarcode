@@ -3,7 +3,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
 import PropTypes from "prop-types"
 import { motion } from "framer-motion"
-import { FaAngleRight } from "@react-icons/all-files/fa/FaAngleRight"
+
 
 
 const cardMotion = {
@@ -25,18 +25,6 @@ const cardMotion = {
   }
 };
 
-const arrowMotion = {
-  rest: { opacity: 0, x: -30, ease: "easeOut", duration: 0.15, type: "tween" },
-  hover: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.25,
-      type: "tween",
-      ease: "easeIn"
-    }
-  }
-};
 
 const Card = props => {
 

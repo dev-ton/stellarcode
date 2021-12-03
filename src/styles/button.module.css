@@ -1,17 +1,7 @@
+
+
 .button {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0px;
-  cursor: pointer;
-  font-weight: 500;
-  padding: 13px 25px;
-  border-radius: 15px;
-  font-size: 1rem;
-  border: none;
-  color: #fff;
-  transition: all 0.25s ease-in-out;
+  @apply flex flex-row items-center justify-center cursor-pointer rounded-2xl border-0 text-white transition-all duration-300 ease-in-out my-3 py-2 px-4 text-base lg:my-5 lg:py-3 lg:px-6 lg:text-lg
 }
 
 .button:hover {
@@ -28,10 +18,14 @@
 
 .primaryBG {
   background: #B27800;
+  background: linear-gradient(90.98deg, #493200 -43.78%, #B27800 73.04%, #FAAF57 131.21%);
+  transition: all ease-in-out .3s;
+  background-size: 150% auto;
 }
 
 .primaryBG:hover {
   box-shadow: 0 10px 20px -10px rgba(102, 69, 0, 0.6);
+  background-position: right center;
 }
 
 .normalBG {

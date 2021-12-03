@@ -1,29 +1,37 @@
+import React, { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import PropTypes from "prop-types"
-import React, { useEffect } from "react"
 import { FaTimes } from "@react-icons/all-files/fa/FaTimes"
 
 const backgroundVariants = {
   closed: {
     opacity: 0,
-    transitionEnd: { display: "none" },
+    right: 0,
+    top: 0,
+    width: 0,
+    transitionEnd: { 
+      display: "none" },
   },
   open: {
-    bottom: 0,
     display: "block",
-    left: 0,
     opacity: 1,
     right: 0,
     top: 0,
+    width: '100%',
   },
 }
 
 const closeButtonVariants = {
   closed: {
     opacity: 0,
+    rotate: 0,
+    transition: {
+      duration: 0.15,
+    },
   },
   open: {
     opacity: 1,
+    rotate: 90,
     transition: {
       delay: 0.75,
       duration: 0.5,
@@ -43,12 +51,16 @@ const childrenVariants = {
   },
 }
 
+
+
 function Overlay({ children, isOpen, setIsOpen }) {
   function closeOnEscapeKey(event) {
     if (event.keyCode === 27 && isOpen) {
       setIsOpen(false)
     }
   }
+
+  const ref = useRef()
 
   useEffect(() => {
     window.addEventListener("keydown", closeOnEscapeKey)
@@ -58,15 +70,27 @@ function Overlay({ children, isOpen, setIsOpen }) {
   })
 
   useEffect(() => {
-    document
-      .querySelectorAll("body, html")
-      .forEach(e => e.classList[isOpen ? "add" : "remove"]("overflow-hidden"))
-  }, [isOpen])
+    const checkIfClickedOutside = e => {
+      // If the menu is open and the clicked target is not within the menu,
+      // then close the menu
+      if (isOpen && ref.current && !ref.current.contains(e.target)) {
+        setIsOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", checkIfClickedOutside)
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside)
+    }
+  }, [isOpen, setIsOpen])
+
+
 
   return (
+    <div className="wrapper w-full" ref={ref}>
     <motion.div
       animate={isOpen ? "open" : "closed"}
-      className="fixed z-50 block bg-gray-900 text-white"
+      className="fixed z-50 block text-whiteLighter"
       initial="closed"
       variants={backgroundVariants}
     >
@@ -76,7 +100,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
             initial="closed"
             animate={isOpen ? "open" : "closed"}
             variants={closeButtonVariants}
-            className="text-white focus:outline-none select-none highlight-none"
+            className="text-whiteLighter focus:outline-none select-none highlight-none"
             onClick={() => setIsOpen(false)}
           >
             <FaTimes className="h-8 w-auto fill-current" />
@@ -91,6 +115,7 @@ function Overlay({ children, isOpen, setIsOpen }) {
         </motion.div>
       </div>
     </motion.div>
+    </div>
   )
 }
 

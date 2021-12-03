@@ -1,24 +1,26 @@
 import React from "react"
-import classNames from "classnames"
+import { useMediaQuery } from 'react-responsive'
 import PropTypes from "prop-types"
-import Card from "./Card"
+import CardsMobile from "./CardsMobile"
+import CardsDesktop from "./CardsDesktop"
 
 const Cards = ({ items, hideLastItemOnMobile = false }) => {
-  return (
-    <div className="">
-      <div className="flex flex-wrap -mx-3 lg:-mx-6">
-        {items.map(item => (
-          <div
-            className={classNames("w-full sm:w-1/2 lg:w-1/3 p-8 md:p-6", {
-              "last:hidden lg:last:block": hideLastItemOnMobile,
-            })}
-            key={item.id}
-          >
-            <Card {...item} />
-          </div>
-        ))}
-      </div>
-    </div>
+
+  const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
+  const notMobile = useMediaQuery({ query: '(min-width: 600px)' })
+
+return (
+  <div>
+
+
+{isMobile && <CardsMobile items={items} />}
+
+
+
+{notMobile && <CardsDesktop items={items} />}
+
+
+</div>
   )
 }
 

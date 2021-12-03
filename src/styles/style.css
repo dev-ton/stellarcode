@@ -3,18 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --trackColor:#131313;
-  --thumbColor:#4B3F72;
+  --space-darkest:#131313;
+  --space-dark:#1f2041;
   --white: #fff;
-  --whitey: #E0E0E0;
-  --whitey-darker: rgb(224, 224, 224);
-  --black: #333;
-  --tab-active-color: #ffc857;
+  --white-darker: #C4C4C9;
+  --white-lighter: #C7C7CF;
   --stellar-dark: #B27800;
   --stellar-light: #ffc857;
   --border-radius: 40px;
-  --underline-color: #121229;
-  --underline-color2: #ffc857;
+
 }
 
 .container {
@@ -27,9 +24,9 @@ body {
   background: url("../images/landscape.svg") no-repeat bottom center;
   background-size: contain; 
   background-color: #121229;
-  scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  scrollbar-color: var(--space-dark) var(--space-darkest) !important;
   scrollbar-width: auto;
-  -webkit-scrollbar-color: var(--thumbColor) var(--trackColor) !important;
+  -webkit-scrollbar-color: var(--space-dark) var(--space-darkest) !important;
   -webkit-scrollbar-width: auto;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -39,13 +36,13 @@ body {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--trackColor);
+  background: var(--space-darkest);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--thumbColor) ;
+  background-color: var(--space-dark) ;
   border-radius: 6px;
-  border: 3px solid var(--trackColor);
+  border: 3px solid var(--space-darkest);
 }
 
 /* Selection color */
@@ -71,19 +68,19 @@ body::-webkit-scrollbar-thumb {
 /* basic typography */
 
 p { 
-  @apply text-base 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5;
+  @apply text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5;
 }
 
 h1 {
-  @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold  pb-2 lg:pb-6 tracking-wide
+  @apply text-3xl lg:text-4xl 2xl:text-5xl font-bold pb-8 lg:pb-16 tracking-wide
 }
 
 h2 {
-  @apply text-xl sm:text-xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal  pb-2 lg:pb-6
+  @apply text-2xl sm:text-2xl md:text-2xl lg:text-2xl 2xl:text-4xl font-normal  pb-2 lg:pb-6
 }
 
 h3 {
-  @apply text-lg sm:text-lg md:text-lg lg:text-lg 2xl:text-2xl font-bold pb-2 lg:pb-4
+  @apply text-xl sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl font-bold pb-2 lg:pb-4
 }
 
 article {
@@ -93,13 +90,14 @@ article {
 blockquote {
   font-weight: 500;
   font-style: italic;
-  color: var(--whitey-darker);
+  color: var(--white-darker);
   border-left-width: 0.25rem;
   border-left-color: var(--stellar-light);
   quotes: "\\201C""\\201D""\\2018""\\2019";
   padding-left: 2rem;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
+  @apply text-3xl
 }
 blockquote p:first-of-type::before {
   content: open-quote;
@@ -127,14 +125,15 @@ blockquote p:last-of-type::after {
 /* Styling of the section headings */
 
 .heading {
-  background-image: linear-gradient(180deg, var(--underline-color) 85%, var(--underline-color2) 15%);
-  background-image: -webkit-linear-gradient(270deg, var(--underline-color) 85%, var(--underline-color2) 15%);
+  background-image: linear-gradient(180deg, var(--space-darkest) 85%, var(--stellar-light) 15%);
+  background-image: -webkit-linear-gradient(270deg, var(--space-darkest) 85%, var(--stellar-light) 15%);
   background-position-y: bottom;
   background-size: 100% 30%;
   background-repeat: no-repeat;
   padding: 0 1rem;
-  margin-bottom: 2.5rem;
-  color:var(--whitey);
+  color:var(--white-darker);
+
+  @apply mb-4  sm:mb-10
 }
 
 
@@ -161,7 +160,7 @@ nav > div.hidden.sm\:block > ul > a.active {
 /* top-3 utility class - used in back button */
 
 .top-3 {
-  top: 3px;
+  top: 7px;
 }
 
 .space-dark-shadow {
@@ -171,6 +170,7 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 .img-height-regulator {
   height:20rem;
+  width:100%;
 }
 
 /* animation of the stars in the logo */
@@ -206,19 +206,23 @@ nav > div.hidden.sm\:block > ul > a.active {
 
 /* tab component */
 
-.arrowSize {
-transform: translateY(15px);
-position:relative;
-z-index: -10;
+.buttonGradient {
+  background: linear-gradient(90.98deg, #493200 -43.78%, #B27800 73.04%, #FAAF57 131.21%);
+  background-size: 100% auto;
 }
 
 .triangle {
-  /*
-	position: relative;
-	text-align: left;
-  top: 0.5em;*/
   margin: auto;
+	background-image: url("data:image/svg+xml,%3Csvg width='68' height='50' viewBox='0 0 68 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.8713 3.44732C31.2077 -0.400859 36.7923 -0.400864 39.1287 3.44731L68 51H0L28.8713 3.44732Z' fill='%231F2041'/%3E%3C/svg%3E");
+  width: 68px;
+  height: 50px;
+  position:relative;
+  z-index: -10;
+  top: 25px;
 }
+
+
+/*  in case I decide to have css triangle instead of svg
 
 .triangle:before,
 .triangle:after {
@@ -245,6 +249,7 @@ z-index: -10;
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
 
+*/
 .arrowMobile {
   top: 2px;
 }
@@ -256,19 +261,19 @@ z-index: -10;
 
 .tab a {
   text-decoration: none;
-  color: var(--whitey);
+  color: var(--white-darker);
 }
 
 .tab svg {
   width: 36px;
   min-width: 36px;
-  fill: var(--whitey);
+  fill: var(--white-darker);
   transition: fill 0.5s ease;
   margin: 0.3rem auto;
 }
 
 .tab.active::before {
-  background: var(--tab-active-color);
+  background: var(--stellar-light);
 }
 
 .tab span {
@@ -279,11 +284,11 @@ z-index: -10;
 }
 
 .tab.active span {
-  color: var(--tab-active-color);
+  color: var(--stellar-light);
 }
 
 .tab.active svg {
-  fill: var(--tab-active-color);
+  fill: var(--stellar-light);
 }
 
 .tab-content {
@@ -303,13 +308,13 @@ z-index: -10;
 }
 
 .textboxMask::-webkit-scrollbar-track {
-  background: var(--trackColor);
+  background: var(--space-darkest);
 }
 
 .textboxMask::-webkit-scrollbar-thumb {
-  background-color: var(--thumbColor) ;
+  background-color: var(--space-dark) ;
   border-radius: 6px;
-  border: 3px solid var(--trackColor);
+  border: 3px solid var(--space-darkest);
 }
 
 
@@ -328,7 +333,7 @@ z-index: -10;
 
 input[type="text"], input[type="email"], textarea  {
   font: 16px/26px "Lato", Arial, sans-serif; 
-  color: var(--whitey-darker); 
+  color: var(--white-lighter); 
   width: 100%; 
   box-sizing: border-box; 
   letter-spacing: 1px;
@@ -361,8 +366,8 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus  {
     left: 0; 
     width: 100%; 
     height: 1px;
-    z-index: -2; 
-    background-color: var(--whitey-darker);
+    z-index: auto; 
+    background-color: var(--white-lighter);
   }
 
 .effect-16:focus ~ .focus-border,
@@ -378,9 +383,9 @@ textarea:not(:placeholder-shown) ~ .focus-border  {
   left: 0; 
   width: 100%; 
   top: 9px; 
-  color: var(--whitey-darker);
+  color: var(--white-lighter);
   transition: 0.3s; 
-  z-index: auto; 
+  z-index: -1; 
   letter-spacing: 0.5px;
 }
 
@@ -400,19 +405,19 @@ textarea:not(:placeholder-shown) ~ label {
 
 .scrollTop {
   position: fixed; 
-  width: 5%;
   bottom: 20px;
-  height: 20px;
+  height: 40px;
+  width: 40px;
   z-index: 1000;
   cursor: pointer;
   animation: fadeIn 0.3s;
-  transition: opacity 0.4s;
-  opacity: 0.5;
-  right: 10px;
+  transition: all ease 0.4s;
+  right: 20px;
 }
 
 .scrollTop:hover{
-  opacity: 1;
+  box-shadow: 0 10px 20px -10px rgba(102, 69, 0, 0.6);
+  bottom: 25px;
 }
 
 @keyframes fadeIn {
@@ -421,13 +426,13 @@ textarea:not(:placeholder-shown) ~ label {
     bottom: -20px;
   }
   100% {
-    opacity: 0.5;
+    opacity: 1;
     bottom: 20px;
   }
 }
 
 .copyIcon {
-  fill: #aaa;
+  fill: var(--white-lighter);
   outline: none;
   transition: all ease .2s;
 }
@@ -449,10 +454,6 @@ textarea:not(:placeholder-shown) ~ label {
 
 @screen sm {
 
-  /*used in back button */
-  .top-3 {
-    top: 5px;
-  }
 
 .space-dark-shadow {
     -webkit-box-shadow: 0px 13px 40px 1px rgba(18,18,41,0.33); 
@@ -461,6 +462,7 @@ textarea:not(:placeholder-shown) ~ label {
 
 .img-height-regulator {
   height:700px;
+  width:100%;
 }
 
 .tab-links {
@@ -473,7 +475,7 @@ textarea:not(:placeholder-shown) ~ label {
 
 .tab a {
   text-decoration: none;
-  color: var(--whitey);
+  color: var(--white-darker);
 }
 
 .tab span {

@@ -33,9 +33,9 @@ return (
    <>
    {showScroll && (
     <FaArrowCircleUp 
-   className="scrollTop invisible md:visible" 
+   className="scrollTop invisible md:visible rounded-full" 
    onClick={scrollToTop} 
-   style={{height: 40, fill: '#131313'}}
+   style={{fill: '#B27800'}}
     />
    )}
    </>

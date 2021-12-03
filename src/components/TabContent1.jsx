@@ -54,24 +54,24 @@ const TabContent = ({ id, active }) => (
                
           <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant}>
-           
-              <article>
-               <h3 className="text-stellarDarker">Why UX design?</h3>
-               <p className=" text-whiteyDarker py-2">
-More and more businesses are finding out how dramatically can good UX design affect their productivity, sales & revenues, reduce development time & costs, reduce maintenance cost and increase customer satisfaction. 
-</p>
-</article>
 
 <article>
 <h3 className="text-stellarDarker">What can I offer?</h3>
-<p className=" text-whiteyDarker py-2">
-My main passion is the interaction design, but I enjoy also other disciplines of UX design, whether it is research, usability testing or others. At the end always stands a perfectly usable product and thats what motivates me the most.
-</p>
+<span className=" text-whiteLighter py-2">
+  <ul className="list-disc pl-4 text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5">
+    <li className="text-whiteLighter">Performing of complete user research and drive design decisions based on that</li>
+    <li className="text-whiteLighter">Building of sophisticated user-flows and information architectures</li>
+    <li className="text-whiteLighter">Rapid creation of cross-platform wireframes and prototypes</li>
+    <li className="text-whiteLighter">Leading of the usability studies</li>
+    <li className="text-whiteLighter">Creation of convincing presentations and presenting the ideas to the stake-holders</li>
+    <li className="text-whiteLighter">Building of the new design systems</li>
+  </ul>
+</span>
 </article>
 
 <article>
 <h3 className="text-stellarDarker">What is my extra value?</h3>
-<p className=" text-whiteyDarker py-2">
+<p className=" text-whiteLighter py-2">
 Having a knowledge of frontend development allows me to create developer-friendly designs, which speed up the hand-off process by reducing the back-and-forths between designer and development team.
 </p>
 </article>
@@ -81,7 +81,7 @@ Having a knowledge of frontend development allows me to create developer-friendl
             <h3 className="text-stellarDarker pb-2">What tools do I use?</h3>
                <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
                   {skillsDesign.map((skill, index) => (
-                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}

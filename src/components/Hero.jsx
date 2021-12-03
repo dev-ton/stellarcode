@@ -10,7 +10,7 @@ const data = useStaticQuery(graphql`
   contentfulIntroSection {
     portraitPhoto {
           gatsbyImageData(
-              height: 1300
+              height: 700
               formats: [AUTO, WEBP]
               placeholder: BLURRED
             )
@@ -32,25 +32,23 @@ const image = getImage(data.contentfulIntroSection.portraitPhoto)
   <div className="topSpace h-12 sm:h-24"></div>
 
   <div className="flex justify-between sm:flex-row flex-col">
-      <header className="w-full sm:w-1/2 sm:pr-6">
+      <header className="w-full sm:w-3/5 sm:pr-6">
 
 
 
 
 
 <h1 className="textGradient text-center sm:text-left tracking-wide">
-   
 I’m Antonin,  
 <br/>
-freelance front-end developer
-<br/>
-and UI/UX designer.
-
+freelance front-end 
+developer and <br className="inline sm:hidden"/> 
+UI/UX designer.
 </h1>
 
 
 
-        <h2 className="text-whiteyDarker text-center sm:text-left">
+        <h2 className="text-whiteDarker text-center sm:text-left">
         Welcome on my portfolio.<br className="inline sm:hidden"/> You can<br className="hidden sm:inline"/> read more <AnchorLink href="#aboutme" offset="50" className="fade_underlink">
           <span className="text-stellar">about me</span></AnchorLink>, check out <AnchorLink href="#mywork" offset="50" className="fade_underlink"><span className="text-stellar">
             my work</span></AnchorLink><br className="hidden sm:inline"/> and if you have a project for me <br/>then <AnchorLink href="#contactme" offset="50" className="fade_underlink"><span className="text-stellar">send me a message!</span></AnchorLink>
@@ -60,8 +58,8 @@ and UI/UX designer.
      
       </header>
 
-      <div className="w-full sm:w-1/2 pl-0 sm:pl-10 pt-12 sm:pt-0">
-      <GatsbyImage image={image} loading="eager" alt="image" className="space-dark-shadow rounded-md img-height-regulator"/>
+      <div className="w-full sm:w-2/5 pl-0 sm:pl-10 pt-12 sm:pt-0">
+      <GatsbyImage image={image} loading="eager" alt={data.contentfulIntroSection.portraitPhoto.title} className="space-dark-shadow rounded-md img-height-regulator"/>
       </div>  
     
     </div>

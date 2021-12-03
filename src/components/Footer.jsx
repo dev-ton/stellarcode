@@ -15,12 +15,12 @@ const Footer = () => {
 
      
 
-      <p className="text-center text-sm md:text-base text-whiteyDarker">
+      <p className="text-center text-sm md:text-base text-whiteDarker">
           Powered by GatsbyJS and Netlify
       </p>
 
       <div className="mt-0 md:order-1">
-        <p className="text-center text-sm md:text-base text-whiteyDarker">
+        <p className="text-center text-sm md:text-base text-whiteDarker">
           &copy; {new Date().getFullYear()} Antonin Jech. All rights reserved.
         </p>
       </div>

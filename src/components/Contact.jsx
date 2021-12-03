@@ -16,9 +16,9 @@ const Contact = () => {
 
 return (
 
-<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-white-whiteyDarker md:border-solid md:border-l-2 px-6">
+<div className="w-full md:w-7/12 lg:w-2/3 flex justify-center md:border-white-whiteDarker md:border-solid md:border-l-[1px] px-6">
 
-<form className="w-full max-w-lg" autoComplete="off">
+<form className="w-full max-w-lg relative z-10" autoComplete="off">
 <div className="pb-8">
 <div className=" w-full relative input-effect">
   <input aria-labelledby="lblname" id="sender" className="effect-16 appearance-none" type="text" name="name" placeholder=" " />
@@ -55,28 +55,6 @@ return (
 </form>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 )

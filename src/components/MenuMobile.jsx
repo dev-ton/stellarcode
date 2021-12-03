@@ -45,7 +45,7 @@ const MenuMobile = ({ links, isOpen, setIsOpen }) => {
               variants={menuItem}
             >
               <AnchorLink
-                className="font-semibold text-4xl text-white"
+                className="font-semibold text-4xl text-whiteLighter"
                 href={link.to}
                 offset='150'
                 onClick={() => setIsOpen(false)}

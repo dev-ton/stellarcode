@@ -8,7 +8,7 @@ import TabContent3 from "./TabContent3";
 
 const tabs = [
     {
-      title: "My Story",
+      title: "Basic facts",
       id: "bio",
       icon: <FaUserAlt />,
       color: "#ffc857",

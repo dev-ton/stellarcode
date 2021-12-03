@@ -3,7 +3,7 @@ import React from "react"
 
 const Button2 = ({ children, href, ...params }) => {
   const className =
-    "bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 text-xs text-whitey uppercase hover:shadow-xl h transition ease-in-out duration-150"
+    "bg-stellar-dark border-2 border-stellar-dark stellarButton p-3 text-xs text-white uppercase hover:shadow-xl h transition ease-in-out duration-150"
 
   if (href) {
     return (

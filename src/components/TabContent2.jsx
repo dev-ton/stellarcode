@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 
 
-const skillsCode = ["ReactJS", "GatsbyJS", "GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm", "Git", "VS Code"];
+const skillsCode = ["GraphQL", "Bootstrap", "LESS", "SASS", "Tailwind", "Bulma", "Styled Components", "Framer Motion", "Hubspot", "Wordpress", "Webflow", "npm/yarn", "Git", "and more"];
+
+const certsCode = ["JavaScript Algorithms and Data Structures - freecodecamp.org", "Adobe AEM - Accenture", "Sitecore CMS", "EpiServer CMS" ];
 
 
 const tabContentVariant = {
@@ -133,9 +135,9 @@ const TabContent = ({ id, active }) => (
                 
   <div className="mx-auto text-left flex flex-col sm:flex-row pb-10 px-2 sm:px-8">
 
-            <motion.div variants={contVariant}>
-           
-  <article className=" text-whiteyDarker px-2">
+        
+  <motion.div variants={contVariant}>         
+  <article className=" text-whiteLighter px-2">
                <h3 className="text-stellarDarker">Tech stack:</h3>
 
             <div className="pb-4">
@@ -144,7 +146,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Expert</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar1}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar1}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -152,7 +154,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Advanced</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar2}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar2}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -160,7 +162,7 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Medium</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar3}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar3}></motion.div>
                 </div>
 
                 <div className="mb-1 flex justify-between">
@@ -168,34 +170,49 @@ const TabContent = ({ id, active }) => (
                   <span className="text-sm font-medium">Medium</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-4 mb-3">
-                  <motion.div className=" bg-stellar-dark h-4 rounded-full" variants={bar4}></motion.div>
+                  <motion.div className=" buttonGradient h-4 rounded-full" variants={bar4}></motion.div>
                 </div>
             </div>
 </article>
 
 <article>
 <h3 className="text-stellarDarker">What can I code for you?</h3>
-<p className=" text-whiteyDarker py-2">
-My main focus was always on HTML/CSS/JS and building modern looking websites and CMS templates. Recently I started working with ReactJS, especially together with GatsbyJS. With this technology I’m now able to build lightning-fast websites. Websites that are fast perform better in search engines, usability scores, and in converting visitors to customers.
+<p className=" text-whiteLighter py-2">
+  Basically everything based on mighty trio <span className="font-bold">HTML/CSS/JS</span>, from highly converting landing pages to lightning fast <span className="font-bold">modern websites</span> including <span className="font-bold">e-shops</span>, all that with a great Lighthouse score.</p><p className=" text-whiteLighter py-2"> Besides that I can use my animation skills and help you out with eye-catching <span className="font-bold">animated banners</span> or code a flawless <span className="font-bold">email newsletters</span>.
 </p>
 </article>
 
             </motion.div>
 
+<div className="mx-auto text-left pb-10 px-2 sm:px-8">
             <motion.div variants={contVariant} className="sm:pl-12 px-2">
               <article>
             <h3 className="text-stellarDarker">Which other tools/frameworks<br/> I use?</h3>
                <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
                   {skillsCode.map((skill, index) => (
-                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteyDarker uppercase" key={index}>{skill}
+                    <div className=" bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{skill}
                     </div>
                     
                   ))}
                </div>
                </article>
             </motion.div>
-            </div>
 
+            <motion.div variants={contVariant} className="sm:pl-12 px-2">
+              <article>
+            <h3 className="text-stellarDarker">Certifications:</h3>
+               <div className="flex flex-wrap py-2 sm:py-3 lg:py-4">
+                 <ul className="list-disc pl-4 text-lg sm:text-xl 2xl:text-xl py-2 sm:py-3 lg:py-4 xl:py-5">
+                  {certsCode.map((cert, index) => (
+                    <li className="text-whiteLighter" key={index}>{cert}
+                    </li>
+                  ))}
+                  </ul>
+               </div>
+               </article>
+            </motion.div>
+            </div>
+</div>
     
 
 

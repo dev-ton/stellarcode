@@ -3,7 +3,7 @@ import cn from "classnames";
 import { motion, AnimateSharedLayout } from "framer-motion";
 
 
-const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
+const TabComponentDesktop = ({ tabs, cv, defaultIndex = 0 }) => {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
 
   const onTabClick = (index) => {
@@ -30,15 +30,9 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
     }
   };
 
-  const spring = {
-    type: "spring",
-    stiffness: 500,
-    damping: 30
-  };
-
   useEffect(() => {
     document.documentElement.style.setProperty(
-      "--tab-active-color",
+      "--stellar-light",
       tabs[activeTabIndex].color
     );
   }, [activeTabIndex, tabs]);
@@ -51,7 +45,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
     
     
   <AnimateSharedLayout>
-  <div className="tab-links flex justify-evenly relative z-auto pt-5 bg-space-light border-b-2 border-solid border-space-DEFAULT rounded-t-md m-0" role="tablist" aria-label="About me Tabs">
+  <div className="tab-links flex justify-evenly relative z-auto pt-5" role="tablist" aria-label="About me Tabs">
     {tabs.map((tab, index) => (
       <motion.div
         key={tab.id}
@@ -73,17 +67,14 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
 
         {activeTabIndex === index && (     
    <motion.div
-   className="arrow"
+   className="arrow arrowSize triangle"
    layoutId="arrow"
    initial="false"
-   transition={spring}
-   > 
+   transition={{type: "spring", bounce: 0.25}}
+   /> 
   
 
-   <div className="arrowSize">
-    <div className=' bg-space-dark triangle'></div>
-   </div>
-  </motion.div>
+ 
         )}
 
       </motion.div>
@@ -105,6 +96,7 @@ const TabComponentDesktop = ({ tabs, defaultIndex = 0 }) => {
       id={tab.id}
       active={activeTabIndex === index}
       aria-labelledby={`tab-${index}`}
+      cv={cv}
       />
     
     ))}

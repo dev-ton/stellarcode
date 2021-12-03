@@ -27,7 +27,7 @@ const Socials = () => {
 
     return (
         
-          <ul className="flex justify-center md:order-2">
+          <ul className="flex justify-center sm:justify-start md:order-2">
             <FooterLink 
                 href={links.twitter} 
                 icon={FaDribbble} 
@@ -65,10 +65,10 @@ const FooterLink = ({ href, label, icon: Icon, hide }) => {
           href={href}
           target="_blank"
           rel="noreferrer noopener"
-          className="text-whitey"
+          className="text-whiteyDarker"
         >
           <span className="sr-only">{label}</span>
-          <Icon className="w-5 h-5 fill-current relative top-0 z-10" />
+          <Icon className="w-5 h-5 fill-current relative top-0 z-10 group-hover:text-white" />
           <div className="w-full h-full bg-stellar-dark opacity-0 rounded-full socialBg group-hover:opacity-100 transition-all ease-linear duration-200"></div>
         </a>
       </li>

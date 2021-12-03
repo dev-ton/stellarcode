@@ -41,7 +41,7 @@ const Layout = ({ children, menuToggle }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  isHome: PropTypes.bool,
+  menuToggle: PropTypes.string,
 }
 
 export default Layout

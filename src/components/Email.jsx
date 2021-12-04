@@ -20,7 +20,7 @@ const CopyToClipElement = ({ text }) => {
     }
   }, [data]);
 
-  return <div>{data && <textarea ref={myRef} defaultValue={data}></textarea>}</div>;
+  return <div className="hidden">{data && <textarea ref={myRef} defaultValue={data}></textarea>}</div>;
 };
 
 

@@ -12,6 +12,8 @@ const Button = ({icon, hasIconRight, title, href, onClick, primary, full}) => {
     full && styles.full
     ])
 
+  
+ 
  
 
         if (href)  { return (
@@ -19,7 +21,7 @@ const Button = ({icon, hasIconRight, title, href, onClick, primary, full}) => {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-        >
+          >
 
         <button
         className={className}

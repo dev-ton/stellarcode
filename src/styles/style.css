@@ -24,9 +24,9 @@ body {
   background: url("../images/landscape.svg") no-repeat bottom center;
   background-size: contain; 
   background-color: #121229;
-  scrollbar-color: var(--space-dark) var(--space-darkest) !important;
+  scrollbar-color: var(--space-dark) var(--space-darkest);
   scrollbar-width: auto;
-  -webkit-scrollbar-color: var(--space-dark) var(--space-darkest) !important;
+  -webkit-scrollbar-color: var(--space-dark) var(--space-darkest);
   -webkit-scrollbar-width: auto;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
@@ -35,15 +35,51 @@ body {
   @apply font-sans antialiased;
 }
 
-body::-webkit-scrollbar-track {
-  background: var(--space-darkest);
+
+/* new scrollbar */
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 11px;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: var(--space-dark) ;
-  border-radius: 6px;
-  border: 3px solid var(--space-darkest);
+::-webkit-scrollbar-button {
+  width: 5px;
+  height: 0px;
 }
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--space-dark);
+  border: 0px solid transparent;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--space-darkest);
+  border: 0px none #ffffff;
+  border-radius: 53px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Selection color */
 

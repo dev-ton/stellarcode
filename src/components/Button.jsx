@@ -1,19 +1,23 @@
 import React from "react";
 import classNames from "classnames";
+import { useMediaQuery } from 'react-responsive'
 import * as styles from "../styles/button.module.css";
 
 
 const Button = ({icon, hasIconRight, title, href, onClick, primary, full}) => {
 
+  const isMobile = useMediaQuery({ query: '(max-width: 599px)' })
+
   const className = classNames(
     [styles.button,
     primary ? styles.primaryBG : styles.normalBG,
     hasIconRight && styles.reverse,
-    full && styles.full
+    full && styles.full,
+    isMobile && styles.full
     ])
 
   
- 
+    
  
 
         if (href)  { return (

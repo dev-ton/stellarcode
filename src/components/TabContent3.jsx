@@ -73,7 +73,7 @@ I’m 35 years old, currently living in Regensburg, Germany, but coming out of P
 
 
 <div className="flex px-2 flex-wrap">
-          <motion.div variants={contVariant} className="mr-4">
+          <motion.div variants={contVariant} className="sm:mr-4 w-full sm:w-auto">
           <Button
           icon={<FaUserAlt/>}
           title="Read more"
@@ -81,7 +81,7 @@ I’m 35 years old, currently living in Regensburg, Germany, but coming out of P
           > </Button>
           </motion.div>
 
-          <motion.div variants={contVariant}>
+          <motion.div variants={contVariant} className="w-full sm:w-auto">
           <Button
           icon={<FaDownload/>}
           title="Download My Resume (PDF)"

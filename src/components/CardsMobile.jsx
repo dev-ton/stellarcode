@@ -17,6 +17,7 @@ const CardsMobile = ({ items, hideLastItemOnMobile = false }) => {
     modules={[A11y]}
     spaceBetween={36}
     slidesPerView={1.5}
+    height={256}
     centeredSlides={true}
     a11y={{prevSlideMessage: 'Previous project', nextSlideMessage: 'Next project'}}
     loop={true}

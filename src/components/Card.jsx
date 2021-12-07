@@ -42,14 +42,17 @@ const Card = props => {
       
       <Link to={`/${slug}`}>
         <div className="pt-3 opacity-80 group-hover:opacity-100 transition duration-150 ease-in-out">
-        <GatsbyImage image={image} alt={name} loading="lazy" />
-        </div>
-        <div className="p-4 pb-6 sm:p-5">
-          <div className="flex">
+        <div className="relative">
+        <GatsbyImage image={image} alt={name} loading="lazy" className="relative" />
+          <div className="flex absolute bottom-0 left-2">
           {tags.map((tag, index) => (
-            <div className="bg-space-darkest rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{tag.name}</div>
+            <div className="bg-space-darkest border-2 border-space-dark rounded-lg p-2 mb-4 mr-3 text-xs text-whiteDarker uppercase" key={index}>{tag.name}</div>
           ))}
           </div>
+        </div>
+        </div>
+        <div className="p-4 pb-6 sm:p-5">
+        
           <div className="w-full flex flex-col">
           <h3 className=" text-whiteLighter font-bold pb-0 group-hover:text-white transition duration-150 ease-in-out">{name}</h3>
           <p className=" text-stellarDarker group-hover:text-stellar transition duration-150 ease-in-out">{summary}</p>

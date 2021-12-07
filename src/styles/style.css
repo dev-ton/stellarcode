@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --space-light:#19647e;
   --space-darkest:#131313;
   --space-dark:#1f2041;
   --white: #fff;
@@ -24,10 +25,6 @@ body {
   background: url("../images/landscape.svg") no-repeat bottom center;
   background-size: contain; 
   background-color: #121229;
-  scrollbar-color: var(--space-dark) var(--space-darkest);
-  scrollbar-width: auto;
-  -webkit-scrollbar-color: var(--space-dark) var(--space-darkest);
-  -webkit-scrollbar-width: auto;
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
   font-feature-settings: "kern", "liga", "clig", "calt";
@@ -57,7 +54,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--space-dark);
+  background: var(--stellar-dark);
   border: 0px solid transparent;
   border-radius: 50px;
 }
@@ -67,6 +64,7 @@ body {
   border: 0px none #ffffff;
   border-radius: 53px;
 }
+
 
 
 
@@ -343,15 +341,6 @@ nav > div.hidden.sm\:block > ul > a.active {
   mask-image: linear-gradient(transparent, rgb(0, 0, 0) 6% 90%,transparent);
 }
 
-.textboxMask::-webkit-scrollbar-track {
-  background: var(--space-darkest);
-}
-
-.textboxMask::-webkit-scrollbar-thumb {
-  background-color: var(--space-dark) ;
-  border-radius: 6px;
-  border: 3px solid var(--space-darkest);
-}
 
 
 /* card */
